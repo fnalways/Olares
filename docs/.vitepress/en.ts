@@ -335,9 +335,10 @@ const side = {
                   link: "/manual/olares/settings/set-up-hosts",
                 },
               ],
-            },
-            { text: "Manage GPU", link: "/manual/olares/settings/gpu-resource" },
-            { text: "Set video playback", link: "/manual/olares/settings/video" },
+             },
+            {text: "Manage GPU", link: "/manual/olares/settings/gpu-resource"},
+            {text: "Set video playback", link: "/manual/olares/settings/video"},
+            {text: "Search", link: "/manual/olares/settings/search"},
             {
               text: "Backup and restore",
               collapsed: true,
