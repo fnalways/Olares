@@ -139,7 +139,7 @@ const side = {
             { text: "Manage integrations", link: "/manual/larepass/integrations" },
           ],
         },
-        { text: "Use VPN", link: "/manual/larepass/private-network" },
+        {text: "Use VPN", link:"/manual/larepass/private-network"},
         {
           text: "Manage device",
           collapsed: true,
@@ -351,12 +351,28 @@ const side = {
                 { text: "Restore", link: "/manual/olares/settings/restore" },
               ],
             },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {text: "Developer resources", link: "/manual/olares/settings/developer"},
+            ]
+          },
+          {text: "Dashboard", link: "/manual/olares/resources-usage"},
+          {text: "Profile", link: "/manual/olares/profile"},
+        ],
+=======
+>>>>>>> 3e46af80 (docs: add play games directly on olares device)
             { text: "Developer resources", link: "/manual/olares/settings/developer" },
           ]
         },
         { text: "Dashboard", link: "/manual/olares/resources-usage" },
         { text: "Profile", link: "/manual/olares/profile" },
       ],
+<<<<<<< HEAD
+=======
+>>>>>>> 9130a9af (docs: add play games directly on olares device)
+>>>>>>> a6b2b50a (docs: add play games directly on olares device)
+>>>>>>> 3e46af80 (docs: add play games directly on olares device)
     },
     {
       text: "Best practices",
@@ -433,6 +449,81 @@ const side = {
     },
   ],
   "/use-cases/": [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  {
+    text: "Use cases",
+    link: "/use-cases/",
+    items: [
+      {
+        text: "Stable Diffusion",
+        link: "/use-cases/stable-diffusion",
+      },
+      {
+        text: "ComfyUI",
+        link: "/use-cases/comfyui",
+        collapsed: true,
+        items: [
+          {
+            text: "Manage ComfyUI",
+            link: "/use-cases/comfyui-launcher",
+          },
+          {
+            text: "Use ComfyUI for Krita",
+            link: "/use-cases/comfyui-for-krita",
+          },
+        ]
+      },
+      {
+        text: "Ollama",
+        link: "/use-cases/ollama",
+      },
+      {
+        text: "Open WebUI",
+        link: "/use-cases/openwebui",
+      },
+      {
+        text: "Perplexica",
+        link: "/use-cases/perplexica",
+      },
+      {
+        text: "Dify",
+        link: "/use-cases/dify",
+      },
+      {
+        text: "Jellyfin",
+        link: "/use-cases/stream-media",
+      },
+      {
+        text: "Steam",
+        link: "/use-cases/stream-game",
+      },
+      // {
+      //   text: "Redroid",
+      //   link: "/use-cases/host-cloud-android",
+      // },
+      {
+        text: "Windows",
+        link: "/use-cases/windows",
+      }, 
+      {
+        text: "DeerFlow",
+        link: "/use-cases/deerflow",
+      }, 
+      {
+        text: "Duix.Avatar",
+        link: "/use-cases/duix-avatar",
+      },
+      {
+        text: "ACE-Step",
+        link: "/use-cases/ace-step",
+      },      
+    ],
+  },
+ ],
+=======
+>>>>>>> 3e46af80 (docs: add play games directly on olares device)
     {
       text: "Use cases",
       link: "/use-cases/",
@@ -478,12 +569,31 @@ const side = {
         },
         {
           text: "Steam",
+<<<<<<< HEAD
           link: "/use-cases/stream-game",
         },
         // {
         //   text: "Redroid",
         //   link: "/use-cases/host-cloud-android",
         // },
+=======
+          collapsed: true,
+          items: [
+            {
+              text: "Play directly on Olares",
+              link: "/use-cases/play-games-directly",
+            },
+            {
+              text: "Stream to other devices",
+              link: "/use-cases/stream-game",
+            }
+          ]
+        },
+        {
+          text: "Redroid",
+          link: "/use-cases/host-cloud-android",
+        },
+>>>>>>> 3e46af80 (docs: add play games directly on olares device)
         {
           text: "Windows",
           link: "/use-cases/windows",
@@ -503,6 +613,10 @@ const side = {
       ],
     },
   ],
+<<<<<<< HEAD
+=======
+>>>>>>> a6b2b50a (docs: add play games directly on olares device)
+>>>>>>> 3e46af80 (docs: add play games directly on olares device)
   "/developer/": [
     {
       text: "Concepts",
