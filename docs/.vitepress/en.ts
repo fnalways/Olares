@@ -351,28 +351,12 @@ const side = {
                 { text: "Restore", link: "/manual/olares/settings/restore" },
               ],
             },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            {text: "Developer resources", link: "/manual/olares/settings/developer"},
-            ]
-          },
-          {text: "Dashboard", link: "/manual/olares/resources-usage"},
-          {text: "Profile", link: "/manual/olares/profile"},
-        ],
-=======
->>>>>>> 3e46af80 (docs: add play games directly on olares device)
             { text: "Developer resources", link: "/manual/olares/settings/developer" },
           ]
         },
         { text: "Dashboard", link: "/manual/olares/resources-usage" },
         { text: "Profile", link: "/manual/olares/profile" },
       ],
-<<<<<<< HEAD
-=======
->>>>>>> 9130a9af (docs: add play games directly on olares device)
->>>>>>> a6b2b50a (docs: add play games directly on olares device)
->>>>>>> 3e46af80 (docs: add play games directly on olares device)
     },
     {
       text: "Best practices",
