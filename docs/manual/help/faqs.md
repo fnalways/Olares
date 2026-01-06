@@ -1,105 +1,132 @@
 ---
-description: Find answers to common questions about Olares.
+outline: [2, 3]
+description: Find answers to common questions about the Olares platform, covering general information, usage, and technical details.
 ---
+
 # FAQs
 
-## What license is Olares using?
+## General information
 
-Olares consists of a series of projects using a hierarchical authorization approach. The basic principles are:
+### Is Olares open source?
+Yes. The Olares OS software is open source, ensuring transparency and community collaboration. The project consists of a family of repositories licensed under appropriate models:
 
-- Projects running on blockchain use Apache 2.0, such as [Snowinning Protocol](https://github.com/beclab/terminusdid-contract-system).
-- Projects related to protocols use Apache 2.0, such as [r4](https://github.com/beclab/r4).
-- Projects around Olares and LarePass use the [Olares License](https://github.com/beclab/Olares/blob/main/LICENSE.md).
-- For third-party applications running on Olares, it is up to the developer to decide whether they want them open source or not and choose the license accordingly.
+* **Olares and LarePass:** Licensed under AGPL-3.0. You can view our [GitHub organization](https://github.com/beclab).
+* **Protocol projects:** Projects like the Smart contract system for Olares ID use Apache 2.0.
+* **Third-party apps:** Developers adopt any license they choose.
 
-For more details, visit our projects on [GitHub](https://github.com/beclab).
 
-## Is the Olares License an open source license?
+### Can I build Olares from source code?
+The short answer is yes, but it is currently complex.
 
-Olares's choice of license for its major projects is inspired by [fair code](https://faircode.io/). The [Olares License](https://github.com/beclab/Olares/blob/main/LICENSE.md) also follows these principles:
+Olares is a massive project spanning over 90 repositories. Because our architecture is evolving quickly, we currently lack a fully integrated local build system that provides a simple "what you see is what you get" experience.
 
-> - Is generally free to use and can be distributed by anybody
-> - Has its source code openly available
-> - Can be extended by anybody in public and private communities
-> - Is commercially restricted by its authors
+We are actively working to streamline the build process and documentation. We expect to improve the local build experience and release standalone deployment guides for core services such as reverse proxy in 2026. Our goal is to refine the foundation first, then invite broader community collaboration.
 
-## Why can't I restore my account if the mnemonics goes missing?
+### Who is Olares for?
+Olares is designed for anyone who wants to use powerful AI tools locally without dealing with complex technical setups.
 
-From 1Password’s MasterKey to crypto wallet’s mnemonic phrase, for more than ten years, the problem of mnemonic storage has not been well solved.
+* **For general users:** You can deploy complex applications like ComfyUI or Perplexica from the Market with a single click.
+* **For developers:** Olares functions as an efficient local development environment. You can leverage the sandboxing and agent infrastructure to build and test applications directly on your Olares device, saving time on environment configuration.
 
-The mnemonic phrase of Olares will be encrypted and stored on all devices that install LarePass. Generally, you only lose the mnemonic phrase if you lose all the devices with LarePass installed at the same time.
+### Do I need to pay for Olares?
+Olares OS itself is free and open source for self-hosting. If you purchase Olares One, it is a one-time hardware cost.
 
-Safety is the most important principle in designing our system. We will continue to improve it in the future to provide you with a better solution that balances convenience and safety.
+We offer two optional cloud-assisted services for convenience, but free alternatives are available so you are never locked in:
+* **Cloud backup:** You can subscribe to Olares Space for integrated cloud backups. The free alternative is to back up to your own external storage or S3-compatible service.
+* **Remote access (FRP):** For easy remote access, we offer a built-in FRP (Fast Reverse Proxy) service with 2 GB of free monthly traffic, with paid options for higher usage. The completely free alternative is to access Olares services via LarePass VPN, or to configure and use your own FRP server.
 
-## Is there a difference between Olares and the current operating systems running on NAS?
+### How often does Olares update?
+We aim for a major release approximately every 2 months. You can view specific changes in our changelog.
 
-At the inception of Olares (formerly Terminus), the market already had excellent NAS operating systems such as [Synology](https://www.synology.com/en-global/dsm/packages), [CasaOS](https://github.com/IceWhaleTech/CasaOS), and [Umbrel](https://github.com/getumbrel/umbrel). They have indeed inspired us.
+### How is Olares different from NAS operating systems?
+While inspired by excellent systems like Synology DSM, CasaOS, and Umbrel, Olares was designed to power a Personal AI Cloud that runs on the Edge.
 
-But we do think the operating system running on Edge should be able to:
+Olares goes beyond standard NAS capabilities by:
+- **Orchestrating resources:** It natively manages multiple hardware resources such as GPUs for AI tasks.
+- **Sandboxing:** It manages applications in strict isolation for security.
 
-- Orchestrate resources for multiple hardware
-- Manage applications in sandboxes
+These capabilities are difficult to achieve with standard NAS operating systems built primarily on Docker Compose.
 
-This is difficult to achieve with the above-mentioned NAS operating systems built on Docker Compose.
+For detailed comparisons, refer to [Compare Olares and NAS](https://blog.olares.com/compare-olares-and-nas/).
 
-Meanwhile, Olares aims to provide a one-stop self-hosted solution, which goes beyond the scope of general NAS operating systems.
+## Local access
 
-## Do I need to pay for Olares?
+### Why is an Olares ID required?
+The Olares ID is designed to allow non-technical users to access their devices easily from anywhere without complex network configurations.
 
-When you're self-hosting, you can essentially use Olares for free.
+Unlike a cloud account, the Olares ID is a decentralized identifier (DID) that you alone control. We never see your credentials, and we cannot recover your data if you lose your mnemonic phrase.
 
-But for the following two features, we may introduce reasonable charges due to the cost (currently both are provided for free):
+### Can I use Olares offline or without internet?
+Yes, we support local-first usage, though the initial activation currently requires internet access.
 
-- **Backup**
+For users prioritizing strict local control, we offer these options:
+* **VPN-Only mode:** You can restrict your Olares so it is only accessible remotely via VPN.
+* **Local-Only access:** You can access Olares services via `.local` domains even if the router has no internet access.
 
-  We provide 10G of free backup space for each Olares ID on Olares Space. When the archive size exceeds this limit, we will charge you a certain fee to cover the cloud provider fee.
+For detailed local access options, refer to [Access Olares services locally](../get-started/local-access.md).
 
-- **Fast Reverse Proxy (FRP)**
+Note that we are also working on an option to allow full device activation in a completely offline environment.
 
-   Accessing Olares locally or via VPN is essentially free. However, if you’re providing external services like hosting a blog, traffic will be forwarded to a Fast Reverse Proxy (FRP) server before reaching Olares. In this case:
+### What is LarePass and why is it required?
+LarePass is the official client for Olares. It acts as a secure bridge to enable seamless access, file synchronization across devices, etc. Currently, it is required to handle the device activation.
 
-   - If you use your own FRP service, Olares does not impose any charges.
-   - If you opt to use the default FRP service from Olares, we offer a free monthly traffic allowance of 2GB. This is usually sufficient for users who do not provide external services through Olares. Additional charges may apply if your usage exceeds this limit.
+### Can I use Olares without the LarePass app?
+We understand this is a core requirement for advanced and enterprise users. We are working on decoupling these functions:
 
-## When are other languages available?
+* **CLI activation:** We plan to move activation logic into the `olares-cli`, allowing for a terminal-based setup without the app.
+* **Standalone components:** We aim to provide standalone deployment options for components like the Reverse Proxy, DID service, and Market repo in future updates.
 
-Right now we only support English and Simplified Chinese.
+## Security and privacy
 
-In fact, we have completed i18n replacement in all front-end projects. However, we lack the experience in maintaining translation resources for a fast iterating project through the open source community. We are still learning.
+### Does Olares collect my data?
+No. Olares is built to reclaim your data ownership. All storage, computation, and AI processing happen locally on your hardware. Olares does not collect or transmit your private data to any centralized service.
 
-## What are the differences among the different "passwords"?
+### Does Olares support backup?
+Yes. Data safety is user-controlled and private. Olares includes a [built-in backup feature](../olares/settings/backup.md) that allows you to save specific file directories and set automatic schedules.
 
-Olares does have various passwords to ensure its security, including:
+Critically, every backup file is end-to-end encrypted. This allows you to store the backup file on any medium including external drive or third-party cloud with full confidence that the data remains inaccessible to others.
 
-- Private key
-- The password of LarePass:
-    - On mobile phones, biometrics can be used for login
-    - On computers and browser plug-ins, manual input is required
-- Password for first activation of Olares
-- Password for Olares login
-- Second verification code when logging in to Olares
+### What is app sandboxing?
+Sandboxing is a security standard used to prevent a single malicious app from compromising the entire system. In Olares, every app runs in its own secure, isolated environment. If an app malfunctions, it is completely contained and cannot access or damage your other applications or personal data.
 
-Don't panic! For daily use, what you need to enter is the two-step verification code when logging in to Olares.
+## Hardware and installation
+### What platforms does Olares support?
+You can install Olares on Linux (Ubuntu or Debian) for best performance.
 
-## How to deploy multi-user applications?
+For product evaluation, you can also install Olares on the following platforms:
+* Proxmox VE
+* Raspberry Pi
+* macOS
+* Windows
 
-It depends on whether you want to provide external service or simply let internal Olares users use it.
+### What is the minimum hardware requirements for installing Olares?
+The requirements vary by platform. Generally:
+* CPU: Minimum 4 cores with x86-64 architecture (Intel or AMD).
+* Memory: At least 8 GB of available RAM.
+* Storage: Minimum 150 GB SSD.
 
-- To provide services to the public, you can select the Entrance to access the application as **Public**. This allows the application to manage its own user registration and authentication.
-- To provide internal access only, you can deploy the Cluster-scoped version of such products on Olares.
+For detailed requirements, refer to the [installation docs](../get-started/install-olares.md).
 
-For Gitlab, we provide two versions of porting: [Gitlab Pure](https://github.com/beclab/apps/tree/main/gitlabpure) and [Gitlab Fusion](https://github.com/RLovelett/gitlab-fusion).
+### Does the system support NVIDIA GPUs?
+Yes. Olares is fully optimized for NVIDIA hardware. It automatically handles driver installation, allowing you to get immediate AI and gaming performance.
 
-## How can I reactivate Olares with the same Olares ID?
+It also supports multiple GPUs on a single motherboard (currently NVIDIA only), allowing users with custom hardware to leverage all available compute power for AI workloads.
 
-If you've reinstalled Olares, the Olares instance you originally activated will no longer be accessible. To reactivate Olares using the same Olares ID:
+## Features
 
-::: tip Install with the same Olares ID
-During the Olares installation, ensure that you have entered the exact same domain and Olares ID that you used previously. 
-:::
+### Can I use my own domain name?
+Yes. You can use your own custom domain instead of the default `olares.com` domain. Note that setting this up currently requires the LarePass app.
 
-![Reactivate](/images/manual/help/reactivate.png)
+### What apps can I run in Olares?
+The [Olares Market](https://market.olares.com/) maintains popular open-source apps like Ollama, ComfyUI, and Open WebUI.
 
-  1. Open LarePass on your phone and enter your previous account. You should see a red prompt on the top saying "No active Olares found".
-  2. Tap **Learn more** > **Reactivate** to enter the QR scan screen.
-  3. Tap **Scan QR code** to scan the QR code on the wizard page and activate Olares.
+If you have Docker experience, you can manually [deploy apps](../../developer/develop/tutorial/index.md) not listed in Olares Market in a testing environment.
+
+
+### Can I develop apps on Olares?
+Yes. You can install [Studio](../../developer/develop/tutorial/index.md) to code directly in your browser or connect your local VS Code to the device. This provides a development experience similar to your local machine but leverages the greater power of your server hardware.
+
+### Does the system support multi-user environments?
+Yes. Olares supports sub-accounts with a built-in roles and permissions system including Super Admin, Admin, and Member.
+
+This allows a team to access shared tools on a single server. For example, you can share files within the same Olares cluster or install a large AI model once for everyone to use.
