@@ -8,22 +8,30 @@ const side = {
       items: [
         // { text: "Compare Olares and NAS", link: "/manual/olares-vs-nas" },
         {
-          text: "Help and support",
-          link: "/manual/help/",
+          text: "FAQs",
+//           link: "/manual/help/faqs",
           collapsed: true,
           items: [
             {
-              text: "FAQs",
-              link: "/manual/help/faqs",
+              text: "Olares FAQs",
+              link: "/manual/help/olares",
+            },
+            {
+                text: "Installation & activation FAQs",
+            link: "/manual/help/installation",
+            },
+            {
+                text: "Usage FAQs",
+            link: "/manual/help/usage",
             },
 //             {
 //               text: "Request support",
 //               link: "/manual/help/request-technical-support",
 //             },
-            {
-             text: "Troubleshooting guide",
-             link: "/manual/help/troubleshooting",
-            },
+//             {
+//              text: "Troubleshooting",
+//              link: "/manual/help/troubleshooting",
+//             },
           ],
         },
       ],
@@ -139,7 +147,7 @@ const side = {
             { text: "Manage integrations", link: "/manual/larepass/integrations" },
           ],
         },
-        {text: "Use VPN", link:"/manual/larepass/private-network"},
+        { text: "Use VPN", link: "/manual/larepass/private-network" },
         {
           text: "Manage device",
           collapsed: true,
@@ -387,12 +395,12 @@ const side = {
                 { text: "Restore", link: "/manual/olares/settings/restore" },
               ],
             },
-            {text: "Developer resources", link: "/manual/olares/settings/developer"},
-            ]
-          },
-          {text: "Dashboard", link: "/manual/olares/resources-usage"},
-          {text: "Profile", link: "/manual/olares/profile"},
-        ],
+            { text: "Developer resources", link: "/manual/olares/settings/developer" },
+          ]
+        },
+        { text: "Dashboard", link: "/manual/olares/resources-usage" },
+        { text: "Profile", link: "/manual/olares/profile" },
+      ],
     },
     {
       text: "Best practices",
@@ -593,6 +601,7 @@ const side = {
         {
           text: "Steam",
 <<<<<<< HEAD
+<<<<<<< HEAD
           link: "/use-cases/stream-game",
         },
         // {
@@ -600,6 +609,8 @@ const side = {
         //   link: "/use-cases/host-cloud-android",
         // },
 =======
+=======
+>>>>>>> a912123b (docs: add faqs and refactor help docs)
           collapsed: true,
           items: [
             {
@@ -623,7 +634,18 @@ const side = {
 //           text: "Redroid",
 //           link: "/use-cases/host-cloud-android",
 //         },
+<<<<<<< HEAD
 >>>>>>> 36acf038 (fix conflicts)
+=======
+=======
+          link: "/use-cases/stream-game",
+        },
+        // {
+        //   text: "Redroid",
+        //   link: "/use-cases/host-cloud-android",
+        // },
+>>>>>>> 80940a1e (docs: add faqs and refactor help docs)
+>>>>>>> a912123b (docs: add faqs and refactor help docs)
         {
           text: "Windows",
           link: "/use-cases/windows",
