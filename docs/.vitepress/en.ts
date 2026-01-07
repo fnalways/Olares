@@ -387,12 +387,12 @@ const side = {
                 { text: "Restore", link: "/manual/olares/settings/restore" },
               ],
             },
-            { text: "Developer resources", link: "/manual/olares/settings/developer" },
-          ]
-        },
-        { text: "Dashboard", link: "/manual/olares/resources-usage" },
-        { text: "Profile", link: "/manual/olares/profile" },
-      ],
+            {text: "Developer resources", link: "/manual/olares/settings/developer"},
+            ]
+          },
+          {text: "Dashboard", link: "/manual/olares/resources-usage"},
+          {text: "Profile", link: "/manual/olares/profile"},
+        ],
     },
     {
       text: "Best practices",
@@ -470,6 +470,7 @@ const side = {
   ],
   "/use-cases/": [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   {
@@ -544,6 +545,8 @@ const side = {
  ],
 =======
 >>>>>>> 3e46af80 (docs: add play games directly on olares device)
+=======
+>>>>>>> 36acf038 (fix conflicts)
     {
       text: "Use cases",
       link: "/use-cases/",
@@ -609,11 +612,18 @@ const side = {
             }
           ]
         },
+<<<<<<< HEAD
         {
           text: "Redroid",
           link: "/use-cases/host-cloud-android",
         },
 >>>>>>> 3e46af80 (docs: add play games directly on olares device)
+=======
+//         {
+//           text: "Redroid",
+//           link: "/use-cases/host-cloud-android",
+//         },
+>>>>>>> 36acf038 (fix conflicts)
         {
           text: "Windows",
           link: "/use-cases/windows",
@@ -634,9 +644,12 @@ const side = {
     },
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a6b2b50a (docs: add play games directly on olares device)
 >>>>>>> 3e46af80 (docs: add play games directly on olares device)
+=======
+>>>>>>> 36acf038 (fix conflicts)
   "/developer/": [
     {
       text: "Concepts",
