@@ -16,21 +16,7 @@
       "source": "/",
       "destination": "/manual/docs-home.html",
       "permanent": true
-    },
-    {
-      "source": "/manual/olares/studio/:path*",
-      "destination": "/developer/develop/tutorial/:path*",
-      "permanent": true
-    },
-    {
-      "source": "(/zh)?/developer/develop/tutorial/studio",
-      "destination": "$1/developer/develop/tutorial",
-      "permanent": true
-    },
-    {
-      "source": "/developer/develop/tutorial/test",
-      "destination": "/developer/develop/tutorial",
-      "permanent": true
     }
-  ]
+    ],
+  "bulkRedirectsPath": "redirects.csv"
 }
