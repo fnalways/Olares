@@ -1,0 +1,190 @@
+import { defineConfig, type DefaultTheme } from "vitepress";
+
+export const oneSidebar: DefaultTheme.Sidebar = {
+  "/one/": [
+    {
+      text: "Olares One",
+      link: "/one/",
+      items: [
+        {
+          text: "Technical spec",
+          link: "/one/spec",
+        },
+        {
+          text: "FAQs",
+          link: "/one/faq",
+        },
+      ],
+    },
+    {
+      text: "Initial setup",
+      items: [
+        {
+          text: "First boot",
+          link: "/one/first-boot",
+        },
+        {
+          text: "Access Olares",
+          link: "/one/access-olares",
+        },
+      ]
+    },
+    {
+      text: "Onboarding",
+      items: [
+        {
+          text: "Open WebUI with Ollama",
+          link: "/one/ollama",
+        },
+        {
+          text: "Switch GPU mode",
+          link: "/one/gpu",
+        },
+      ]
+    },
+    {
+      text: "Use",
+      items: [
+        {
+          text: "Customize Olares",
+          link: "/one/customize",
+        },
+        {
+          text: "Manage files",
+          link: "/one/files",
+        },
+        {
+          text: "Install & update apps",
+          link: "/one/market",
+        },
+        {
+          text: "Secure passwords",
+          link: "/one/vault",
+        },
+        {
+          text: "Download YouTube videos",
+          link: "/one/wise-download",
+        },
+        {
+          text: "Deploy an app",
+          link: "/one/deploy",
+        },
+
+      ]
+    },
+    {
+      text: "Manage",
+      items: [
+        {
+          text: "Set up app entrances",
+          link: "/one/app-entrances",
+        },
+        {
+          text: "Create users",
+          link: "/one/users",
+        },
+      ]
+    },
+    {
+      text: "Monitor",
+      items: [
+        {
+          text: "System resources",
+          link: "/one/dashboard",
+        },
+        {
+          text: "Traffic",
+          link: "/one/space",
+        },
+      ]
+    },
+    {
+      text: "Explore",
+      items: [
+        {
+          text: "Generate images with ComfyUI",
+          link: "/one/comfyui",
+        },
+        {
+          text: "Play games with Steam Headless",
+          link: "/one/steam",
+        },
+        {
+          text: "Access Windows in Olares",
+          link: "/one/windows",
+        },
+        {
+          text: "Generate music with Ace-Step",
+          link: "/one/ace-step",
+        },
+
+        {
+          text: "Deep research with DeerFlow",
+          link: "/one/deerflow",
+        },
+      ]
+    },
+    {
+      text: "Advanced",
+      items: [
+        {
+          text: "Connect two Olares One",
+          items:
+            [
+              {
+                text: "Manage GPU",
+                link: "/one/two-one-gpu",
+              },
+              {
+                text: "Run larger local LLMs",
+                link: "/one/two-one-llm",
+              }
+            ]
+        },
+        {
+          text: "Set up with eGPU",
+          link: "/one/egpu",
+        },
+        {
+          text: "Dual-boot Olares OS with Windows",
+          items:
+            [
+              {
+                text: "Single-drive setup",
+                link: "/one/single-drive-dual-boot",
+              },
+              {
+                text: "Dual-drive setup",
+                link: "/one/dual-drive-dual-boot",
+              }
+            ]
+        },
+        {
+          text: "Set up with eGPU",
+          link: "/one/egpu",
+        },
+        {
+          text: "Expand storage with a new drive",
+          link: "/one/expand-storage-with-external-drive",
+        },
+      ]
+    },
+    {
+      text: "System update",
+      items: [
+        {
+          text: "Update OS",
+          link: "/one/update",
+        },
+        {
+          text: "Back up & restore",
+          link: "/one/backup-resotre",
+        },
+        {
+          text: "Factory reset",
+          link: "/one/factory-reset",
+        },
+      ]
+    },
+  ],
+}
