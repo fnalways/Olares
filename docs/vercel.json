@@ -18,8 +18,8 @@
       "permanent": true
     },
     {
-      "source": "/manual/olares/studio{/:(.*)}?",
-      "destination": "/developer/develop/tutorial/$1",
+      "source": "/manual/olares/studio/:path*",
+      "destination": "/developer/develop/tutorial/:path*",
       "permanent": true
     },
     {
