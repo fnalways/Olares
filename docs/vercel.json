@@ -16,6 +16,16 @@
       "source": "/",
       "destination": "/manual/docs-home.html",
       "permanent": true
+    },
+    {
+      "source": "/manual/olares/studio{/:(.*)}?",
+      "destination": "/developer/develop/tutorial/$1",
+      "permanent": true
+    },
+    {
+      "source": "(/zh)?/developer/develop/tutorial/studio",
+      "destination": "$1/developer/develop/tutorial",
+      "permanent": true
     }
   ]
 }
