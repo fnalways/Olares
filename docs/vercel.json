@@ -26,6 +26,11 @@
       "source": "(/zh)?/developer/develop/tutorial/studio",
       "destination": "$1/developer/develop/tutorial",
       "permanent": true
+    },
+    {
+      "source": "/developer/develop/tutorial/test",
+      "destination": "/developer/develop/tutorial",
+      "permanent": true
     }
   ]
 }
