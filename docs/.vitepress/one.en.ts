@@ -27,6 +27,10 @@ export const oneSidebar: DefaultTheme.Sidebar = {
           text: "Access Olares",
           link: "/one/access-olares",
         },
+        {
+          text: "Redeem Olares Space membership",
+          link: "/one/redeem-membership",
+        },
       ]
     },
     {
