@@ -11,7 +11,7 @@ Follow the steps on this page to redeem your membership and unlock the full pote
 
 ## Redemption steps
 
-1. Go to https://space.olares.com in a web browser.
+1. Go to `https://space.olares.com` in a web browser.
 2. Use the LarePass app to scan the QR code on screen to log in.
 3. Go to **Usage & billing** > **Account email**, and then click **Bind** to enter the email address used for your Kickstarter order. 
 

@@ -1,6 +1,6 @@
 ---
 outline: [2, 4]
-description: Learn how to upload data, share content, and connect external cloud drives in Olares.
+description: Get started with the Files app on your Olares One. Learn the interface layout, how to upload your first files, share content, and connect your existing cloud drives.
 ---
 
 # Manage files
@@ -9,10 +9,9 @@ Olares's built-in Files app provides a secure and efficient solution for file st
 
 Operations in Files are essentially the same as in other file managers. This page introduces some common tasks in Files to get you started.
 
-## Understand the interface
+## Before you begin
 
-The Files interface mainly consists of the following areas:
-
+Familiarize yourself with the workspace. The Files interface mainly consists of the following areas:
 * Drive: Stores your personal files such as documents and pictures.
 * Sync: A library-based storage area for files requiring frequent modifications or real-time synchronization.
 * Application: Reserved for application-specific data. Primarily for development and debugging, not general file storage.
@@ -22,6 +21,8 @@ The Files interface mainly consists of the following areas:
 ![Files](/images/manual/olares/files-index.png#bordered)
 
 ## Upload files
+
+Populate your server with content to start using Olares One. Use the Files app or the LarePass desktop to upload files directly from your computer, or use the LarePass mobile to upload from your mobile devices.
 
 ### Upload via the Files app
 
@@ -45,7 +46,9 @@ LarePass desktop offers the same upload experience as the Files app, with automa
 
 ### Upload via LarePass mobile
 
-You can also upload files or folders on your phone via the LarePass app.
+Use LarePass Mobile to upload files from your mobile device to Olares.
+
+You can also upload files or folders from your mobile device to Olares using the LarePass mobile.
 <Tabs>
 <template #Direct-upload>
 
@@ -80,11 +83,11 @@ Files uploaded via the LarePass mobile app will also sync automatically with you
 
 ## Share files
 
-This feature supports sharing folders with internal members or external users through different methods. You can flexibly set access permissions, passwords, and expiration dates, and manage or cancel these shares at any time.
+Share stored files with family memeber, friends, or colleagues. Olares provides flexible sharing options depending on the folder location.
 
 ### Share types and support scope
 
-Currently, file sharing is only supported at the **folder** level. Supported sharing types vary depending on the directory location of the folder. Refer to the following table for details:
+Currently, you can share content at the **folder** level. Supported sharing types vary depending on the directory location of the folder. Refer to the following table for details:
 
 | Directory type | Public share | Internal share | SMB share |
 | :--- | :---: | :---: | :---: |
@@ -103,7 +106,7 @@ Where,
 
 ### User permissions
 
-You can assign specific permissions to members in **Internal share** and **SMB share** to control their level of access and allowed operations.
+Set control levels when sharing internally or via SMB:
 
 | Permission | Description |
 | :--- | :--- |
@@ -177,34 +180,41 @@ SMB sharing utilizes a dedicated local Linux account system. The SMB accounts ge
 5. Click **Confirm** to generate the link.
 6. Copy or note down the link address, and then click **Confirm**.
 
-## Mount cloud storage
+## Connect cloud storage
 
-You can easily mount a cloud storage through the **Integration** function in Olares, and access and manage your cloud files directly in the **Files** application.
+You can connect services like Google Drive or AWS S3 to view and manage those external files directly within Olares. The unifies all your data in one interface.
 
 ![Cloud storage](/images/manual/olares/files-cloud.png)
 
-### Mount a cloud storage
+### Add a cloud drive
 
-To mount a cloud storage, connect to it in **Integrations** in LarePass or Olares Settings:
+Authorize the connection and add the drive to your Files app.
 
-* **OAuth-based storage services**: Google Drive and Dropbox. Connect via [**LarePass** app](../../larepass/integrations.md#add-a-cloud-drive-via-oauth).
-* **API credential-based services**: AWS S3 or Tencent Cloud Object Storage (COS); Connect via [LarePass app](../../larepass/integrations.md#add-a-cloud-storage-using-api-keys) or [Olares Settings](../settings/integrations.md#add-cloud-object-storage-via-api-keys).
+1. Connect your service using the supported method accordingly:
+    - OAuth-based storage services such as Google Drive and Dropbox: Connect via the [LarePass app](../../larepass/integrations.md#add-a-cloud-drive-via-oauth).
+    - API credential-based services such as AWS S3 and Tencent Cloud Object Storage (COS): Connect via the [LarePass app](../../larepass/integrations.md#add-a-cloud-storage-using-api-keys) or [Olares Settings](../settings/integrations.md#add-cloud-object-storage-via-api-keys).
+2. Open the Files app and confirm that the service appears as a drive under **Cloud Drive**.
 
-Once connected, the cloud storage will be automatically mounted under **Cloud Drive** in **Files**.
+### Access and manage cloud files
 
-### Access a cloud storage
+After the cloud storage is connected, you can interact with the cloud files from the Files app as if they were local.
 
-Once mounted, you can access and manage files just as you would with local storage:
+1. Open the Files app and select the cloud storage.
+2. Manage the cloud files the same way as you manage your local files:
+    - Upload and download files
+    - Preview supported file types
+    - Rename, move, or delete files and folders
 
-* **Upload / Download** files
-* **Preview** supported file types
-* **Rename**, **move**, or **delete** files and folders
+    Changes made in the Files app sync instantly to the cloud provider.
 
-Changes made in the Files app will sync with your remote storage provider.
+### Disconnect a cloud drive
 
-### Unmount a cloud storage
+To remove the drive, delete the integration in the LarePass app or Olares Settings.
 
-You can unmount a cloud storage by removing the corresponding integration:
+1. Remove the integration to disconnect the drive:
+    - [Remove integration in LarePass](../../larepass/integrations.md#disconnect-integrations)
+    - [Remove integration in Olares Settings](../settings/integrations.md#view-and-manage-existing-integrations)
+2. Verify that the drive disappears from the Files app.
 
-* [Remove integration in LarePass](../../larepass/integrations.md#disconnect-integrations)
-* [Remove integration in Olares Settings](../settings/integrations.md#view-and-manage-existing-integrations)
+    The drive disappears from your Files app, but your data remains safe on the cloud service.
+

@@ -19,7 +19,7 @@ Start by connecting your Olares One to power and the network.
 
 3. Press the **Power** button on the Olares One. The status LED turns solid white, indicating the device is powered on successfully.
 
-## 2. Install LarePass
+## 2. Install LarePass mobile
 
 To interact with your Olares One without a monitor, you need the **LarePass** app. It is the companion mobile app for managing your Olares identity and verifying logins.
 
@@ -83,6 +83,10 @@ Now that setup is completed, switch to your computer's web browser to access you
 
 By default, your Olares ID uses the olares.com domain. This means you access your Olares services through URLs like desktop.{your-username}.olares.com without complex network configurations.
 
-When you are familiar with the system, you might want to use a custom domain such as employee@company.com or me@my-personal-domain.com for a personalized experience.
+When you are familiar with the system, you might want to use a custom domain such as `employee@company.com` or `me@my-personal-domain.com` for a personalized experience.
 
 For more information, see [Set up a custom domain for your Olares](../manual/best-practices/set-custom-domain.md).
+
+## Resources
+
+- [Back up mnemonic phrase](../manual/larepass/back-up-mnemonics.md)
