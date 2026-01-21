@@ -83,7 +83,7 @@ Files uploaded via the LarePass mobile app will also sync automatically with you
 
 ## Share files
 
-Share stored files with family memeber, friends, or colleagues. Olares provides flexible sharing options depending on the folder location.
+Share stored files with family members, friends, or colleagues. Olares provides flexible sharing options depending on the folder location.
 
 ### Share types and support scope
 
@@ -99,7 +99,7 @@ Currently, you can share content at the **folder** level. Supported sharing type
 
 Where,
 - **Public share**: Generates an access link with password protection supported, suitable for external sharing.
-- **Internal share**: Restricted to members within the same Olares cluster, suitable for internal team collaboration. For more information, see [Manage your team](../settings/manage-team.md).
+- **Internal share**: Restricted to members within the same Olares cluster, suitable for internal team collaboration. For more information, see [Manage your team](../manual/olares/settings/manage-team.md).
 - **SMB share**: Shared via the SMB protocol within the Local Area Network (LAN).
 
 ![Share file type](/images/manual/olares/share-files.png#bordered)
@@ -180,9 +180,9 @@ SMB sharing utilizes a dedicated local Linux account system. The SMB accounts ge
 5. Click **Confirm** to generate the link.
 6. Copy or note down the link address, and then click **Confirm**.
 
-## Connect cloud storage
+## Connect and manage cloud files
 
-You can connect services like Google Drive or AWS S3 to view and manage those external files directly within Olares. The unifies all your data in one interface.
+Bring your scattered files together. Instead of switching between different apps, connect services like Google Drive or AWS S3 to view and manage those external files directly within Olares.
 
 ![Cloud storage](/images/manual/olares/files-cloud.png)
 
@@ -191,8 +191,8 @@ You can connect services like Google Drive or AWS S3 to view and manage those ex
 Authorize the connection and add the drive to your Files app.
 
 1. Connect your service using the supported method accordingly:
-    - OAuth-based storage services such as Google Drive and Dropbox: Connect via the [LarePass app](../../larepass/integrations.md#add-a-cloud-drive-via-oauth).
-    - API credential-based services such as AWS S3 and Tencent Cloud Object Storage (COS): Connect via the [LarePass app](../../larepass/integrations.md#add-a-cloud-storage-using-api-keys) or [Olares Settings](../settings/integrations.md#add-cloud-object-storage-via-api-keys).
+    - OAuth-based storage services such as Google Drive and Dropbox: Connect via the [LarePass app](../manual/larepass/integrations.md#add-a-cloud-drive-via-oauth).
+    - API credential-based services such as AWS S3 and Tencent Cloud Object Storage (COS): Connect via the [LarePass app](../manual/larepass/integrations.md#add-a-cloud-storage-using-api-keys) or [Olares Settings](../manual/olares/settings/integrations.md#add-cloud-object-storage-via-api-keys).
 2. Open the Files app and confirm that the service appears as a drive under **Cloud Drive**.
 
 ### Access and manage cloud files
@@ -212,9 +212,8 @@ After the cloud storage is connected, you can interact with the cloud files from
 To remove the drive, delete the integration in the LarePass app or Olares Settings.
 
 1. Remove the integration to disconnect the drive:
-    - [Remove integration in LarePass](../../larepass/integrations.md#disconnect-integrations)
-    - [Remove integration in Olares Settings](../settings/integrations.md#view-and-manage-existing-integrations)
+    - [Remove integration in LarePass](../manual/larepass/integrations.md#disconnect-integrations)
+    - [Remove integration in Olares Settings](../manual/olares/settings/integrations.md#view-and-manage-connected-services)
 2. Verify that the drive disappears from the Files app.
 
     The drive disappears from your Files app, but your data remains safe on the cloud service.
-
