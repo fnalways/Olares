@@ -5,7 +5,9 @@ description: View the hardware components and specifications of Olares One.
 
 # Technical specifications
 
-Olares One features high-performance components designed to run advanced AI models locally and host private services efficiently. This page provides information about the hardware components and specifications.
+Olares One features high-performance components designed to run advanced AI models locally and host private services efficiently.
+
+This page provides information about the hardware components and specifications.
 
 ## Hardware overview
 
