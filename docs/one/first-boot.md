@@ -1,39 +1,57 @@
 ---
-description: Learn how to set up your Olares One for the first time, including setting up hardware, installing the client app, creating your account, connecting to your device, installing & activating the system, and logging into your Olares.
+description: Learn how to set up your Olares One for the first time, including setting up hardware, installing the client app, creating your Olares account, connecting to your device, installing & activating the system, and logging into your Olares.
+head:
+  - - meta
+    - name: keywords
+      content: Olares, Olares One, first boot, initial setup, first time use
 ---
 
-# First boot
+# First boot <Badge type="tip" text="15 min" />
 
-Follow the steps on this page to set up your Olares One hardware, connect to the network, and activate your system for the first time.
+This guide walks you through setting up your Olares One for the first time.
+
+## Learning objectives
+
+This setup process includes:
+- Connect physical power and network cables.
+- Install the LarePass app to act as your setup controller.
+- Create an Olares ID, your digital identity.
+- Pair your LarePass with the Olares One.
+- Activate the system and obtain your access URL.
+
+## Before you begin
+
+Ensure that you have prepared the following items:
+- An iOS or Android mobile device to run the LarePass app
+- A power outlet near your installation location
+- (Recommended) An Ethernet cable connected to your router or switch
+
+    :::tip
+    A wired connection is recommended for stability and speed during the initial installation. If wired access is not available, you can configure Wi-Fi via Bluetooth during setup.
+    :::
 
 ## 1. Set up hardware
 
-Start by connecting your Olares One to power and the network.
+Start by connecting the physical hardware components.
 
 1. Plug the included power adapter into the **Power port** on the Olares One, and then connect it to a power outlet.
 2. (Recommended) Connect one end of an Ethernet cable to the **2.5G Ethernet port** on the Olares One, and then connect the other end to your router or switch.
-
-    :::tip
-    The wired LAN connection provides the best stability and performance. If the wired connection is not available, you can configure Wi-Fi via Bluetooth in later steps.
-    :::
-
 3. Press the **Power** button on the Olares One. The status LED turns solid white, indicating the device is powered on successfully.
 
 ## 2. Install LarePass mobile
 
 To interact with your Olares One without a monitor, you need the **LarePass** app. It is the companion mobile app for managing your Olares identity and verifying logins.
 
-Search for "LarePass" in the Apple App Store or Google Play Store and install it on your mobile device.
+1. Search for "LarePass" in the Apple App Store or Google Play Store.
+2. Install and open the app on your mobile device.
 
 ## 3. Create Olares ID
 
 To manage your Olares One securely and independently, you need an Olares ID. This unique identifier acts as your username across the entire Olares ecosystem, serving as your digital identity and gateway to various services.
 
-1. Open the LarePass app, and then tap **Create an account**.
+1. In the LarePass app, tap **Create an account**.
 2. Enter a unique Olares ID.
-3. Click **Continue**. Your Olares ID is created.
-
-For more information, see [Olares ID](../developer/concepts/olares-id.md).
+3. Click **Continue**. Your Olares ID is now created and ready to use.
 
 ## 4. Connect LarePass to Olares One
 
@@ -61,32 +79,36 @@ If a wired LAN connection is unavailable, use this method.
 
 ## 5. Install & activate Olares OS
 
-With the connection established between your mobile device and the Olares One, you can now proceed with the system installation and activation.
+With device paired, you can proceed with the system installation and activation.
 
 1. In the LarePass app, tap **Install now** to install the Olares OS.
 2. Tap **Activate now** to activate and initialize the system.
 3. Select a reverse proxy node that is closest to your location and tap **Confirm**.
 4. Set the login password for Olares as prompted.
 5. Copy or note down your personal URL. For example, `https://desktop.{your-olares-id}.olares.com`. You need this URL to access your Olares later.
+6. Tap **I got it**. Your Olares One is now ready to use.
 
-## 6. Log in to Olares
+:::tip
+Your system is now accessible via this default address without any complex network configuration. You can configure a custom domain later  if you prefer a personalized address.
+:::
 
-Now that setup is completed, switch to your computer's web browser to access your Olares desktop.
+## Next steps
 
-1. Go to your personal URL.
+Your Olares One is already set up and active. Here are the recommended ways to access Olares and start working with your system:
+- [Access using URL](acccess-olares.md)
+- [Access using local network](access-olares.md)
+
+<!--### Access using URL
+
+1. On your computer, open a web browser and go to your personal URL. Screen ask you to Confirm on LarePass app, verify using one-time password from LarePass
+3. Open larepass, enter password, tap **Complete**. You log in to larepass app.
 2. Enter the login password you set in the previous step.
 3. Verify your login using one of the following methods:
     - Tap **Confirm** in the **Confirm Login** notification sent to your LarePass app.
-    - Enter the 6-digit authenticator code that is displayed on the **Settings** page in the LarePass app.
-
-### Use custom domains
-
-By default, your Olares ID uses the olares.com domain. This means you access your Olares services through URLs like desktop.{your-username}.olares.com without complex network configurations.
-
-When you are familiar with the system, you might want to use a custom domain such as `employee@company.com` or `me@my-personal-domain.com` for a personalized experience.
-
-For more information, see [Set up a custom domain for your Olares](../manual/best-practices/set-custom-domain.md).
+    - Click Verify using one-time password from LarePass. then Enter the 6-digit authenticator code that is displayed on the **Vault** tab in the LarePass app.<-->
 
 ## Resources
 
+- [Olares ID](../developer/concepts/olares-id.md)
 - [Back up mnemonic phrase](../manual/larepass/back-up-mnemonics.md)
+- [Set up a custom domain for your Olares](../manual/best-practices/set-custom-domain.md)
