@@ -51,7 +51,12 @@ To manage your Olares One securely and independently, you need an Olares ID. Thi
 
 1. In the LarePass app, tap **Create an account**.
 2. Enter a unique Olares ID.
+
+    ![Create Olares ID](../public/images/one/create-olares-id.png#bordered){width=30%}
+
 3. Click **Continue**. Your Olares ID is now created and ready to use.
+
+    ![Olares ID created](../public/images/one/olares-id-created.png#bordered){width=30%}
 
 ## 4. Connect LarePass to Olares One
 
@@ -64,7 +69,10 @@ Choose one of the following methods according to your network setup.
 If Olares One connects to a wired LAN and your phone is on the same network, use this method.
 
 1. In the LarePass app, tap **Discover nearby Olares**.
-2. Select your Olares One from the list of available devices.
+
+    ![Discover nearby Olares](../public/images/one/discover-nearby-olares.png#bordered){width=30%}  
+
+2. Find your Olares One from the list of available devices.
 
 ### Method B: Wi-Fi via Bluetooth
 
@@ -75,18 +83,30 @@ If a wired LAN connection is unavailable, use this method.
 3. When your device appears, tap **Network setup**.
 4. Connect to the Wi‑Fi your phone is currently using.
 5. Return to the device scan page and tap **Discover nearby Olares** again.
-6. Select your Olares One from the list of available devices.
+6. Find your Olares One from the list of available devices.
 
 ## 5. Install & activate Olares OS
 
 With device paired, you can proceed with the system installation and activation.
 
-1. In the LarePass app, tap **Install now** to install the Olares OS.
-2. Tap **Activate now** to activate and initialize the system.
+1. In the LarePass app, on the device you just found, tap **Install now** to install the Olares OS.
+
+    ![Find your device](../public/images/one/install-now.png#bordered){width=30%}
+
+2. When the OS installation finishes, tap **Activate now** to activate and initialize the system.
+
+    ![Activate Olares OS](../public/images/one/activate-now.png#bordered){width=30%}
+
 3. Select a reverse proxy node that is closest to your location and tap **Confirm**.
+
+    ![Reverse proxy](../public/images/one/select-reverse-proxy.png#bordered){width=30%}
+
 4. Set the login password for Olares as prompted.
 5. Copy or note down your personal URL. For example, `https://desktop.{your-olares-id}.olares.com`. You need this URL to access your Olares later.
-6. Tap **I got it**. Your Olares One is now ready to use.
+
+    ![Obtain URL](../public/images/one/obtain-url.png#bordered){width=30%}
+
+6. Tap **Got it**. Your Olares One is now ready to use.
 
 :::tip
 Your system is now accessible via this default address without any complex network configuration. You can configure a custom domain later  if you prefer a personalized address.
@@ -100,12 +120,10 @@ Your Olares One is already set up and active. Here are the recommended ways to a
 
 <!--### Access using URL
 
-1. On your computer, open a web browser and go to your personal URL. Screen ask you to Confirm on LarePass app, verify using one-time password from LarePass
-3. Open larepass, enter password, tap **Complete**. You log in to larepass app.
-2. Enter the login password you set in the previous step.
-3. Verify your login using one of the following methods:
-    - Tap **Confirm** in the **Confirm Login** notification sent to your LarePass app.
-    - Click Verify using one-time password from LarePass. then Enter the 6-digit authenticator code that is displayed on the **Vault** tab in the LarePass app.<-->
+1. Open a web browser on your computer and go to your personal URL. 
+2. Click **Verify using one-time password from LarePass** on the screen.
+3. Open the LarePass app, obtan the 6-digit authenticator code that is displayed on the **Vault** tab.
+4. Go back to the browser screen and enter the authenticator code to log in to Olares.-->
 
 ## Resources
 
