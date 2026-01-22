@@ -118,16 +118,20 @@ Your system is now accessible via this default address without any complex netwo
 
 ## Next steps
 
-Your Olares One is already set up and active. Here are the recommended ways to access Olares and start working with your system:
-- [Access using URL](access-olares.md)
-- [Access using local network](access-olares.md)
+Your Olares One is already set up and active. Here are the recommended ways to access Olares and start working with your system.
 
-<!--### Access using URL
+### Access using URL
+
+This is the standard way to access your Olares desktop.
 
 1. Open a web browser on your computer and go to your personal URL. 
 2. Click **Verify using one-time password from LarePass** on the screen.
 3. Open the LarePass app, obtan the 6-digit authenticator code that is displayed on the **Vault** tab.
-4. Go back to the browser screen and enter the authenticator code to log in to Olares.-->
+4. Go back to the browser screen and enter the authenticator code to log in to Olares.
+
+### Access using local network
+
+Connect to your Olares via the local network for advanced management. For more information, see [Set up local network access](access-olares.md).
 
 ## Resources
 
