@@ -1,6 +1,10 @@
 ---
 outline: [2, 3]
 description: View the hardware components and specifications of Olares One.
+head:
+  - - meta
+    - name: keywords
+      content: Olares, Olares One, technical specifications, tech specs, hardware specs
 ---
 
 # Technical specifications <Badge type="tip" text="2 min" />
