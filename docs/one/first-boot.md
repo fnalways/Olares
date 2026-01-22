@@ -99,6 +99,10 @@ With device paired, you can proceed with the system installation and activation.
 
 3. Select a reverse proxy node that is closest to your location and tap **Confirm**.
 
+    :::tip Reverse proxy node
+    The reverse proxy node acts as a secure gateway for your connection. You can think of this node as a "relay station" for your connection. Selecting the location physically nearest to you ensures the fastest response times and best stability when accessing your desktop remotely.
+    :::
+
     ![Reverse proxy](../public/images/one/select-reverse-proxy.png#bordered){width=30%}
 
 4. Set the login password for Olares as prompted.
@@ -115,7 +119,7 @@ Your system is now accessible via this default address without any complex netwo
 ## Next steps
 
 Your Olares One is already set up and active. Here are the recommended ways to access Olares and start working with your system:
-- [Access using URL](acccess-olares.md)
+- [Access using URL](access-olares.md)
 - [Access using local network](access-olares.md)
 
 <!--### Access using URL
