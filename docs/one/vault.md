@@ -1,175 +1,186 @@
 ---
 outline: [2, 3]
-description: Understand Vault basics in Olares. Learn to set up vaults, manage vault items, organize sensitive data with tags, and protect your information with local passwords and encryption.
+description: Understand Vault basics in Olares. Learn to set up vaults and manage vault items.
 ---
 
 # Secure passwords with Vault
 
-Vault is a password manager in Olares, designed for secure storage and management of sensitive data. With Vault, you can safely store and organize private keys and passwords, digital identities (DIDs) and Olares IDs, one-time passwords (OTPs), and other confidential data.
+Vault is the dedicated password and sensitive data manager in Olares. Use it to securely store passwords, keys, digital identities, and sensitive documents.
 
-This guide will walk you through the fundamentals of using Vault, from setting up your first vault to organizing your sensitive data efficiently.
+This page covers the fundamentals of using Vault, including setting up your first vault, importing credentials, and managing your sensitive data efficiently.
 
-## Understand Vault components
+## Before you begin
 
-### Types of vault
-Olares Vault offers two main types of vaults for users:
+Familiarize yourself with related Vault concepts and how Vault organizes data.
 
-* Main vault (**My vault**): Automatically created upon account activation, serving as the user's private vault. It's encrypted with the user's mnemonic for maximum security.
-* Shared vault (**Team vault**): These are collaborative vaults within Olares, allowing secure information sharing among team members or family.
+### Vault types
+
+Olares Vault offers two main types of vaults:
+
+* My vault: This is your private vault that is created automatically upon account activation. The vault is encrypted with your mnemonic and is visible only to you.
+* Team vaults: These are collaborative vaults that are used to share credentials securely with team members or family.
 
 ### Vault items
-Think of vault items as individual secure containers for your sensitive information. Each vault item consists of several components:
 
-* **Name**: A title for easy identification
-* **Tags**: For organization and quick filtering
-* **Fields**: Various data types to store different kinds of information
-* **History**: Tracks changes made to the item
-* **Attachments**: For adding related files
-* **Expiration**: Set an expiry date for time-sensitive information
+A vault item is a secure container for a specific piece of information, such as a login credential or a secure note. Vault items mainly include the following information:
 
-Currently, Vault supports various default types for a vault item:
-- Website/App
-- Computer
-- Credit card
-- Bank account
-- Wi-Fi Password
-- Passport
-- Authenticator
-- Document
+- Type: The category of data, such as website, app, credit card, bank account, Wi-Fi password, and passport.
+- Name: A title for easy identification.
+- Tags: For organization and quick filtering.
+- Fields: Customizable input fields for recording different types of data of vault items, such as username, password, PIN, and URL.
+- Attachments: For adding related files.
+- Expiration: Set an expiry date for time-sensitive information.
+- History: Tracks changes made to the item.
 
-### Fields
-Fields are the core component of Vault Items, allowing storage of various data types, including:
+## Set up Vault
 
-* Username
-* Password
-* Mnemonic
-* Email address
-* URL
-* Date and month
-* Credit card number
-* Phone number
-* PIN
-* Plain text
-* One-time password (OTP)
+When you open Vault for the first time, you must initialize it for security.
 
-## Protect Vault with password
-When use Vault in Olares for the first time, you will be prompted to set a local password. This password should not be the same as your Olares login password.
+1. Set a local password for Vault, which is used to unlock Vault on the current device only.
 
-1. Set the local password for Vault.
-2. Import the Olares ID that's already linked to your Olares server using mnemonic phrase. 
+   :::tip
+   For security, do not use your Olares login password.
+   :::
 
-![Vault password](/images/manual/olares/vault-local-password.png)
+   ![Open Vault for the first time](../public/images/one/open-vault.png#bordered){width=35%}
 
-:::info
-If you don't know where to find the mnemonic phrase, see [back up mnemonic phrase](/manual/larepass/back-up-mnemonics).
+2. Click **Confirm**.
 
+3. Import your Olares ID that is already linked to your server using your mnemonic phrase.
 
-## Manage vault items
-:::tip
-Keep your vault organized from the start by using descriptive names and relevant tags. This becomes especially valuable as your collection of secure items grows.
-:::
+   ![Enter mnemonic phrase](../public/images/one/vault-enter-mnemonic-phrase.png#bordered){width=35%}
 
-### Add
-To add a vault item:
+   :::tip
+   For information about how to get your mnemonic phrase in case you do not have it handy, see [Reveal and back up your mnemonic phrase](../manual/larepass/back-up-mnemonics.md#reveal-and-back-up-your-mnemonic-phrase).
+   :::
+
+4. Click **Next**.
+
+## Add vault items
+
+Create new vault items to store your credentials.
+
 <tabs>
 <template #Olares>
 
 1. Open the Vault app from the Dock or Launchpad.
-2. Click <i class="material-symbols-outlined">add</i> in the top right corner.
-3. Select a type, such as **Website / App** for storing account details, and click **Create**.
+2. Click <i class="material-symbols-outlined">add</i> in the **All vaults** panel.
+3. From the **Select Vault** list, choose **My Vault** for private use or **Team Vault** for a shared one.
 
-   ![Add vault item](/images/manual/olares/add-vault-item.png#bordered)
-4. Fill in the required fields like item name, Username, Password, and URL.
+   ![Add vault item](../public/images/one/new-vault-item.png#bordered){width=50%}
 
-   ![Fill item fields](/images/manual/olares/fill-item-fields.png#bordered)
-5. Click **Save** to create the new vault item.
+4. Select the category of the vault item, and then click **Confirm**. The details panel opens on the right. It displays the default fields relevant to the category you selected.
+
+   ![Configure vault item settings](../public/images/one/configure-vault-item.png#bordered){width=50%}
+
+5. Fill in the default fields or customize the fields according to your needs:
+
+   - To add custom fields, click <i class="material-symbols-outlined">add</i> in the top right corner.
+   - To delete fields that you do not need, click <i class="material-symbols-outlined">delete</i>.
+   - To re-order the fields, click <i class="material-symbols-outlined">arrow_upward_alt</i> or <i class="material-symbols-outlined">arrow_downward_alt</i>.
+
+6. Click **Save**.
 </template>
 <template #LarePass-desktop-or-mobile>
 
-1. Open LarePass on your device, and navigate to the **Vault** page within the app.
+1. Open the LarePass desktop or mobile, and then go to the **Vault** tab.
 2. Click <i class="material-symbols-outlined">add</i> in the top right corner.
-3. Select a type, such as **Website / App** for storing account details, and click **Create**.
-4. Fill in the required fields like item name, Username, Password, and URL.
-5. Click **Save** to create the new vault item.
+3. From the **Select Vault** list, choose **My Vault** for private use or **Team Vault** for a shared one.
+4. Select the category of the vault item, and then click **Confirm**.
+5. Specify the detailed settings for the vault item, and then click **Save**.
 </template>
 
 <template #LarePass-browser-extension>
 
-:::info
-The LarePass browser extension is currently only available for Google Chrome. Visit the [official page](https://www.olares.com/larepass) to download the extension.
+:::info Before you begin
+- The LarePass browser extension is currently only available for Google Chrome. 
+- Install it from the Chrome Web Store or the [official page](https://www.olares.com/larepass). 
+- For quick access, pin the extension to your browser toolbar.
 :::
-:::tip
-To easily access LarePass, you can pin the extension to your toolbar.
-:::
-1. Click the LarePass icon in your toolbar or extension menu to open LarePass on the right side of your browser window.
-2. Navigate to the **Vault** page within the extension.
-3. Click <i class="material-symbols-outlined">add</i> in the top right corner.
-4. Select a type, such as **Website / App** for storing account details, and click **Create**.
-5. Fill in the required fields like item name, Username, Password, and URL. The URL field is automatically populated with the current web address.
-6. Click **Save** to create the new vault item.
+
+1. Click the LarePass icon on your browser toolbar to open the sidebar.
+2. Click **Vault**.
+3. Click <i class="material-symbols-outlined">add</i> in the **All vaults** panel.
+4. Select the category of the vault item, and then click **Confirm**.
+5. Specify the detailed settings for the vault item, and then click **Save**.
 </template>
 </tabs>
 
-### Import
+## Import passwords
 
-You can import passwords from other popular password applications like 1Password and BitWarden. Supported formats include `text/plain`, `.csv`, `.pls`, `.set`, `.pbes2`, `.1pux`, and `.json`.
+You can import passwords from other password managers such as 1Password and BitWarden. Supported formats include `text/plain`, `.csv`, `.pls`, `.set`, `.pbes2`, `.1pux`, and `.json`.
 
 :::tip LarePass Desktop only
-The import process must be completed using the LarePass desktop client.
+The import process must be completed using the LarePass desktop.
 :::
 
-![Vault import](/images/manual/olares/vault-import.png)
-1.  Open LarePass and click your avatar in the top-left corner.
-2.  Navigate to **Settings** > **Import**, and click the <i class="material-symbols-outlined">upload_file</i> button.
-3.  Select the file you want to import, such as `bitwarden_export.json`.
-4.  Choose the destination Vault. The default is **My Vault**, but you can also select a team Vault you have created.
-5.  Click **Confirm** to complete the import.
+1.  Open LarePass desktop.
+2.  Click your avatar in the top-left corner and click **Settings**.
+3.  In the **Settings** panel, click **Import**.
+4.  Select the file you want to import, such as `bitwarden_export.json`.
 
-The imported items will be automatically tagged with the import file's name, making them easy to find and manage in your Vault.
+      ![Vault import](/images/manual/olares/vault-import.png#bordered){width=90%}
 
-### Edit
+5.  Choose the destination Vault. The default is **My Vault**, but you can also select a team vault you have created.
+6.  Click **Import**. 
+
+      Imported items are automatically tagged with the file names for easy sorting.
+
+## Manage vault items
+
+Keep your vault items organized and up to date.
+
+### Edit vault items
+
 :::info
-The LarePass browser extension does not support editing vault items. For full editing capabilities, please use the Vault app in Olares, the mobile, or desktop versions of LarePass.
+You cannot edit vault items using the LarePass browser extension. Use the Vault app, LarePass desktop, or LarePass mobile instead.
 :::
-In the edit mode, you can:
-- Update required fields.
-- Add tags to items for easy organization and filtering.
-- Set an expiration time.
-- Add file attachments. Each file must not exceed 1 MB.
-- View and restore a history item. Vault keeps up to 10 records for each item. When this limit is reached, older entries are discarded to make way for new ones.
 
-To edit a vault item:
-1. In Vault, select the vault item you need to edit. 
-2. In its details window or page, click <i class="material-symbols-outlined">edit_note</i> in the top right corner to enter edit mode.
-3. Make the necessary changes to the item's details.
-4. Click **Save**.
+1. Open the Vault app.
+2. In the **All vaults** panel, click the target vault item.
+3. In the details panel on the right, click <i class="material-symbols-outlined">edit_note</i>.
+4. Make changes as needed, such as setting an expiration date or attaching a file up to 1 MB.
+5. Click **Save**.
 
-### Favorite
-Important items can be marked as favorites for quick access.
+### Mark favorite vault items
+
+Mark frequently used vault items for quick access.
+
 <tabs>
 <template #Olares>
 
-1. In Vault, click the vault item to open its details window on the right.
-2. Click <i class="material-symbols-outlined">star_border</i> in the top right corner to mark this item as favorite.
+1. Open the Vault app.
+2. In the **All vaults** panel, click the target vault item.
+3. Click <i class="material-symbols-outlined">star_border</i> in the top right corner. The item is marked with a star in the **All vaults** panel.
 </template>
 <template #LarePass-desktop-or-mobile>
 
-1. Open LarePass on your device, and navigate to the **Vault** page within the app.
-2. Click the vault item to navigate to its details page.
-3. Click <i class="material-symbols-outlined">star_border</i> in the top right corner to mark this item as favorite.
+1. Open the LarePass desktop or mobile.
+2. Go to the **Vault** tab, and then click the target vault item.
+3. Click <i class="material-symbols-outlined">star_border</i> in the top right corner. The item is marked with a star in the all vaults list.
 </template>
 </tabs>
 
+## Find vault items
 
+Locate vault items quickly using keyword search or filters.
 
-## Filter vault items
-You can use quick filters or search box to locate the vault item you need.
-### Quick filters
-* By Main Vault & Shared Vault: Select **My Vault** or **Team Vault** to quickly find items within.
-* By Tags: Click on tag names to locate tagged vault items easily.
-* By Favorites: Click on **Favorites** to list all your favorite items.
-* By Recently Used: Click on **Recently used** to display your recent items.
-* By attachment: Click on **Attachment** to display all items with attached files.
+### Search
 
-### Keyword search
-Click <i class="material-symbols-outlined">search</i> to directly search for target items using keywords.
+In the **All vaults** panel, click <i class="material-symbols-outlined">search</i> and enter keywords to find specific vault items.
+
+### Filter
+
+Use the left sidebar to narrow down the list:
+
+- Vault category: Switch between My Vault and Team Vaults to change the scope.
+- Tags: Click a tag name to view all related vault items.
+- Favorites: Click **Favorites** to view all starred items.
+- Recently used: Click **Recently used** to view your access history.
+- Attachments: Click **Attachments** to view items containing files.
+
+## Resources
+
+- [Manage shared vaults](../manual/olares/vault/share-vault-items.md)
+- [Autofill passwords with LarePass](../manual/larepass/autofill.md)
+- [Generate two-factor authentication codes](../manual/larepass/two-factor-verification.md)

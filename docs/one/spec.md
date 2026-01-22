@@ -1,9 +1,13 @@
 ---
 outline: [2, 3]
 description: View the hardware components and specifications of Olares One.
+head:
+  - - meta
+    - name: keywords
+      content: Olares, Olares One, technical specifications, tech specs, hardware specs
 ---
 
-# Technical specifications
+# Technical specifications <Badge type="tip" text="2 min" />
 
 Olares One features high-performance components designed to run advanced AI models locally and host private services efficiently.
 
@@ -13,6 +17,8 @@ This page provides information about the hardware components and specifications.
 
 Refer to the following table to identify the buttons, ports, and interfaces on Olares One.
 
+![Olares One rear panel](../public/images/one/olares-one-backview.png#bordered){width="80%"}
+
 | No. | Component | Description |
 | :--- | :--- | :--- |
 | 1 | Power button/status LED | Turns the device on or off. The LED light indicates the current operational status. |
@@ -21,8 +27,6 @@ Refer to the following table to identify the buttons, ports, and interfaces on O
 | 4 | HDMI 2.1 port | Connects to an external monitor or display for high-fidelity video and audio output. |
 | 5 | USB 3.2 port (Type-A)| Connects peripherals (such as a keyboard or mouse) or transfers data. |
 | 6 | 2.5G Ethernet port | Connects to a wired LAN for high-speed internet access (up to 2.5 Gbps). |
-
-![Olares One rear panel](../public/images/one/olares-one-backview.png#bordered){width="80%"}
 
 ## Component specifications
 
