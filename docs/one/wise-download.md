@@ -2,11 +2,19 @@
 outline: [2, 3]
 description: Learn how to save YouTube videos into your Wise library using YT-DLP for offline viewing.
 ---
-# Download YouTube videos in Wise
+# Download YouTube videos in Wise <Badge text="15 min"/>
 
 Wise lets you save YouTube videos directly into your library for offline viewing. Unlike a standard file download, saving to the library ensures the video appears within the Wise application, allowing you to manage, play, and organize it alongside your other content.
 
-## Before you begin
+## Learning objectives
+
+By the end of this tutorial, you will learn how to:
+
+- Save a YouTube video to your Wise library by pasting a link in Wise (recommended).
+- Save a video from your browser using the LarePass extension.
+- Check download progress and watch the video offline.
+
+## Install Wise and YT-DLP
 
 Before downloading YouTube videos, make sure the following apps are installed from Olares Market:
 - **Wise**: The interface.
@@ -18,9 +26,9 @@ Before downloading YouTube videos, make sure the following apps are installed fr
 
 ## Save video to library
 
-You can save videos by pasting the URL directly in Wise or by using the [LarePass extension](https://www.olares.com/larepass) while browsing.
+You can save videos by pasting the URL directly in Wise or by using the LarePass extension while browsing.
 
-### Paste URL in Wise
+### Paste URL in Wise <Badge text="recommended"/>
 
 1. Copy the URL of the YouTube video.
 2. Open Wise, click <i class="material-symbols-outlined">add_circle</i> in the bottom-left menu bar, then select **Add link**.
@@ -31,6 +39,8 @@ You can save videos by pasting the URL directly in Wise or by using the [LarePas
     - **Login is required**: If you see a prompt to log in to the site and upload cookies, simply click **Upload**. Once the status updates, click <i class="material-symbols-outlined">box_add</i> to save.
     
 ### Use LarePass extension
+
+If you frequently save videos while browsing, the [LarePass extension](https://www.olares.com/larepass) can be more convenient, but it requires installing the extension first.
 
 1. Open the YouTube video in your browser.
 2. Click the LarePass browser extension icon in your browser toolbar and select the "Collect" icon.
@@ -52,10 +62,10 @@ When you save a video to the library, Wise creates a record immediately, and the
 
 Once the download is complete, you can play the video directly inside Wise even without an internet connection.
 
-## Learn more
+## Resources
 
 If you want to explore more Wise features beyond offline video saving, see also:
 
-- [Wise basics](/docs/manual/olares/wise/basics.md): For general usage of the application.
-- [Subscribe and manage feeds](/docs/manual/olares/wise/subscribe.md): If you wish to follow YouTube channels via RSS.
-- [Manage cookies for Wise](/docs/manual/olares/wise/manage-cookies.md): For detailed cookie management configurations.
+- [Wise basics](/manual/olares/wise/basics.md): For general usage of the application.
+- [Subscribe and manage feeds](/manual/olares/wise/subscribe.md): If you wish to follow YouTube channels via RSS.
+- [Manage cookies for Wise](/manual/olares/wise/manage-cookies.md): For detailed cookie management configurations.
