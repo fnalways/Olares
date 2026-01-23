@@ -7,7 +7,7 @@ head:
       content: Olares, Olares One, upload files, manage files, access cloud files, Olares Files app
 ---
 
-# Manage files
+# Manage files <Badge type="tip" text="15 min" />
 
 Olares's built-in Files app provides a secure and efficient solution for file storage and synchronization. It allows you to access your personal files anywhere, keep data synchronized across devices, and manage third-party cloud storage in one place.
 
@@ -134,8 +134,7 @@ Deleted files cannot be recovered.
 1. Open the Files app from the Dock or Launchpad.
 2. Right-click the target file, and then click  **Delete**.
 3. In the **Delete** window, click **Confirm**.
-
-## Next steps
+<!--## Next steps
 
 Integrate external storage services like Google Drive, Dropbox, or AWS S3 to view and manage your cloud-based files directly in Olares without switching applications.
 
@@ -168,7 +167,7 @@ Integrate external storage services like Google Drive, Dropbox, or AWS S3 to vie
 
     b. Verify that the drive disappears from the Files app.
 
-    The drive disappears from your Files app, but your data remains safe on the cloud service.
+    The drive disappears from your Files app, but your data remains safe on the cloud service.-->
 
 ## Resources
 
@@ -176,4 +175,5 @@ Integrate external storage services like Google Drive, Dropbox, or AWS S3 to vie
 - [Share files](../manual/olares/files/share-files.md)
 - [Sync files to local](../manual/olares/files/sync-files.md)
 - [Mount SMB](../manual/olares/files/mount-SMB.md)
+- [Mount cloud storage](../manual/olares/files/mount-cloud-storage.md)
 - [LarePass official page](https://www.olares.com/larepass)
