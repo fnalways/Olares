@@ -20,7 +20,7 @@ Follow the steps on this page to redeem your membership.
 - Activate your Basic membership.
 - Manage or transfer your membership between accounts.
 
-## Before you
+## Before you begin
 
 Understand what Olares Space is and how your specific membership works.
 
@@ -31,8 +31,8 @@ Olares Space is a fully managed cloud platform that extends the capabilities of 
 ### Plans and features
 
 Olares Space offers two subscription tiers:
-- **Free**: Designed for users who need basic remote access. It provides standard speed and connectivity, with backups managed by the user via local devices or third-party cloud services.
-- **Basic**: Tailored for users who require high-performance remote access. It provides faster speeds, lower latency through regional nodes, higher data limits, and integrated cloud storage for backups.
+- **Free**: It provides standard speed and connectivity, with backups managed by the user via local devices or third-party cloud services.
+- **Basic**: It provides faster speeds, lower latency through regional nodes, higher data limits, and integrated cloud storage for backups.
 
 |Feature|Free|Basic|
 |:--|:--|:--|
