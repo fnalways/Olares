@@ -1,17 +1,31 @@
 ---
-outline: [2, 4]
-description: Get started with the Files app on your Olares One. Learn the interface layout, how to upload your first files, share content, and connect your existing cloud drives.
+outline: [2, 3]
+description: Get started with the Files app on your Olares One. Learn the interface layout, how to upload your first files, preview and edit content, search your drive, and connect external cloud storage like Google Drive.
+head:
+  - - meta
+    - name: keywords
+      content: Olares, Olares One, upload files, manage files, access cloud files, Olares Files app
 ---
 
 # Manage files
 
 Olares's built-in Files app provides a secure and efficient solution for file storage and synchronization. It allows you to access your personal files anywhere, keep data synchronized across devices, and manage third-party cloud storage in one place.
 
-Operations in Files are essentially the same as in other file managers. This page introduces some common tasks in Files to get you started.
+Operations in Files are essentially the same as in other file managers. This guide introduces some common tasks in Files to get you started.
+
+## Learning objectives
+
+- Know the Files interface.
+- Upload files from your local computer. This guide uploads a `.pdf` document and a `.txt` file as the example.
+- Preview and edit supported file types.
+- Locate files using the system search.
 
 ## Before you begin
 
+### Interface overview
+
 Familiarize yourself with the workspace. The Files interface mainly consists of the following areas:
+
 * Drive: Stores your personal files such as documents and pictures.
 * Sync: A library-based storage area for files requiring frequent modifications or real-time synchronization.
 * Application: Reserved for application-specific data. Primarily for development and debugging, not general file storage.
@@ -20,200 +34,146 @@ Familiarize yourself with the workspace. The Files interface mainly consists of 
 
 ![Files](/images/manual/olares/files-index.png#bordered)
 
+### File formats support
+
+The Files app supports the following file formats for previewing and editing:
+
+- Preview:
+   * Images: JPG, JPEG, PNG, BMP, WEBP, SVG
+   * Videos: MP4, MKV, MOV, MPEG, MTS, WMV, WEBM, RM, 3GP
+   * Audio: MP3, WMA, WAV, OGG, AAC, M4A, APE, FLAC
+   * Text: PDF, TXT, JS, CSS, XML, YAML, HTML
+- Edit: 
+   * TXT, JS, CSS, XML, YAML, HTML
+
 ## Upload files
 
-Populate your server with content to start using Olares One. Use the Files app or the LarePass desktop to upload files directly from your computer, or use the LarePass mobile to upload from your mobile devices.
+Populate your server with content by uploading documents via the Files app.
 
-### Upload via the Files app
+1. Open the Files app from the Dock or Launchpad.
 
-1. Open the Files app from the Dock or Launchpad on Olares.
+    ![Find and open the Files app](../public/images/one/find-files-app.png#bordered)
+
 2. In the left sidebar, select the directory where you want to upload files. For example, **Documents**.
-3. Upload multiple files or folders using one of these methods:
+
+    ![Select upload destination](../public/images/one/upload-file.png#bordered)
+
+3. Upload the PDF document and text file using one of these methods:
    - Drag and drop files from your local file manager into the Files window. 
    - Click <i class="material-symbols-outlined">drive_folder_upload</i> in the top right corner. 
    - Right-click in an empty space and select from the context menu.
 
-:::info
-Files supports resumable uploads. If an upload is interrupted, it will automatically resume from the last checkpoint.
+    :::info Upload progress indicator
+    During upload, a notification in the lower right corner displays the upload status.
+    :::
+
+4. When the upload is completed, the files are listed in the directory you selected.
+
+     ![File upload completed](../public/images/one/upload-file-completed.png#bordered)
+
+:::info Resumable uploads
+If your internet connection drops, the upload stops automatically. When the connection is back, Olares resumes the upload from exactly where it left off, so you don't have to start over.
 :::
 
-### Upload via LarePass desktop
+## Preview & edit files
 
-:::info Import your Olares ID
-To start using LarePass desktop, you must import your Olares ID by pasting your mnemonics. Make sure you have [backed up your mnemonics](/manual/larepass/back-up-mnemonics.md).
+You can view and modify many common file types directly in the Files app without downloading them.
+
+- To preview the PDf document, double-click it.
+
+    ![Find Files app](../public/images/one/preview-file.png#bordered)
+
+- To edit the text file:
+   
+   1. Double-click it.
+
+    ![Preview a text file](../public/images/one/open-txt.png#bordered)
+
+   2. Click <i class="material-symbols-outlined">edit_square</i> in the top-right corner.
+   3. Modify the content, and then save your changes by clicking <i class="material-symbols-outlined">save</i>.
+    
+    ![Edit and save text file](../public/images/one/edit-save-file.png#bordered)
+
+## Search files
+
+Locate files quickly using the global desktop search.
+
+1. Click <i class="material-symbols-outlined">search</i>in the Dock to open the search window.
+
+    ![Search files](../public/images/one/search-dock.png#bordered)
+
+2. Select **Drive** as the search scope.
+
+    ![Select drive](../public/images/one/select-drive.png#bordered)
+
+3. In the **Search files** field, enter the keywords related to the file you're looking for. For example, `txt`. The results are listed.
+
+    ![Search a txt file](../public/images/one/search-txt.png#bordered)
+
+4. Double-click to open it in the Files app directly.
+
+## Download files
+
+Download files to your local computer.
+
+1. Open the Files app from the Dock or Launchpad.
+2. Right-click the target file, and then select **Download**. 
+
+    The file is downloaded via your web browser's standard download manager.
+
+:::tip Notes
+Web browsers cannot download entire folders or extremely large files reliably. For these tasks, install the LarePass Desktop application to unlock folder downloads and resume capabilities. 
 :::
-LarePass desktop offers the same upload experience as the Files app, with automatic syncing to your Olares ID.
 
-### Upload via LarePass mobile
+## Delete files
 
-Use LarePass Mobile to upload files from your mobile device to Olares.
-
-You can also upload files or folders from your mobile device to Olares using the LarePass mobile.
-<Tabs>
-<template #Direct-upload>
-
-1. Open LarePass app and navigate to the **Files** tab.
-2. Select the directory where you want to upload files.
-3. Tap <i class="material-symbols-outlined">add_circle</i> in the bottom-right corner, and select one of the following upload options:
-   - **File**: Select from your phone's storage.
-   - **Image/Video**: Select from your phone's gallery.
-   :::tip
-   If you want to organize your uploads, you can select **Create folder** first.
-   :::
-4. Follow the on-screen instructions to complete the upload.
-</template>
-
-<template #Share-to-upload>
-
-:::info
-The exact steps may vary depending on your operating system and browser.
+:::warning
+Deleted files cannot be recovered.
 :::
 
-This method allows you to quickly upload files or media via your phone's sharing options.
-1. Open the share menu for the file.
-2. Select the LarePass icon in the sharing options, or select **LarePass** in the **Other actions** menu. You will be directed to the LarePass app.
-3. In the LarePass app, select the destination for your upload:
-   - **drive**: Upload files to your Drive storage for personal use.
-   - **sync**: Upload files to your Sync storage for sharing or synchronization.
-4. Follow the on-screen instructions to complete the process based on your selected target location.
-</template>
-</Tabs>
+1. Open the Files app from the Dock or Launchpad.
+2. Right-click the target file, and then click  **Delete**.
+3. In the **Delete** window, click **Confirm**.
 
-Files uploaded via the LarePass mobile app will also sync automatically with your Olares ID.
+## Next steps
 
-## Share files
+Integrate external storage services like Google Drive, Dropbox, or AWS S3 to view and manage your cloud-based files directly in Olares without switching applications.
 
-Share stored files with family members, friends, or colleagues. Olares provides flexible sharing options depending on the folder location.
+1. Authorize the connection and add the drive to your Files app.
 
-### Share types and support scope
+    a. Connect your service using the supported method accordingly:
 
-Currently, you can share content at the **folder** level. Supported sharing types vary depending on the directory location of the folder. Refer to the following table for details:
-
-| Directory type | Public share | Internal share | SMB share |
-| :--- | :---: | :---: | :---: |
-| **Home** | Supported | Supported | Supported |
-| **External** | - | Supported | Supported |
-| **Sync** | - | Supported | - |
-| **Data** | Supported | Supported | Supported |
-| **Cache** | - | Supported | Supported |
-
-Where,
-- **Public share**: Generates an access link with password protection supported, suitable for external sharing.
-- **Internal share**: Restricted to members within the same Olares cluster, suitable for internal team collaboration. For more information, see [Manage your team](../manual/olares/settings/manage-team.md).
-- **SMB share**: Shared via the SMB protocol within the Local Area Network (LAN).
-
-![Share file type](/images/manual/olares/share-files.png#bordered)
-
-### User permissions
-
-Set control levels when sharing internally or via SMB:
-
-| Permission | Description |
-| :--- | :--- |
-| **Admin** | The user has the full access, including:<ul><li>Add, view, edit, and delete files.</li><li>Invite and remove members.</li> <li>Modify share settings.</li></ul> |
-| **Edit** | The user can add, view, modify, and delete files. |
-| **View** | The user can only open, view, and download files. They cannot upload, modify, or <br>delete any content. |
-
-### Create share
-
-#### Create Internal share
-
-1. Right-click the target folder，and then click **Internal share**.
-2. In the **Invite users** section, click <i class="material-symbols-outlined">add</i>, search for and select the target user or group, and then click **Invite**.
-
-![Invite users for Internal Share](/images/manual/olares/internal-share-invite.png#bordered){width=60%}
-
-3. In the **Set user permissions** list, click <i class="material-symbols-outlined">chevron_forward</i> to the right of the user avatar to assign specific permissions, and then click **Submit**.
-4. Click **Confirm**.
-
-#### Create SMB share
-
-SMB sharing utilizes a dedicated local Linux account system. The SMB accounts generated within this system are independent of Olares members, strictly for LAN file access.
-
-1. Right-click the target folder, and then click **SMB share**.
-2. Select whether to make it **Public**.
-    - If you selected **Yes**, click **Confirm**, and then it will be accessible to anyone on the LAN.
-    - If you selected **No**, authentication is required. You must select or create a dedicated SMB account by using Step3 or Step4.
-3. Select an existing SMB account to authorize.
-    
-    a. In the **Invite users** field, click <i class="material-symbols-outlined">add</i>.
-
-    ![Invite existing users for SMB Share](/images/manual/olares/smb-share-invite.png#bordered){width=60%}
-    
-    b. Search for the SMB account, select it, and then click **Invite**.
-
-    c. In the **Set user permissions** list, click <i class="material-symbols-outlined">chevron_forward</i> to the right of the user avatar to assign specific permissions, and then click **Submit**.
-
-    d. Click **Confirm**.
-
-4. Create a new SMB account to authorize.
-    
-    a. To the right of **Invite users**, click **Add user accounts**.
-
-    ![Create new users for SMB Share](/images/manual/olares/smb-share-new-usr.png#bordered){width=60%}
-    
-    b. Enter a unique user name.
-    
-    c. In the **Set password** field, a secure system-generated password is provided by default. You can also manually enter a new password or click **Regenerate** to create a new random one.
-
-    d. Click **Confirm**. The system will automatically generate this account for you.
-    
-    e. In the **Invite users** field, click <i class="material-symbols-outlined">add</i>.
-    
-    f. Search for the newly created account, select it, and then click **Invite**.
-
-    g. In the **Set user permissions** list, click <i class="material-symbols-outlined">chevron_forward</i> to the right of the user avatar to assign specific permissions, and then click **Submit**.
-
-    h. Click **Confirm**.
-
-#### Create Public share
-
-1. Right-click the target folder, and then click **Public share**.
-
-![Public share settings](/images/manual/olares/public-share-settings.png#bordered){width=56%}
-
-2. In the **Set password** field, a secure system-generated password is provided by default. You can also manually enter a new password or click **Regenerate** to create a new random one.
-3. In the **Set expiration** region, select the specific expiration time for the share link.
-4. Select the following restrictions as needed:
-     - **Limit file size**: To limit the size of files uploaded by visitors, select this checkbox, enter a value, and then select the unit (Mi/Gi/Ti).
-    - **Allow uploads only**: If you select this checkbox, visitors can only upload files and cannot view or download existing content.
-5. Click **Confirm** to generate the link.
-6. Copy or note down the link address, and then click **Confirm**.
-
-## Connect and manage cloud files
-
-Bring your scattered files together. Instead of switching between different apps, connect services like Google Drive or AWS S3 to view and manage those external files directly within Olares.
-
-![Cloud storage](/images/manual/olares/files-cloud.png)
-
-### Add a cloud drive
-
-Authorize the connection and add the drive to your Files app.
-
-1. Connect your service using the supported method accordingly:
     - OAuth-based storage services such as Google Drive and Dropbox: Connect via the [LarePass app](../manual/larepass/integrations.md#add-a-cloud-drive-via-oauth).
     - API credential-based services such as AWS S3 and Tencent Cloud Object Storage (COS): Connect via the [LarePass app](../manual/larepass/integrations.md#add-a-cloud-storage-using-api-keys) or [Olares Settings](../manual/olares/settings/integrations.md#add-cloud-object-storage-via-api-keys).
-2. Open the Files app and confirm that the service appears as a drive under **Cloud Drive**.
 
-### Access and manage cloud files
+    b. Open the Files app and confirm that the service appears as a drive under **Cloud Drive**.
 
-After the cloud storage is connected, you can interact with the cloud files from the Files app as if they were local.
+2. After the cloud storage is connected, you can interact with the cloud files from the Files app as if they were local.
 
-1. Open the Files app and select the cloud storage.
-2. Manage the cloud files the same way as you manage your local files:
+    a. Open the Files app and select the cloud storage.
+
+    b. Manage the cloud files the same way as you manage your local files. Changes made in the Files app sync instantly to the cloud provider.
+    
     - Upload and download files
     - Preview supported file types
     - Rename, move, or delete files and folders
 
-    Changes made in the Files app sync instantly to the cloud provider.
+3. To remove the drive, delete the integration in the LarePass app or Olares Settings.
 
-### Disconnect a cloud drive
+    a. Remove the integration to disconnect the drive:
 
-To remove the drive, delete the integration in the LarePass app or Olares Settings.
-
-1. Remove the integration to disconnect the drive:
     - [Remove integration in LarePass](../manual/larepass/integrations.md#disconnect-integrations)
+
     - [Remove integration in Olares Settings](../manual/olares/settings/integrations.md#view-and-manage-connected-services)
-2. Verify that the drive disappears from the Files app.
+
+    b. Verify that the drive disappears from the Files app.
 
     The drive disappears from your Files app, but your data remains safe on the cloud service.
+
+## Resources
+
+- [Basic file operations](../manual/olares/files/add-edit-download.md)
+- [Share files](../manual/olares/files/share-files.md)
+- [Sync files to local](../manual/olares/files/sync-files.md)
+- [Mount SMB](../manual/olares/files/mount-SMB.md)
+- [LarePass official page](https://www.olares.com/larepass)
