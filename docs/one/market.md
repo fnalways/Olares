@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: Discover, install, and manage applications using Olares Market.
+description: Perform common application management tasks in Olares Market. Learn how to install, update, and uninstall software.
 head:
   - - meta
     - name: keywords
@@ -11,7 +11,7 @@ head:
 
 Olares Market is an open and permissionless application platform. Use it to find official Olares apps, third-party tools, and AI services.
 
-This guide walks you through finding and installing applications, updating applications, and removing applications when no longer needed.
+This guide walks you through the most common tasks for managing your applications, including finding and installing apps, applying updates, and removing unused apps.
 
 ## Learning objectives
 
@@ -28,11 +28,18 @@ Browse the Market catalog and install new software on your device.
 
     ![Open Market](../public/images/one/open-market.png#bordered)
 
-2. Find your target app "Jellyfin", click **Get**, and then click **Install**.
+2. Find the target app "Jellyfin" by browsing by category or using **Search** from the left sidebar.
+
+    ![Search in Market](../public/images/one/search-app.png#bordered)
+
+3. Click **Get**, and then click **Install**.
 
     ![Open Market](../public/images/one/install-app.png#bordered)
 
-3. When the installation finishes, the button changes to **Open**. Click it to launch the app immediately.
+    :::tip Progress indicator
+    Installation time depends on the app size and your internet speed. The **Install** button changes to a progress bar, indicating the download and installation status. You can navigate away and continue using Olares when it downloads in the background.
+
+4. When the installation finishes, the button changes to **Open**. Click it to launch the app immediately.
 
     ![Open app](../public/images/one/open-app.png#bordered)
 
