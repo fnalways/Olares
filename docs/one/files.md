@@ -52,11 +52,11 @@ Populate your server with content by uploading documents via the Files app.
 
 1. Open the Files app from the Dock or Launchpad.
 
-    ![Find and open the Files app](../public/images/one/find-files-app.png#bordered)
+    ![Find and open the Files app](/images/one/find-files-app.png#bordered)
 
 2. In the left sidebar, select the directory where you want to upload files. For example, **Documents**.
 
-    ![Select upload destination](../public/images/one/upload-file.png#bordered)
+    ![Select upload destination](/images/one/upload-file.png#bordered)
 
 3. Upload the PDF document and text file using one of these methods:
    - Drag and drop files from your local file manager into the Files window. 
@@ -69,7 +69,7 @@ Populate your server with content by uploading documents via the Files app.
 
 4. When the upload is completed, the files are listed in the directory you selected.
 
-     ![File upload completed](../public/images/one/upload-file-completed.png#bordered)
+     ![File upload completed](/images/one/upload-file-completed.png#bordered)
 
 :::info Resumable uploads
 If your internet connection drops, the upload stops automatically. When the connection is back, Olares resumes the upload from exactly where it left off, so you don't have to start over.
@@ -81,18 +81,18 @@ You can view and modify many common file types directly in the Files app without
 
 - To preview the PDf document, double-click it.
 
-    ![Find Files app](../public/images/one/preview-file.png#bordered)
+    ![Find Files app](/images/one/preview-file.png#bordered)
 
 - To edit the text file:
    
    1. Double-click it.
 
-    ![Preview a text file](../public/images/one/open-txt.png#bordered)
+    ![Preview a text file](/images/one/open-txt.png#bordered)
 
    2. Click <i class="material-symbols-outlined">edit_square</i> in the top-right corner.
    3. Modify the content, and then save your changes by clicking <i class="material-symbols-outlined">save</i>.
     
-    ![Edit and save text file](../public/images/one/edit-save-file.png#bordered)
+    ![Edit and save text file](/images/one/edit-save-file.png#bordered)
 
 ## Search files
 
@@ -100,15 +100,15 @@ Locate files quickly using the global desktop search.
 
 1. Click <i class="material-symbols-outlined">search</i>in the Dock to open the search window.
 
-    ![Search files](../public/images/one/search-dock.png#bordered)
+    ![Search files](/images/one/search-dock.png#bordered)
 
 2. Select **Drive** as the search scope.
 
-    ![Select drive](../public/images/one/select-drive.png#bordered)
+    ![Select drive](/images/one/select-drive.png#bordered)
 
 3. In the **Search files** field, enter the keywords related to the file you're looking for. For example, `txt`. The results are listed.
 
-    ![Search a txt file](../public/images/one/search-txt.png#bordered)
+    ![Search a txt file](/images/one/search-txt.png#bordered)
 
 4. Double-click to open it in the Files app directly.
 

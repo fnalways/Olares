@@ -60,7 +60,7 @@ To redeem your benefits, you must verify the email address associated with your 
     
     b. Go to `https://space.olares.com`.
 
-    ![Olares Space login page](../public/images/one/olares-space-login.png#bordered)
+    ![Olares Space login page](/images/one/olares-space-login.png#bordered)
 
 2. Log in to Olares Space:
     
@@ -68,13 +68,13 @@ To redeem your benefits, you must verify the email address associated with your 
     
     b. Go to the **Settings** tab, and then tap the scan icon.
 
-    ![Scan to log in](../public/images/one/scan-olares-space.png#bordered){width=30%}
+    ![Scan to log in](/images/one/scan-olares-space.png#bordered){width=30%}
 
     c. Scan the QR code on the computer screen and tap **Confirm**.
 
     Now you have logged in to Olares Space using your Olares ID.
 
-    ![Log in to Olares Space](../public/images/one/login-olares-space.png#bordered)
+    ![Log in to Olares Space](/images/one/login-olares-space.png#bordered)
 
 3. In Olares Space:
 
@@ -82,11 +82,11 @@ To redeem your benefits, you must verify the email address associated with your 
 
     b. On the **Account email** tab, click **Email address**.
 
-    ![Olares Space account email](../public/images/one/account-email.png#bordered)
+    ![Olares Space account email](/images/one/account-email.png#bordered)
 
     c. In the **Add email** window, enter the email address used for your Kickstarter order.
 
-    ![Olares Space bind email](../public/images/one/bind-email.png#bordered)
+    ![Olares Space bind email](/images/one/bind-email.png#bordered)
 
     d. Click **Send verification code**.
 
@@ -102,7 +102,7 @@ To redeem your benefits, you must verify the email address associated with your 
     
     g. Click your avatar in the upper right corner. A **Basic** tag appearing next to your username confirms that your membership is active now.
 
-    ![Olares Space Basic plan](../public/images/one/basic-plan.png#bordered)   
+    ![Olares Space Basic plan](/images/one/basic-plan.png#bordered)   
 
 ## Manage membership
 
@@ -120,11 +120,11 @@ If you want to move your Basic membership to a new Olares ID:
     
     c. Click **Unbind** to remove the Kickstarter email from the account email settings. 
 
-    ![Unbind email](../public/images/one/unbind-button.png#bordered) 
+    ![Unbind email](/images/one/unbind-button.png#bordered) 
 
     d. Click **Send verification code**.
 
-    ![Unbind email](../public/images/one/remove-email.png#bordered)    
+    ![Unbind email](/images/one/remove-email.png#bordered)    
 
     e. Check the email inbox for the 6-digit code. 
 
@@ -132,27 +132,27 @@ If you want to move your Basic membership to a new Olares ID:
     
     A notification message will confirm that the email was removed. Your account automatically changes to the Free plan.
     
-    ![Unbind email complete](../public/images/one/change-to-free.png#bordered)     
+    ![Unbind email complete](/images/one/change-to-free.png#bordered)     
 
 2. Bind membership to a new Olares ID:
 
     a. Log in to Olares Space with the new Olares ID.
 
-    ![Switch to a new ID](../public/images/one/login-new-id.png#bordered) 
+    ![Switch to a new ID](/images/one/login-new-id.png#bordered) 
 
     The account is at the Free plan.
 
-    ![Free subscription](../public/images/one/free-subscription.png#bordered) 
+    ![Free subscription](/images/one/free-subscription.png#bordered) 
 
     b. Go to **Usage & billing** > **Account email**.
     
     c. Bind and verify the Kickstarter email using the steps in the [Activate membership](#activate-membership) section. This will immediately upgrade the new Olares ID to the Basic plan.
 
-    ![Bind new email](../public/images/one/bind-again.png#bordered) 
+    ![Bind new email](/images/one/bind-again.png#bordered) 
 	
     d. Click the avatar in the upper right corner. A **Basic** tag appearing next to the username confirms that your membership is now active on the new Olares ID.
 
-    ![Bind new email](../public/images/one/new-account-basic.png#bordered) 
+    ![Bind new email](/images/one/new-account-basic.png#bordered) 
 
 :::warning Transfer notice
 Transferring your membership to a new Olares ID reduces your remaining validity period by one month. If you transfer multiple times within the same month, the deduction only occurs once.

@@ -17,7 +17,7 @@ This page provides information about the hardware components and specifications.
 
 Refer to the following table to identify the buttons, ports, and interfaces on Olares One.
 
-![Olares One rear panel](../public/images/one/olares-one-backview.png#bordered){width="80%"}
+![Olares One rear panel](/images/one/olares-one-backview.png#bordered){width="80%"}
 
 | No. | Component | Description |
 | :--- | :--- | :--- |

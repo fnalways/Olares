@@ -26,22 +26,22 @@ Browse the Market catalog and install new software on your device.
 
 1. Open Market from Dock or Launchpad.
 
-    ![Open Market](../public/images/one/open-market.png#bordered)
+    ![Open Market](/images/one/open-market.png#bordered)
 
 2. Find the target app "Jellyfin" by browsing by category or using **Search** from the left sidebar.
 
-    ![Search in Market](../public/images/one/search-app.png#bordered)
+    ![Search in Market](/images/one/search-app.png#bordered)
 
 3. Click **Get**, and then click **Install**.
 
-    ![Open Market](../public/images/one/install-app.png#bordered)
+    ![Open Market](/images/one/install-app.png#bordered)
 
     :::tip Progress indicator
     Installation time depends on the app size and your internet speed. The **Install** button changes to a progress bar, indicating the download and installation status. You can navigate away and continue using Olares when it downloads in the background.
 
 4. When the installation finishes, the button changes to **Open**. Click it to launch the app immediately.
 
-    ![Open app](../public/images/one/open-app.png#bordered)
+    ![Open app](/images/one/open-app.png#bordered)
 
 ## Update applications
 
@@ -50,7 +50,7 @@ Regular updates provide new features, bug fixes, and security patches. Keep your
 1. Open Market from the Dock or Launchpad.
 2. In the left sidebar, click **Updates**. A badge indicates the number of available updates.
 
-    ![Update app](../public/images/one/update-app.png#bordered)
+    ![Update app](/images/one/update-app.png#bordered)
 
 3. Select your update method:
     - Click **Update** under a specific app to update it individually.
@@ -64,7 +64,7 @@ Remove applications that you no longer need to save storage space.
 2. Click **My Olares** to view all your installed applications.
 3. Find the target app "Jellyfin", click <i class="material-symbols-outlined">keyboard_arrow_down</i> next to the **Open** button, and then click **Uninstall**.
 
-    ![Uninstall app](../public/images/one/uninstall-app.png#bordered)
+    ![Uninstall app](/images/one/uninstall-app.png#bordered)
 
 4. In the **Uninstall** window, click **Confirm**.
 
