@@ -24,8 +24,8 @@ export const oneSidebar: DefaultTheme.Sidebar = {
           link: "/one/first-boot",
         },
         {
-          text: "Access Olares",
-          link: "/one/access-olares",
+          text: "Access Olares securely",
+          link: "/one/access-olares-via-vpn",
         },
         {
           text: "Redeem Olares Space membership",
@@ -39,6 +39,10 @@ export const oneSidebar: DefaultTheme.Sidebar = {
         {
           text: "Open WebUI with Ollama",
           link: "/one/ollama",
+        },
+        {
+          text: "Generate images with ComfyUI",
+          link: "/one/comfyui",
         },
         {
           text: "Switch GPU mode",
@@ -106,10 +110,6 @@ export const oneSidebar: DefaultTheme.Sidebar = {
       text: "Explore",
       items: [
         {
-          text: "Generate images with ComfyUI",
-          link: "/one/comfyui",
-        },
-        {
           text: "Play games with Steam Headless",
           link: "/one/steam",
         },
@@ -131,6 +131,10 @@ export const oneSidebar: DefaultTheme.Sidebar = {
     {
       text: "Advanced",
       items: [
+      {
+        text: "SSH into Olares One",
+        link: "/one/access-terminal-ssh",
+      },
         {
           text: "Connect two Olares One",
           items:
