@@ -1,23 +1,49 @@
 ---
 outline: [2, 3]
-description: Create and customize your Olares personal homepage by designing your header, adding social links and content blocks, adjusting appearance, and sharing your profile with others.
+description: Learn how to personalize your Olares experience by customizing your desktop background, system theme, and designing your public profile page.
 ---
 
-# Design your Olares profile <Badge text="15 min"/>
+# Customize Olares <Badge text="15 min"/>
 
-Your Olares profile is a personal homepage you can share with others. You can use it as a landing page, a portfolio, or a digital business card.
-
-![Profile](/images/manual/olares/profile.png)
+Olares allows you to customize both your private workspace and your public identity. This guide shows you how to set up your desktop appearance and design a profile page to share with others.
 
 ## Learning objectives
 
 By the end of this tutorial, you will learn how to:
-- Customize your profile header and identity.
-- Centralize your social media links.
-- Build a custom layout using content blocks.
+- Switch between light and dark system themes.
+- Customize your desktop and login screen wallpapers.
+- Design your public profile with social links and content blocks.
 - Style your page and share it.
 
-## Customize your profile
+## Customize Olares desktop
+
+You can adjust the look and feel of your local Olares environment through the system settings.
+
+1. Open **Settings** from the Dock.
+2. Select **Appearance** in the sidebar.
+
+![Customize desktop](/images/one/setting-appearance.png#bordered){width=80%}
+
+### Set system theme
+
+In **Theme**, choose between **Light** or **Dark** mode.
+
+The change takes effect immediately.
+
+### Change wallpaper
+
+You can set a distinct look for your desktop and login screen.
+
+1. In **Wallpaper** , select the target: **Desktop background** or **Login background**.
+2. Choose a background:
+   - Built-in: Browse and select from the provided images.
+   - Custom: Click <i class="material-symbols-outlined">add_photo_alternate</i>, select an image file from your computer, then click **Open**.
+
+## Design your public profile
+
+Your Olares profile is a public homepage available at `https://{your-olares-id}.olares.com`. You can use it as a landing page, portfolio, or digital business card.
+
+![Profile](/images/manual/olares/profile.png)
 
 Open **Profile** from the Dock to start editing. The editor has four tabs: **Header**, **Social**, **Blocks**, and **Appearance**. 
 
@@ -69,7 +95,7 @@ Use the **Appearance** tab to define the visual style. You can select a preset t
 
 ## Share your profile
 
-Your profile is available at `https://{Local name}.olares.com`.
+Your profile is available at `https://{your-olares-id}.olares.com`.
 
 When you are ready, click the **<i class="material-symbols-outlined">share</i> Share** button. You can:
 
