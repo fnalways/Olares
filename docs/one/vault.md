@@ -41,7 +41,7 @@ When you open Vault on your device for the first time, you must initialize it fo
 
 1. Set a local password for Vault, which is used to unlock Vault on the current device only. This local Vault password acts as a second layer of defense. 
 
-   ![Open Vault for the first time](../public/images/one/open-vault.png#bordered){width=35%}
+   ![Open Vault for the first time](/images/one/open-vault.png#bordered){width=35%}
 
    :::tip Security best practice
    Do not use the same password as your Olares login. If someone guesses your login password, this secondary password ensures your sensitive data remains locked.
@@ -51,7 +51,7 @@ When you open Vault on your device for the first time, you must initialize it fo
 
 3. Import your Olares ID that is already linked to your server using your mnemonic phrase.
 
-   ![Enter mnemonic phrase](../public/images/one/vault-enter-mnemonic-phrase.png#bordered){width=35%}
+   ![Enter mnemonic phrase](/images/one/vault-enter-mnemonic-phrase.png#bordered){width=35%}
 
    :::tip
    For information about how to get your mnemonic phrase in case you do not have it handy, see [Reveal and back up your mnemonic phrase](../manual/larepass/back-up-mnemonics.md#reveal-and-back-up-your-mnemonic-phrase).
@@ -67,19 +67,19 @@ Create a new vault item to store "my company Wi-Fi password".
 2. Click <i class="material-symbols-outlined">add</i> in the **All vaults** panel.
 3. From the **Select Vault** list, choose **My Vault** for private use.
 
-   ![Select My Vault](../public/images/one/select-my-vault.png#bordered){width=50%}
+   ![Select My Vault](/images/one/select-my-vault.png#bordered){width=50%}
 
 4. Select **WIFI Password** from the category, and then click **Confirm**. 
 
-   ![Add vault item Wi-Fi](../public/images/one/select-wifi-vault.png#bordered){width=50%}
+   ![Add vault item Wi-Fi](/images/one/select-wifi-vault.png#bordered){width=50%}
 
    The details panel opens on the right. It displays the default fields relevant to the category you selected.
 
-   ![Configure vault item settings for Wi-Fi](../public/images/one/new-vault-item-wifi.png#bordered){width=50%}
+   ![Configure vault item settings for Wi-Fi](/images/one/new-vault-item-wifi.png#bordered){width=50%}
 
 5. Fill in details in the fields.
 
-   ![Add vault item Wi-Fi](../public/images/one/fill-info-vault.png#bordered){width=50%}
+   ![Add vault item Wi-Fi](/images/one/fill-info-vault.png#bordered){width=50%}
 
 6. Click **Save**. The vault item is encrypted and added to the **All vaults** list.
 
@@ -95,7 +95,7 @@ Modify an existing vault item to update details.
 2. In the **All vaults** panel, click the target vault item.
 3. In the details panel on the right, click <i class="material-symbols-outlined">edit_note</i>.
 
-   ![Edit vault item Wi-Fi](../public/images/one/edit-vault-item.png#bordered){width=50%}
+   ![Edit vault item Wi-Fi](/images/one/edit-vault-item.png#bordered){width=50%}
 
 4. Make changes as needed. For example, remove the expiration date.
 5. Click **Save**.
@@ -108,11 +108,11 @@ Mark frequently used vault items for quick access.
 2. In the **All vaults** panel, click the target vault item.
 3. Click <i class="material-symbols-outlined">star_border</i> in the top right corner. 
 
-   ![Mark favourite](../public/images/one/mark-favourite.png#bordered){width=50%}   
+   ![Mark favourite](/images/one/mark-favourite.png#bordered){width=50%}   
 
    The item is marked with a star in the **All vaults** panel.
 
-   ![Favourite vault item](../public/images/one/favourite-vault-item.png#bordered){width=70%} 
+   ![Favourite vault item](/images/one/favourite-vault-item.png#bordered){width=70%} 
 
 ## Find vault items
 
@@ -122,7 +122,7 @@ Locate vault items quickly using keyword search or filters.
 
 In the **All vaults** panel, click <i class="material-symbols-outlined">search</i> and enter keywords (such as `Wi-Fi` or `company`) to find specific vault items.
 
-![Search vault item](../public/images/one/search-vault.png#bordered){width=70%} 
+![Search vault item](/images/one/search-vault.png#bordered){width=70%} 
 
 ### Filter
 
@@ -165,5 +165,5 @@ Use the left sidebar to narrow down the list:
 5. Specify the detailed settings for the vault item, and then click **Save**.
 </template>
 </tabs>
-![Add vault item](../public/images/one/new-vault-item.png#bordered){width=50%}
-![Configure vault item settings](../public/images/one/configure-vault-item.png#bordered){width=50%}-->
+![Add vault item](/images/one/new-vault-item.png#bordered){width=50%}
+![Configure vault item settings](/images/one/configure-vault-item.png#bordered){width=50%}-->
