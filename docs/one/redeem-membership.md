@@ -158,12 +158,11 @@ If you want to move your Basic membership to a new Olares ID:
 Transferring your membership to a new Olares ID reduces your remaining validity period by one month. If you transfer multiple times within the same month, the deduction only occurs once.
 :::
 
-## Change bound email
+### Change bound email
 
 If you replace your Kickstarter email with a different email in the account email settings:
 
-- Your account will lose the Kickstarter benefits immediately.
-- Your plan will change to Free.
+- Your current account will lose the Basic membership immediately, and the plan will change to Free.
 - To re-gain the Basic plan, use one of the following methods:
     - Re-bind the original Kickstarter email. This restores your complimentary Basic membership, but reduces the remaining validity period by one month.
     - Purchase a Basic subscription.
