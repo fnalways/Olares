@@ -68,7 +68,7 @@ To redeem your benefits, you must verify the email address associated with your 
     
     b. Go to the **Settings** tab, and then tap the scan icon.
 
-    ![Scan to log in](/images/one/scan-olares-space.png#bordered){width=30%}
+    ![Scan to log in](/images/one/scan-olares-space.png#bordered)
 
     c. Scan the QR code on the computer screen and tap **Confirm**.
 
