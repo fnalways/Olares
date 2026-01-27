@@ -41,7 +41,7 @@ Familiarize yourself with the key metrics used to measure system performance.
 
 The **Overview** page shows you the health of your device at a glance.
 
-1. Open the Dashboard app from the Dock or Launchpad.
+1. Open the Dashboard app from the Launchpad.
 
     ![Find Dashboard app](/images/one/find-dashboard.png#bordered)   
 
