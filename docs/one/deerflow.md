@@ -7,7 +7,7 @@ head:
        content: Deerflow, Ollama, Deep research
 ---
 
-# Deep research with DeerFlow  <Badge type="tip" text="15 min" />
+# Deep research with DeerFlow  <Badge type="tip" text="20 min" />
 DeerFlow is an open-source framework that transforms a simple research topic into a comprehensive, detailed report.
 
 This guide will walk through the process of setting up DeerFlow on your Olares device, integrating it with a local Ollama model and the Tavily search engine for web-enabled research.
@@ -18,11 +18,6 @@ This guide will walk through the process of setting up DeerFlow on your Olares d
 - Execute deep research tasks and manage reports.
 
 ## Before you begin
-
-**Shared app** <br>
-Ollama functions as a "shared app" on Olares. This means:
-* It must be installed from the Market by a **Super Admin**.
-* Once installed, the service is available to all users in the cluster. Other users do not need to install their own instances.
 
 **Network access requirements** <br>
 DeerFlow connects to Ollama using the `.com` domain.
@@ -37,7 +32,7 @@ Currently, the `.local` domain is not supported for connecting to the Ollama API
 - Sufficient disk space to download models.
 
 **User permissions**
-- Super Admin privileges to install Ollama from the Market.
+- Admin privileges to install Ollama from the Market.
 
 **External services** <br>
 - A [Tavily](https://www.tavily.com/) account is required to generate an API key for web search. The free plan is sufficient.
@@ -46,12 +41,12 @@ Currently, the `.local` domain is not supported for connecting to the Ollama API
 - The LarePass app is installed on your device. This guide uses the desktop application to demonstrate the configuration and usage from desktop.
 
 ## Step 1: Install Ollama and DeerFlow
-1. Open **Market**, and search for "Ollama".
+1. Open Market, and search for "Ollama."
    ![Install DeerFlow](/images/manual/use-cases/ollama.png#bordered)
 
 2. Click **Get**, then **Install**, and wait for installation to complete.
 
-3. Repeat the same steps to install "DeerFlow".
+3. Repeat the same steps to install "DeerFlow."
    ![Install DeerFlow](/images/manual/use-cases/deerflow.png#bordered)
 
 ## Step 2: Install models and configure Ollama
