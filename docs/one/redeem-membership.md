@@ -169,5 +169,6 @@ If you replace your Kickstarter email with a different email in the account emai
 
 ## Resources
 
+- [Monitor traffic in Olares Space](space.md)
 - [Olares Space introduction](../space/index.md)
 - [Olares Space plans and pricing](https://space.olares.com/plans)
