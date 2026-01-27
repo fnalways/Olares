@@ -39,7 +39,11 @@ A vault item is a secure container for a specific piece of information. While co
 
 When you open Vault on your device for the first time, you must initialize it for security.
 
-1. Set a local password for Vault, which is used to unlock Vault on the current device only. This local Vault password acts as a second layer of defense. 
+1. Open the Vault app from the Launchpad.
+
+   ![Find Vault](/images/one/find-vault-app.png#bordered)
+
+2. Set a local password for Vault, which is used to unlock Vault on the current device only. This local Vault password acts as a second layer of defense. 
 
    ![Open Vault for the first time](/images/one/open-vault.png#bordered){width=35%}
 
@@ -47,9 +51,9 @@ When you open Vault on your device for the first time, you must initialize it fo
    Do not use the same password as your Olares login. If someone guesses your login password, this secondary password ensures your sensitive data remains locked.
    :::
 
-2. Click **Confirm**.
+3. Click **Confirm**.
 
-3. Import your Olares ID that is already linked to your server using your mnemonic phrase.
+4. Import your Olares ID that is already linked to your server using your mnemonic phrase.
 
    ![Enter mnemonic phrase](/images/one/vault-enter-mnemonic-phrase.png#bordered){width=35%}
 
@@ -57,7 +61,7 @@ When you open Vault on your device for the first time, you must initialize it fo
    For information about how to get your mnemonic phrase in case you do not have it handy, see [Reveal and back up your mnemonic phrase](../manual/larepass/back-up-mnemonics.md#reveal-and-back-up-your-mnemonic-phrase).
    :::
 
-4. Click **Next**.
+5. Click **Next**.
 
 ## Add vault items
 
