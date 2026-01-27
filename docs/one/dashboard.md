@@ -7,7 +7,7 @@ head:
       content: Olares, Olares One, monitor system, system resources, app status, CPU usage, memory usage, disk space, fan speed
 ---
 
-# Monitor system and application status
+# Monitor system and application status <Badge type="tip" text="10 min" />
 
 The Dashboard app provides a centralized, real-time view of your system's status. Use it to check available storage, monitor hardware temperatures, and identify which applications are using the most resources.
 
