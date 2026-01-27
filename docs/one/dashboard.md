@@ -1,213 +1,142 @@
 ---
 outline: [2, 3]
-description: Monitor your Olares system and application performance with comprehensive dashboards tracking CPU, memory, and disk usage for optimal resource management.
+description: Monitor your Olares system health. Learn how to check CPU and memory usage, manage disk storage, and identify resource-heavy applications.
+head:
+  - - meta
+    - name: keywords
+      content: Olares, Olares One, monitor system, system resources, app status, CPU usage, memory usage, disk space, fan speed
 ---
 
 # Monitor system and application status
 
-The Dashboard app in Olares provides a centralized and intuitive view of your system's status, offering deep insights without requiring extensive technical expertise. From the dashboard, you can monitor key resource usage patterns and access detailed real-time metrics across your cluster.
+The Dashboard app provides a centralized, real-time view of your system's status. Use it to check available storage, monitor hardware temperatures, and identify which applications are using the most resources.
 
-## Access monitoring dashboards
+This guide walks you through the most common tasks for maintaining a healthy system.
 
-View your system's status through these specialized dashboards:
-- **Overview**: Shows current resource usage and system health.
-- **Applications**: Displays running applications and their status.
+## Learning objectives
 
-## Overview
+- View the system status overview.
+- Check detailed usage for specific hardware. This guide uses "Disk" as the example.
+- Monitor fan speed and temperature.
+- Identify and manage resource-intensive applications.
 
-The Overview page provides a comprehensive, at-a-glance view of your Olares system's health and resource utilization. It is divided into key sections to help you monitor performance effectively:
+## Before you begin
 
-- Cluster's physical resources
-- User resource usage
-- Usage ranking
+Familiarize yourself with the key metrics used to measure system performance.
 
-### View physical resources usage
+| Metric           | Description                        | why it matters                                |
+|:-----------------|:-----------------------------------|:----------------------------------------------|
+| CPU usage        | Percentage of processor power used | Prolonged high usage makes the system slow and unresponsive.|
+| Memory usage     | Percentage of RAM in use           | If RAM is full, apps might crash or freeze. |
+| Average CPU load | Average number of active processes | High load indicates system overload.         |
+| Disk usage       | Percentage of storage space filled | Running out of space prevents saving new files or installing apps. |
+| Inode usage      | Percentage of index nodes (inodes) used | Exhaustion prevents new file creation. |
+| Disk throughput  | Data transfer rate (MB/s)          | Important for large file transfers.  |
+| IOPS             | Input/Output Operations Per Second | Critical for small file or random data access. |
+| Network traffic  | Internet usage (Mbps)              | High traffic can slow down remote access and downloads.  |
+| Pod status       | Number of active app containers    | Indicates if your applications are running, pending, or failed.    |
+| Fan speed        | Cooling fan speed (RPM)            | Higher speeds indicate the system is working hard to cool down. |
 
-Monitor the fundamental resource metrics directly from the **Cluster's physical resource** dashboard:
+## Check system health
 
-![Dashboard overview](/images/manual/olares/dashboard-overview.png#bordered){width=60%}
+The **Overview** page shows you the health of your device at a glance.
 
-- CPU utilization
-- Memory consumption
-- Disk usage
-- Pod status
-- GPU usage
-- Network status
-- Fan status <Badge type="tip" text="Olares One Only" />
+1. Open the Dashboard app from the Dock or Launchpad.
 
-:::info Multi-node cluster display
-When your cluster consists of multiple nodes:
-- Overview panels: Display aggregate results across all nodes (e.g., CPU/memory usage, disk utilization, network traffic, overall GPU usage).
-- Resource detail pages: Show metrics broken down per node, allowing you to analyze each node individually.
-  :::
+    ![Find Dashboard app](/images/one/find-dashboard.png#bordered)   
 
-### Access detailed resource panels
+    You are on the **Overview** page by default.
 
-For a deeper analysis of any resource, simply click on its card on the **Cluster's physical resources** dashboard. This navigates you to a dedicated detail panel with comprehensive monitoring data and metrics.
+   ![Dashboard overview](/images/one/dashboard-overview.png#bordered)
 
-#### CPU panel
+2. Check the **Cluster's physical resources** section. Cards in this section provide an instant snapshot of your hardware status:
 
-The CPU panel provides an in-depth view of your Olares cluster's CPU performance and health.
+    - **CPU core**: The "brain" of your system. High percentages indicate heavy processing.
+    - **Memory Gi**: The "workspace" for running apps. If this is full, the system might become slow or unresponsive.
+    - **Disk**: Your local storage space usage.
+    - **Pods**: The total number of active application units running on your system.
+    - **GPU**: Graphics processing power, used for AI tasks or media rendering.
+    - **Network**: Real-time upload and download speeds.
+    - **Fan**: Current cooling status.
 
-To access it, click on the **CPU** card on the **Cluster's physical resources** dashboard.
+## View resource details
 
-![CPU panel](/images/manual/olares/dashboard-cpu.png#bordered)
+Click on any resource card to see detailed metrics. Take the common task "managing storage (Disk)" for example.
 
-This panel displays:
-- A real-time CPU utilization graph.
-- Node-specific CPU specifications (model, cores, threads).
-- Breakdown of utilization rate (User, System, I/O wait).
-- Current CPU temperature.
-- Average load over 1, 5, and 15 minutes.
+1. On the **Overview** page, in the **Cluster's physical resources** section, click the **Disk Gi** card.
 
-#### Memory panel
+    ![Disk card](/images/one/dashboard-disk-card.png#bordered)   
 
-The Memory panel offers a clear, in-depth view of your Olares cluster's memory usage and allocation. To access it, click on the **Memory** card on the **Cluster's physical resources** dashboard.
+2. On the **Disk details** panel, you can view the following information:
 
-This panel allows you to switch between **Physical memory** and **Swap** views using the dropdown menu.
-![Memory panel](/images/manual/olares/dashboard-memory.png#bordered)
+    - Identity and status: The disk name (e.g., nvme0n1), type (SSD), and overall health status (e.g., Normal).
+    - Storage usage: A visual bar chart displaying the exact amount of used space versus available space.
+    - Hardware specifications: Technical details including the model name, serial number, interface protocol (e.g., NVMe), and total capacity.
+    - Health metrics: Statistics such as the current temperature, total power-on duration, and total data written.
 
-- When **Physical memory** is selected, it displays:
-  - A real-time memory utilization graph.
-  - A memory usage breakdown showing reserved, used, buffer, cache, and available memory, along with total memory and utilization rate.
+    ![Disk details](/images/one/dashboard-disk-details.png#bordered)    
 
-- When **Swap** is selected, it displays:
-  - A real-time swap usage graph.
-  - Numerical swap in/out rates.
-  - Swap space summary (Total, Used, and Utilization rate).
+3. To view exactly which folders are taking up space, click **Occupancy analysis** in the top right corner.
 
-#### Disk panel 
+    ![Disk details-Occupancy analysis](/images/one/dashboard-occupancy.png#bordered) 
 
-The Disk panel offers a comprehensive view of your storage devices. Use this panel to monitor disk health, track storage consumption, and analyze space allocation in your Olares cluster.
+    This view lists every file system, helping you see exactly where your storage is being allocated.
 
-To access it, click on the **Disk** card on the **Cluster's physical resources** dashboard.
-![Disk panel](/images/manual/olares/dashboard-disk.png#bordered)
+    ![Disk details-Storage usage](/images/one/dashboard-storage-usage.png#bordered){width=90%} 
 
-This panel displays:
+You can follow this same pattern to check other resources.
 
-- Overall storage status: Disk name, storage status, and a usage bar showing used, and available space.
-- Detailed information: Key device specifications like total capacity, model, serial number, interface protocol, temperature, power-on time, and write volume.
+## Monitor hardware status
 
-For a detailed usage breakdown for a specific storage device, click **Occupancy analysis** in the top right corner.
+The dedicated **Fan** panel helps you ensure your Olares One is not overheating.
 
-The storage usage popup displays:
-![Disk analysis](/images/manual/olares/dashboard-disk-analysis.png#bordered)
+1. On the **Overview** page, find the **Fan** card.
 
-- A list of file systems (partitions) on the disk.
-- For each file system, you can view storage metrics like total capacity, used space, available space, usage rate, and mount point.
+    ![Dashboard Fan card](/images/one/dashboard-fan-card.png#bordered) 
 
-#### Pods panel
-
-The Pods panel offers a dynamic view of your application's deployment status.
-
-To access it, click the **Pods** card on the **Cluster's physical resources** dashboard.
-
-![Pods panel](/images/manual/olares/dashboard-pods.png#bordered)
-
-This panel displays real-time graphs showing the number of running pods over time for different nodes in the cluster. (e.g., "Olares" and "Olares2").
-
-#### GPU panel
-
-The **GPU** panel provides in-depth information about your GPUs within the cluster. Use this panel to effectively monitor GPU health, resource allocation, and performance across your cluster. 
-
-To access it, click the GPU card on the **Cluster's physical resources** dashboard.
-
-![GPU panel](/images/manual/olares/dashboard-gpu-overview.png#bordered)
-
-This panel includes two tabs: 
-
-- **Graphics management tab**: View a list of all detected GPUs, including their GPU ID, model, GPU mode (e.g., Memory Slicing), host node, health status, computing power usage, VRAM usage rate, and power draw.
+2. Click it to view real-time statistics:
   
-  For a more granular view of a specific GPU, click **View details** next to its entry.
+    - Fan speed: Current RPM (Revolutions Per Minute).
+    - Temperature: Current temperature of the main hardware components.
+    - Power: Current power consumption of the GPU.
 
-- **Task management tab**: Monitor tasks currently using your GPUs. It provides insights into the task name, status, GPU Mode, host node, computing power usage, and VRAM used, along with available operations.
+    ![Dashboard Fan details](/images/one/dashboard-fan-details.png#bordered) 
 
-#### Network panel
+    :::tip Adjust cooling mode
+    To change the fan profile (e.g., from **Silent mode** to **Performance mode**), go to **Settings** > **My hardware** > **Power mode**.
+    :::
 
-The Network panel provides comprehensive insights into your network interfaces. Use this panel to monitor network connectivity, traffic flow, and configuration for optimal system performance.
+## Track application performance
 
-To access it, click the **Network** card on the **Overview** dashboard.
+If your system feels slow, a specific application might be consuming too many resources.
 
-![Network panel](/images/manual/olares/dashboard-network.png#bordered)
+### Quick ranking
 
-The Network panel displays:
+On the **Overview** page, scroll down to the **Usage ranking** section. This lists the top 5 applications currently using the most CPU or memory.
 
-- Network port information: Details for each network port (e.g., wlo1), including its usage status, real-time upload and download speeds, and connection status.
+![Dashboard usage ranking](/images/one/dashboard-usage-ranking.png#bordered) 
 
-- IP configuration: Information on IP acquisition method (e.g., DHCP), host node, and network configuration.
+### Detailed application list
 
-- IPv4 and IPv6 details: Comprehensive details for both IPv4 and IPv6, including address, subnet mask, gateway address, DNS, and network status.
+For a complete view of all running services:
 
-#### Fan panel <Badge type="tip" text="Olares One Only" />
+1. From the left navigation pane, click **Applications**.
+2. Sort the list using the dropdown menu in the top right:
 
-The Fan panel is exclusive to the **Olares One** hardware. It displays real-time **fan speed**, **temperature** for both the CPU and GPU, and **power draw** for the GPU.  
-Use this panel to quickly assess cooling performance and overall hardware health.
+    - Sort by CPU usage: Find processor-heavy apps.
+    - Sort by memory usage: Find memory-hungry apps.
+    - Sort by inbound traffic: Find apps downloading the most data.
+    - Sort by outbound traffic: Find apps uploading the most data.
 
-![Fan panel](/images/manual/olares/dashboard-fans.png#bordered)
+    ![Applications dashboard](/images/one/dashboard-applications.png#bordered)   
 
-::: tip Change fan speed profile
-You can adjust the fan speed profile by toggling between silent mode or performance mode in **Settings** > **My Olares** > **My hardware** >  **Power mode**. 
-:::
+## Next steps
 
-#### Access detailed resource metrics 
+If you identify an application consuming excessive resources, you can take actions to restore system speed. For example,
+- Restart the app: Often, apps consume excess resources due to a temporary error. Restarting it usually fixes the problem.
+- Stop or uninstall the app: If an app consistently slows down your system and you don't need it, you can stop it or uninstall it completely to free up resources for other tasks.
 
-Click **More details** on the top right of the **Overview** dashboard to view dynamic monitoring data over a specific period of time.
+## Resources
 
-Use the dropdown menu in the top right to change the time range, or click <i class="material-symbols-outlined">refresh</i> to update monitoring data.
-
-The following metrics help you maintain optimal system performance:
-
-| Metric           | Description                        | Impact                                        |
-|------------------|------------------------------------|-----------------------------------------------|
-| CPU usage        | Percentage of CPU resources used   | Prolonged spikes can slow down the system     |
-| Memory usage     | Percentage of memory in use        | Impacts application performance and stability |
-| Average CPU load | Average number of active processes | High load indicates system overload           |
-| Disk usage       | Percentage of disk space used      | Crucial for data reliability, prevent overuse |
-| Inode usage      | Percentage of inodes used          | Exhaustion prevents new file creation         |
-| Disk throughput  | Data transfer rate (MB/s)          | Important for large file transfers            |
-| IOPS             | Input/Output Operations Per Second | Critical for small file or random data access |
-| Network traffic  | Network usage (Mbps)               | Reflects network speed and quality            |
-| Pod status       | Count of pods by state             | Reflects application health                   |
-
-![Physical resource monitoring](/images/manual/olares/physical-resource-monitoring.png#bordered)
-
-### Check user resource quota
-
-You can view your resource quota allocated by the Olares admin.
-
-![Resource quota](/images/manual/olares/resource-quota.png#bordered)
-
-:::warning
-When your resource quota runs low, you may experience:
-
-* Slower system performance.
-* Inability to install new applications.
-* Automatic suspension of resource-intensive applications.
-:::
-
-
-### Track application performance
-The **Usage ranking** section displays the top 5 applications consuming CPU and memory resources. To access the complete list of application resource usage, click **More**.
-
-![Usage ranking](/images/manual/olares/usage-ranking.png#bordered)
-
-## Applications
-
-The **Applications** dashboard helps you monitor resource usage patterns across your applications through various sorting and filtering options.
-
-Use the dropdown menu in the upper right corner to sort applications based on their resource consumption:
-- CPU usage
-- Memory usage
-- Inbound traffic
-- Outbound traffic
-
-![Applications](/images/manual/olares/applications.png#bordered)
-
-Toggle between ascending and descending order to identify which applications are consuming the most or least resources.
-
-For applications supporting multiple entrances (such as Wordpress), you can click icons to switch between different entrance types and view their corresponding resource metrics.
-![Multiple entrances](/images/manual/olares/multiple-entrances.png){width=40%}
-:::tip
-* When your application list grows large, quickly locate specific applications by typing their names in the search box at the top of the page.
-* Regularly checking resource consumption patterns helps you identify applications that might need optimization or attention.
-:::
+- [Uninstall applications](../manual/olares/market/market.md#uninstall-applications)
+- [My hardware](../manual/olares/settings/my-olares.md#my-hardware)
