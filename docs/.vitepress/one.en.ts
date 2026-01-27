@@ -175,6 +175,10 @@ export const oneSidebar: DefaultTheme.Sidebar = {
           text: "Expand storage with a new drive",
           link: "/one/expand-storage-with-external-drive",
         },
+        {
+          text: "Create a bootable USB drive",
+          link: "/one/create-drive",
+        },
       ]
     },
     {
