@@ -165,6 +165,11 @@ export const oneSidebar: DefaultTheme.Sidebar = {
                 text: "Dual-drive setup",
                 link: "/one/dual-drive-dual-boot",
               }
+              ,
+              {
+                text: "Install NVIDIA driver",
+                link: "/one/install-nvidia-driver",
+              }
             ]
         },
         {
