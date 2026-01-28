@@ -129,12 +129,23 @@ This is the standard way to access your Olares desktop.
 3. Open the LarePass app, obtan the 6-digit authenticator code that is displayed on the **Vault** tab.
 4. Go back to the browser screen and enter the authenticator code to log in to Olares.
 
-### Access using local network
+### Back up mnemonic phrase
 
-Connect to your Olares via the local network for advanced management. For more information, see [Set up local network access](access-olares-via-vpn.md).
+Your Olares ID is secured by a unique 12-word mnemonic phrase. This phrase is the sole method to recover your account if you lose your phone or need to log in on a new device.
+
+1. Open the LarePass app and go to **Settings** > **Safety**.
+2. Tap **Mnemonic phrase** and verify your identity.
+3. Tap **Click to view**.
+4. Enter the local password as prompted.
+5. Write the 12 words onto the **Recovery Sheet**, and then store the sheet in a secure, offline location.
+
+:::warning Security warning 
+You are responsible for your security. Never share this phrase. If you lose these 12 words, you will permanently lose access to your Olares ID and all data stored in your Vault.
+:::
 
 ## Resources
 
+- [Access Olares using local network](access-olares-via-vpn.md)
 - [Olares ID](../developer/concepts/olares-id.md)
 - [Back up mnemonic phrase](../manual/larepass/back-up-mnemonics.md)
 - [Set up a custom domain for your Olares](../manual/best-practices/set-custom-domain.md)
