@@ -131,7 +131,7 @@ This is the standard way to access your Olares desktop.
 
 ### Access using local network
 
-Connect to your Olares via the local network for advanced management. For more information, see [Set up local network access](access-olares.md).
+Connect to your Olares via the local network for advanced management. For more information, see [Set up local network access](access-olares-via-vpn.md).
 
 ## Resources
 
