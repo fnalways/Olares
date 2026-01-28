@@ -2,11 +2,12 @@
 outline: [2, 3]
 description: Step-by-step guide to installing ACE-Step AI on Olares, generating songs with lyrics or instrumentals, optimizing audio with retake and repainting, and using Audio2Audio to transform reference audio into new music.
 ---
-# Create AI-generated music with ACE-Step <Badge type="tip" text="30 min" />
+# Create AI-generated music with ACE-Step <Badge type="tip" text="15 min" />
 
-ACE-Step, developed by ACE Studio and StepFun, is an open-source model that generates music from the lyrics and style tags you provide, allowing you to create songs, vocals, and instrumentals from simple text inputs. With its built-in tools, you can also refine your tracks by adjusting or regenerating specific parts without starting over.
+ACE-Step is an open-source music generation model developed by ACE Studio and StepFun. 
+It generates music from lyrics and style tags, and supports editing tools such as retake, repainting, and Audio2Audio.
 
-This guide shows you how to install ACE-Step on Olares, generate your first track, explore different musical styles, and enhance your audio using the editing features built into the app.
+This guide walks you through installation, first-time generation, and basic editing workflows on Olares One.
 
 ## Learning objectives
 
@@ -16,6 +17,12 @@ By the end of this tutorial, you will learn how to:
 - Locate and download your generated audio files.
 - Refine tracks by adjusting the style, editing sections, extending the song, or using a reference clip to reshape it.
 
+## Prerequisites
+
+Before you begin, make sure you have:
+- Olares One connected to a stable network.
+- Sufficient disk space to download models.
+
 ## Install and set up ACE-Step
 
 With your Olares device ready, follow these steps to install ACE-Step and begin generating music.
@@ -24,17 +31,17 @@ With your Olares device ready, follow these steps to install ACE-Step and begin 
 
 Follow these steps to install ACE-Step.
 
-1. Open the **Market** app in your Olares web interface.  
-2. Use the search bar and type "ACE-Step". 
-3. Click **Get**, then click **Install**.  
-4. Wait a few minutes for the installation to complete.
+1. Open Market, and search for "ACE-Step". 
+    ![Install ACE-Step](/images/one/ace-market.png#bordered)
+2. Click **Get**, then **Install**.  
+3. Wait a few minutes for the installation to complete.
 
 ### Download required models on first-time launch
 
 Once installation finishes, open ACE-Step from Launchpad.
 
 Olares will automatically download and install required models. A **Download Manager** window will appear, showing model size and download progress.  
-   ![ACE-Step Download Manager](../public/images/manual/use-cases/ace-step-download-manager.png#bordered){width=500}
+   ![ACE-Step Download Manager](/images/manual/use-cases/ace-step-download-manager.png#bordered){width=500}
 
 After the download completes, the ACE-Step generation interface will open automatically.
 
@@ -68,7 +75,7 @@ Follow these steps to set your parameters and begin music generation.
 
 1.  Click **Generate** when all parameters are set. 
 2.  Once generation is complete, click the **Play** button to preview your track.
-   ![Generate the audio](../public/images/manual/use-cases/ace-step-generate.png#bordered){width=80%}
+   ![Generate the audio](/images/manual/use-cases/ace-step-generate.png#bordered){width=80%}
 
 ### Save the generated music
 
@@ -95,7 +102,7 @@ You can generate a new version of the entire track.
     - Higher values: Create a significantly different version.
     - Lower values: Keep the new version closer to the original.
 3. Click **Retake** and wait for the generation.
-    ![Preview the retake](../public/images/manual/use-cases/ace-step-retake.png#bordered){width=90%}
+    ![Preview the retake](/images/manual/use-cases/ace-step-retake.png#bordered){width=90%}
 
 ### Regenerate a specific section
 
@@ -111,7 +118,7 @@ You can update only a selected time range while keeping the rest of the track un
     - `last_repaint`: The previous repainted version.
     - `upload`: The audio you uploaded.
 5. Click **Repaint** and wait for the generation.
-    ![Preview the repaint](../public/images/manual/use-cases/ace-step-repaint.png#bordered){width=90%}
+    ![Preview the repaint](/images/manual/use-cases/ace-step-repaint.png#bordered){width=90%}
 
 ### Edit lyrics
 
@@ -122,7 +129,7 @@ You can edit lyrics to modify specific lines without affecting the rest of the t
 3. Modify only the specific lines you wish to change.
 4. Under **Edit Type**, select `only_lyrics`.
 5. Click **Edit** and wait for the generation.
-    ![Edit lyrics](../public/images/manual/use-cases/ace-step-edit-lyrics.png#bordered){width=90%}
+    ![Edit lyrics](/images/manual/use-cases/ace-step-edit-lyrics.png#bordered){width=90%}
 
 ### Edit tags
 
@@ -132,7 +139,7 @@ You can edit tags to reset the style or timbre of the track.
 2. Enter the new style or timbre tags (e.g., `hard rock` or `male tenor vocals`) in the **Edit Tags** area.
 3. In **Edit Type**, select `remix`.
 4. Click **Edit** and wait for the generation.
-    ![Edit tags](../public/images/manual/use-cases/ace-step-edit-tags.png#bordered)
+    ![Edit tags](/images/manual/use-cases/ace-step-edit-tags.png#bordered)
 
 ### Extend the audio
 
@@ -147,7 +154,7 @@ You can extend the length of the original track by adding new audio before or af
     - `last_extend`: The previous extended version.
     - `upload`: The audio you uploaded.
 4. Click **Extend** and wait for the generation.
-    ![Extend tags](../public/images/manual/use-cases/ace-step-extend.png#bordered)
+    ![Extend tags](/images/manual/use-cases/ace-step-extend.png#bordered)
 
 ## Audio2Audio
 
@@ -158,4 +165,4 @@ You can create a new track based on a **reference audio** clip you upload. The A
 4. Select a **Preset** style, or keep the default.
 5. Set other parameters as needed.
 6. Click **Generate** to create new music with an atmosphere similar to the reference audio.
-    ![Audio2Audio](../public/images/manual/use-cases/ace-step-audio2audio.png#bordered)
+    ![Audio2Audio](/images/manual/use-cases/ace-step-audio2audio.png#bordered)
