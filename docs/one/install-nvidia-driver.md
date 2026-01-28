@@ -70,6 +70,9 @@ Before downloading a driver, you need to know exactly which graphics card model 
 ## Step 3: Install the driver
 
 1. Double-click the downloaded `.exe` file to start the installer.
+
+    ![Launch installer](/images/one/launch-installer.png#bordered){width=65%}
+
 2. **System Check**: 
 
     a. Select **NVIDIA Graphics Driver**. NVIDIA App is optional. 
