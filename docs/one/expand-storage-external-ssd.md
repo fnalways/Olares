@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: Learn how to manually mount an external SSD to Olares One for permanent storage expansion.
+description: Learn how to manually mount an external SSD to Olares One for temporary or permanent storage expansion.
 head:
    - - meta
      - name: keywords
@@ -11,18 +11,21 @@ head:
 
 You can manually mount high-capacity external SSDs to specific system paths on Olares One.
 
-This approach is recommended for long-term storage expansion, such as downloading more and larger local AI models.
+This approach is recommended for long-term storage expansion, such as downloading more or larger local AI models.
 
-## Before you begin
-
+:::warning HDD support
+This guide is intended for SSDs. Mechanical Hard Disk Drives (HDDs) have not been tested with Olares One.
+:::
+:::info Mount path
 Currently, only mounts under the `/olares/share` directory are supported.
 
 Mounting flexibility will be improved in future versions.
+:::
 
 ## Prerequisites
 **Hardware**
 - Your Olares One is set up and running.
-- The external SSD, formatted as `ext4` or `XFS`, is connected to Olares One.
+- The external SSD is connected to Olares One.
 
 **SSH access**
 - [SSH access to Olares One](access-terminal-ssh.md).
@@ -32,23 +35,19 @@ Mounting flexibility will be improved in future versions.
 
 ## Step 1: Identify the drive
 
-1. Connect the external SSD to Olares One.
-2. Open your terminal via SSH or from Control Hub.
-3. Run the following command to view detected drives:
+1. Connect to your Olares One terminal via SSH or from the Control Hub.
+
+2. Run the following command to view detected drives:
 
    ```bash
    sudo fdisk -l
    ```
 
-4. Identify your target drive from the output:
-    - **SATA/USB drives**: Typically appear as `/dev/sda`, `/dev/sdb`, etc.
-    - **NVMe SSD**: Typically appear as `/dev/nvme0n1`, `/dev/nvme1n1`, etc.
-
-   Each drive lists its partitions under the **Device** column, such as `/dev/nvme1n1p1`, `/dev/nvme1n1p2`, or `/dev/sdb1`.
+3. Identify your target drive from the output. Each drive lists its partitions under the **Device** column, such as `/dev/nvme1n1p1`, `/dev/nvme1n1p2`, or `/dev/sdb1`.
 
    ![Partition list](/images/manual/tutorials/expand-storage-partition.png#bordered)
 
-5. Note the target partition you intend to mount. For example: `/dev/nvme1n1p1`.
+4. Note the target partition you intend to mount. For example: `/dev/nvme1n1p1`.
 
 ## Step 2: Mount the partition
 ### Option A: Temporarily mount a partition
@@ -82,8 +81,10 @@ Temporary mounting is suitable for one-time tasks such as data migration. The co
 ### Option B: Permanently mount a partition
 For long-term usage, you must configure the system to mount the drive automatically at boot using the `/etc/fstab` file.
 
-1. Get the UUID. Using the UUID is safer than using device names (like `/dev/sdb1`), which can change if you plug drives into different ports.
-
+1. Get the UUID. 
+   :::tip Use UUID to identify device
+   Using the UUID is safer than using device names (like `/dev/sdb1`), which can change if you plug drives into different ports.
+   :::
    a. Run the following command:
     ```bash
     lsblk -f
@@ -127,8 +128,9 @@ For long-term usage, you must configure the system to mount the drive automatica
     ```bash
     mount -a
     ```
-   :::warning Prevent boot failure
+   :::tip Prevent boot failure
    An incorrect `/etc/fstab` configuration might prevent your system from booting.
+
    It is strongly recommended to run `mount -a` first to validate the configuration before rebooting.
    :::
    If no errors appear, the setup is successful.
@@ -136,7 +138,7 @@ For long-term usage, you must configure the system to mount the drive automatica
 7. After reboot, confirm the drive is automatically mounted in the **External** directory.
 
 ## Step 3: Unmount a partition
-:::warning
+:::warning Irreversible operation
 Ensure no programs or terminals are accessing the directory before unmounting.
 :::
 
@@ -152,9 +154,6 @@ To safely remove the drive or delete the mount point configuration:
     ```bash
     rm -rf /olares/share/<directory_name>
     ```
-   :::warning
-   Ensure the directory is empty and fully unmounted before deleting.
-   :::
 
 ## Resources
 - [Manage files in Olares](../manual/olares/files/index.md)

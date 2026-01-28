@@ -131,10 +131,29 @@ export const oneSidebar: DefaultTheme.Sidebar = {
     {
       text: "Advanced",
       items: [
-      {
-        text: "SSH into Olares One",
-        link: "/one/access-terminal-ssh",
-      },
+        {
+          text: "SSH into Olares One",
+          link: "/one/access-terminal-ssh",
+        },
+        {
+          text: "Expand storage",
+          collapsed: true,
+          items:
+            [
+              {
+                text: "USB drive",
+                link: "/one/expand-storage-usb-drive",
+              },
+              {
+                text: "External SSD",
+                link: "/one/expand-storage-external-ssd",
+              },
+              {
+                text: "NVMe SSD",
+                link: "/one/expand-storage-internal-ssd",
+              },
+            ]
+        },
         {
           text: "Connect two Olares One",
           items:
@@ -175,14 +194,6 @@ export const oneSidebar: DefaultTheme.Sidebar = {
         {
           text: "Set up with eGPU",
           link: "/one/egpu",
-        },
-        {
-          text: "Expand storage with a new drive",
-          link: "/one/expand-storage-with-external-drive",
-        },
-        {
-          text: "Create a bootable USB drive",
-          link: "/one/create-drive",
         },
       ]
     },
