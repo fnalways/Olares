@@ -38,7 +38,7 @@ export const oneSidebar: DefaultTheme.Sidebar = {
       items: [
         {
           text: "Open WebUI with Ollama",
-          link: "/one/ollama",
+          link: "/one/open-webui",
         },
         {
           text: "Generate images with ComfyUI",
@@ -190,10 +190,6 @@ export const oneSidebar: DefaultTheme.Sidebar = {
                 link: "/one/install-nvidia-driver",
               }
             ]
-        },
-        {
-          text: "Set up with eGPU",
-          link: "/one/egpu",
         },
       ]
     },
