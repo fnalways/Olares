@@ -90,7 +90,7 @@ As Super Admin, you can verify or modify the authentication level:
 
    ![Get Ollama endpoint](/images/manual/use-cases/ollama-endpoint.png#bordered)
 
-### Optinal: Enable LarePass VPN
+### Optional: Enable LarePass VPN
 
 If you are accessing Olares from a remote network, or if you have selected an authentication model other than **None**, you must enable LarePass VPN on your client device to establish a connection.
 
