@@ -189,11 +189,11 @@ export const oneSidebar: DefaultTheme.Sidebar = {
             [
               {
                 text: "Single-drive setup",
-                link: "/one/single-drive-dual-boot",
+                link: "/one/dual-boot-single-drive",
               },
               {
                 text: "Dual-drive setup",
-                link: "/one/dual-drive-dual-boot",
+                link: "/one/dual-boot-dual-drive",
               }
               ,
               {
