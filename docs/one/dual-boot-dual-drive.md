@@ -16,7 +16,7 @@ This dual-drive configuration physically isolates the systems. This ensures Olar
 **Hardware**<br>
 - A secondary NVMe M.2 SSD physically installed in Olares One.
 - A USB flash drive containing a bootable Windows installation media.
-- A wired keyboard and mouse. Bluetooth peripherals might not function in BIOS.
+- A wired keyboard and mouse.
 - A monitor connected to Olares One.
 
 ## Step 1: Boot into BIOS
@@ -32,21 +32,22 @@ This dual-drive configuration physically isolates the systems. This ensures Olar
 4. The system will restart and load the Windows installation interface.
 
 ## Step 3: Install Windows
-Follow the on-screen prompts to begin the Windows installation.
+1. Follow the on-screen prompts to begin the Windows installation.
+   :::danger Select the correct drive
+   You must carefully identify the secondary SSD.
 
-:::danger Select the correct drive
-You must carefully identify the secondary SSD.
+   Selecting the wrong drive will permanently erase your Olares data.
+   :::
 
-Selecting the wrong drive will permanently erase your Olares data.
-:::
+2. When the installation finishes and the system restarts, unplug the Windows USB drive.
 
 Once installation is complete, the system will restart into Windows automatically.
 
-## Step 4: Switch between operating systems
+## Switch between operating systems
 
 Because the operating systems are on separate physical drives, you switch between them using the BIOS boot priority.
 
-### Switch back to Olares OS
+### Switch to Olares OS
 1. Restart Olares One.
 2. Press **Delete** repeatedly to enter BIOS.
 3. Go to the **Boot** tab.

@@ -185,15 +185,16 @@ export const oneSidebar: DefaultTheme.Sidebar = {
         },
         {
           text: "Dual-boot Olares OS with Windows",
+          collapsed: true,
           items:
             [
               {
-                text: "Single-drive setup",
-                link: "/one/dual-boot-single-drive",
+                text: "Dual-drive setup (Recommended)",
+                link: "/one/dual-boot-dual-drive",
               },
               {
-                text: "Dual-drive setup",
-                link: "/one/dual-boot-dual-drive",
+                text: "Single-drive setup",
+                link: "/one/dual-boot-single-drive",
               }
               ,
               {
