@@ -1,6 +1,10 @@
 ---
 outline: [2, 3]
 description: Learn how to restore your Olares One to factory settings using LarePass.
+head:
+  - - meta
+    - name: keywords
+      content: Factory reset, Olares One
 ---
 # Reset to factory settings <Badge type="tip" text="10 min" />
 
@@ -25,11 +29,12 @@ Before starting, ensure that:
 
 ## Reset Olares One to factory settings
 
-1. Open **LarePass** on your phone and go to **Settings**.
+1. Open LarePass on your phone and go to **Settings**.
 2. In the **My Olares** card, tap **System** to enter the **Olares management** page.
 3. Tap **Restore to factory settings**.
 4. Review the risk prompt, then tap **Restore to factory settings** to continue.
     ![Review risk prompt](/images/manual/larepass/review-risk-prompt.png#bordered)
+
 5. Enter your local LarePass lock screen password and tap **Confirm**.
     ![Enter local unlock password](/images/manual/larepass/enter-password-to-uninstall.png#bordered)
    

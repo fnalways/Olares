@@ -24,18 +24,18 @@ This guide walks you through the most common tasks for maintaining a healthy sys
 
 Familiarize yourself with the key metrics used to measure system performance.
 
-| Metric           | Description                        | why it matters                                |
-|:-----------------|:-----------------------------------|:----------------------------------------------|
-| CPU usage        | Percentage of processor power used | Prolonged high usage makes the system slow and unresponsive.|
-| Memory usage     | Percentage of RAM in use           | If RAM is full, apps might crash or freeze. |
-| Average CPU load | Average number of active processes | High load indicates system overload.         |
-| Disk usage       | Percentage of storage space filled | Running out of space prevents saving new files or installing apps. |
-| Inode usage      | Percentage of index nodes (inodes) used | Exhaustion prevents new file creation. |
-| Disk throughput  | Data transfer rate (MB/s)          | Important for large file transfers.  |
-| IOPS             | Input/Output Operations Per Second | Critical for small file or random data access. |
-| Network traffic  | Internet usage (Mbps)              | High traffic can slow down remote access and downloads.  |
-| Pod status       | Number of active app containers    | Indicates if your applications are running, pending, or failed.    |
-| Fan speed        | Cooling fan speed (RPM)            | Higher speeds indicate the system is working hard to cool down. |
+| Metric           | Description                             | why it matters                                                     |
+|:-----------------|:----------------------------------------|:-------------------------------------------------------------------|
+| CPU usage        | Percentage of processor power used      | Prolonged high usage makes the system slow and unresponsive.       |
+| Memory usage     | Percentage of RAM in use                | If RAM is full, apps might crash or freeze.                        |
+| Average CPU load | Average number of active processes      | High load indicates system overload.                               |
+| Disk usage       | Percentage of storage space filled      | Running out of space prevents saving new files or installing apps. |
+| Inode usage      | Percentage of index nodes (inodes) used | Exhaustion prevents new file creation.                             |
+| Disk throughput  | Data transfer rate (MB/s)               | Important for large file transfers.                                |
+| IOPS             | Input/Output Operations Per Second      | Critical for small file or random data access.                     |
+| Network traffic  | Internet usage (Mbps)                   | High traffic can slow down remote access and downloads.            |
+| Pod status       | Number of active app containers         | Indicates if your applications are running, pending, or failed.    |
+| Fan speed        | Cooling fan speed (RPM)                 | Higher speeds indicate the system is working hard to cool down.    |
 
 ## Check system health
 

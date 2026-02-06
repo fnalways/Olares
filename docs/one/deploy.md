@@ -1,6 +1,10 @@
 ---
 outline: [2, 3]
 description: Deploy a single-container Docker app to Olares using Studio.
+head:
+  - - meta
+    - name: keywords
+      content: Olares Studio, Docker, Container
 ---
 # Deploy an app <Badge type="tip" text="20 min" />
 
@@ -29,7 +33,7 @@ Before you begin, ensure you have:
 
 ## Install Studio
 
-1. Open **Market** and search for "Studio".
+1. Open Market and search for "Studio".
 2. Click **Get**, then **Install**.
 
 ## Reference: Docker configuration 

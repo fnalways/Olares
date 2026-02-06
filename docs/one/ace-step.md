@@ -1,18 +1,20 @@
 ---
 outline: [2, 3]
 description: Step-by-step guide to installing ACE-Step AI on Olares, generating songs with lyrics or instrumentals, optimizing audio with retake and repainting, and using Audio2Audio to transform reference audio into new music.
+head:
+  - - meta
+    - name: keywords
+      content: ACE-Step, AI music
 ---
 # Create AI-generated music with ACE-Step <Badge type="tip" text="15 min" />
 
-ACE-Step is an open-source music generation model developed by ACE Studio and StepFun. 
-It generates music from lyrics and style tags, and supports editing tools such as retake, repainting, and Audio2Audio.
+ACE-Step is an open-source music generation model developed by ACE Studio and StepFun. It generates music from lyrics and style tags, and supports editing tools such as retake, repainting, and Audio2Audio.
 
 This guide walks you through installation, first-time generation, and basic editing workflows on Olares One.
 
 ## Learning objectives
 
 By the end of this tutorial, you will learn how to:
-- Install ACE-Step on your Olares device.
 - Generate songs with lyrics, tags, and stylistic controls.
 - Locate and download your generated audio files.
 - Refine tracks by adjusting the style, editing sections, extending the song, or using a reference clip to reshape it.
@@ -33,6 +35,7 @@ Follow these steps to install ACE-Step.
 
 1. Open Market, and search for "ACE-Step". 
     ![Install ACE-Step](/images/one/ace-market.png#bordered)
+
 2. Click **Get**, then **Install**.  
 3. Wait a few minutes for the installation to complete.
 
@@ -79,15 +82,20 @@ Follow these steps to set your parameters and begin music generation.
 
 ### Save the generated music
 
-You can save your generated music via two methods:
+You can save your generated music via two methods.
 
-- **Direct download**: Click the <i class="material-symbols-outlined">download</i> button in the upper right corner to save the audio file directly to your local device.
-    
-- **From Olares Files**:
-    1. Open **Files**.
-    2. Navigate to: `/Home/AI/output/acestepv2`.
-    3. Right-click the generated audio file and save it to your local device.
+<tabs>
+<template #Direct-download>
 
+Click the <i class="material-symbols-outlined">download</i> button in the upper right corner to save the audio file directly to your local device.
+</template>
+<template #From Olares Files>
+
+1. Open Files.
+2. Navigate to: `/Home/AI/output/acestepv2`.
+3. Right-click the generated audio file and save it to your local device.
+</template>
+</tabs>
 
 ## Optimize your audio
 
@@ -102,6 +110,7 @@ You can generate a new version of the entire track.
     - Higher values: Create a significantly different version.
     - Lower values: Keep the new version closer to the original.
 3. Click **Retake** and wait for the generation.
+
     ![Preview the retake](/images/manual/use-cases/ace-step-retake.png#bordered){width=90%}
 
 ### Regenerate a specific section
@@ -118,6 +127,7 @@ You can update only a selected time range while keeping the rest of the track un
     - `last_repaint`: The previous repainted version.
     - `upload`: The audio you uploaded.
 5. Click **Repaint** and wait for the generation.
+
     ![Preview the repaint](/images/manual/use-cases/ace-step-repaint.png#bordered){width=90%}
 
 ### Edit lyrics
@@ -129,6 +139,7 @@ You can edit lyrics to modify specific lines without affecting the rest of the t
 3. Modify only the specific lines you wish to change.
 4. Under **Edit Type**, select `only_lyrics`.
 5. Click **Edit** and wait for the generation.
+
     ![Edit lyrics](/images/manual/use-cases/ace-step-edit-lyrics.png#bordered){width=90%}
 
 ### Edit tags
@@ -139,6 +150,7 @@ You can edit tags to reset the style or timbre of the track.
 2. Enter the new style or timbre tags (e.g., `hard rock` or `male tenor vocals`) in the **Edit Tags** area.
 3. In **Edit Type**, select `remix`.
 4. Click **Edit** and wait for the generation.
+
     ![Edit tags](/images/manual/use-cases/ace-step-edit-tags.png#bordered)
 
 ### Extend the audio
@@ -154,6 +166,7 @@ You can extend the length of the original track by adding new audio before or af
     - `last_extend`: The previous extended version.
     - `upload`: The audio you uploaded.
 4. Click **Extend** and wait for the generation.
+
     ![Extend tags](/images/manual/use-cases/ace-step-extend.png#bordered)
 
 ## Audio2Audio
@@ -165,4 +178,5 @@ You can create a new track based on a **reference audio** clip you upload. The A
 4. Select a **Preset** style, or keep the default.
 5. Set other parameters as needed.
 6. Click **Generate** to create new music with an atmosphere similar to the reference audio.
+
     ![Audio2Audio](/images/manual/use-cases/ace-step-audio2audio.png#bordered)

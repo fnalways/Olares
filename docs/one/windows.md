@@ -1,6 +1,10 @@
 ---
 outline: [2, 4]
 description: A comprehensive guide to installing and running a Windows virtual machine on Olares. Learn how to configure initial credentials, connect via browser-based VNC or Microsoft Remote Desktop (RDP), and transfer files between your computer and the VM.
+head:
+  - - meta
+    - name: keywords
+      content: Olares One, Windows VM
 ---
 
 # Run a Windows VM on Olares One <Badge type="tip" text="20 min" />
@@ -30,6 +34,7 @@ Windows is available as an app in the Olares Market.
 ### Install Windows
 1. Open Market, and search for "Windows".
    ![Install Windows](/images/one/win-market.png#bordered)
+
 2. Click **Get**, then **Install**.
 3. When prompted, set environment variables:
     - `USERNAME`: Create a username for accessing Windows.
@@ -100,7 +105,7 @@ The following steps show the macOS interface, but the workflow is similar on all
     b. In **PC name**, enter the domain you get from the previous step, followed by a colon and the port number.
 
       For example, if your URL is `https://0f4137ed.<username>.olares.com`, and the port is `47374`, enter:
-      ```
+      ```text
       0f4137ed.<username>.olares.com:47374
       ```
 

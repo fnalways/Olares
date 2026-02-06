@@ -1,10 +1,14 @@
 ---
 outline: [2, 3]
 description: Learn how to use the LarePass app to check for and install system updates on your Olares One.
+head:
+  - - meta
+    - name: keywords
+      content: Olares One, Update Olares
 ---
 # Update OS <Badge type="tip" text="15 min" />
 
-Use the **LarePass** app to keep your Olares One up to date with the latest features and security patches.
+Use the LarePass app to keep your Olares One up to date with the latest features and security patches.
 
 :::warning Admin access required
 Only an Olares administrator can perform system updates. Please note that updates apply to the entire Olares cluster and affect all members.
@@ -26,7 +30,7 @@ Make sure that:
 
 ## Check for updates
 
-1. Open **LarePass** and go to **Settings**.
+1. Open LarePass on your phone and go to **Settings**.
 2. In the **My Olares** card, tap **System** to enter the **Olares management** page.
 3. Tap **System update**.
 4. If a new version appears in the **New version** field, tap **Upgrade**.

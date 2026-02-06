@@ -1,6 +1,10 @@
 ---
 outline: [2, 3]
 description: Learn about the three GPU modes in Olares and how to switch between them to match different workloads.
+head:
+  - - meta
+    - name: keywords
+      content: GPU, Time slicing, App exclusive, Memory slicing, GPU management
 ---
 # Switch GPU mode <Badge text="10 min"/>
 
@@ -15,18 +19,18 @@ Olares lets you control how applications use GPU resources for workloads like AI
 By the end of this tutorial, you will learn how to:
 
 - Choose between the three GPU modes.
-- Switch GPU mode in **Settings**.
+- Switch GPU mode in Settings.
 - Configure app binding for **App exclusive** mode and **Memory slicing** mode.
 
 ## Choose the right GPU mode
 
 Olares provides three GPU modes, each designed for a different usage pattern.
 
-| GPU mode | Definition | Use scenario |
-| :--- | :--- | :--- |
-| **Time slicing** (Default) | Multiple apps share one GPU<br> by taking turns using compute<br> and VRAM. | General workloads that run several lightweight apps. |
-| **App exclusive** | One app gets full, uninterrupted<br> access to the compute and VRAM<br> of a single GPU. | Heavy workloads that require maximum stability, such as LLMs and high‑end gaming. |
-| **Memory slicing** | The GPU's VRAM is divided into<br> fixed quotas, and apps run concurrently<br> within their limits. | Running specific apps simultaneously while strictly limiting their memory usage. |
+| GPU mode                   | Definition                                                                                          | Use scenario                                                                      |
+|:---------------------------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
+| **Time slicing** (Default) | Multiple apps share one GPU<br> by taking turns using compute<br> and VRAM.                         | General workloads that run several lightweight apps.                              |
+| **App exclusive**          | One app gets full, uninterrupted<br> access to the compute and VRAM<br> of a single GPU.            | Heavy workloads that require maximum stability, such as LLMs and high‑end gaming. |
+| **Memory slicing**         | The GPU's VRAM is divided into<br> fixed quotas, and apps run concurrently<br> within their limits. | Running specific apps simultaneously while strictly limiting their memory usage.  |
 
 ## View GPU details
 
@@ -46,7 +50,7 @@ Follow these steps to change how a GPU is used:
 2. Choose a mode from the **GPU mode** dropdown.
 
 :::warning Restart notice
-Changing a GPU’s mode restarts applications currently using that GPU.
+Changing a GPU's mode restarts applications currently using that GPU.
 :::
 
 ### Time slicing

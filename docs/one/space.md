@@ -91,7 +91,7 @@ Monitor how much data you have used for remote access to avoid exceeding the mon
 
    a. Click the date range dropdown list.
 
-      ![Olares Space traffice by month](/images/one/space-traffic-filter.png#bordered)
+      ![Olares Space traffic by month](/images/one/space-traffic-filter.png#bordered)
 
    b. Select a specific billing period to view the traffic history for that month. For example, 2025-12-02 ~ 2026-01-02.
 

@@ -33,7 +33,7 @@ However, simply plugging in a monitor is not enough. Because Steam Headless is o
 
 ## Step 1: Install Steam Headless
 
-1. Open the Market, and search for "Steam."
+1. Open the Market, and search for "Steam".
 2. Click **Get**, then **Install**.
    ![Install Steam Headless](/images/manual/use-cases/steam-install-steam-headless1.png#bordered)
 

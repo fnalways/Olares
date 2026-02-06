@@ -121,7 +121,7 @@ Download files to your local computer.
 
     The file is downloaded via your web browser's standard download manager.
 
-:::tip Notes
+:::info
 Web browsers cannot download entire folders or extremely large files reliably. For these tasks, install the LarePass Desktop application to unlock folder downloads and resume capabilities. 
 :::
 

@@ -1,6 +1,10 @@
 ---
 outline: [2, 3]
 description: Learn how to save YouTube videos into your Wise library using YT-DLP for offline viewing.
+head:
+- - meta
+  - name: keywords
+    content: Wise, YouTube, LarePass browser extension
 ---
 # Download YouTube videos in Wise <Badge text="15 min"/>
 
@@ -36,6 +40,7 @@ You can save videos by pasting the URL directly in Wise or by using the LarePass
 4. In the panel, locate the Save to library section:
     - **Video is ready**: Click <i class="material-symbols-outlined">box_add</i> next to the video item to save it.
     ![Save video via link](/images/one/wise-save-to-lib-add-link.png#bordered){width=60%}
+   
     - **Login is required**: If you see a prompt to log in to the site and upload cookies, simply click **Upload**. Once the status updates, click <i class="material-symbols-outlined">box_add</i> to save.
     
 ### Use LarePass extension
@@ -47,6 +52,7 @@ If you frequently save videos while browsing, the [LarePass extension](https://w
 3. In the panel, locate the Save to library section:
    - **Video is ready**: Click <i class="material-symbols-outlined">box_add</i> next to the video item to save it.
     ![Save video via larepass](/images/one/wise-save-to-lib-larepass.png#bordered){width=60%}
+   
    - **Login is required**: If you see a prompt to log in to the site and upload cookies, simply click **Upload**. Once the status updates, click <i class="material-symbols-outlined">box_add</i> to save.
 
 ## Monitor and manage video downloads

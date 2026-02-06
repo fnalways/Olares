@@ -9,25 +9,19 @@ head:
 
 # Create a bootable USB drive <Badge type="tip" text="15 min"/>
 
-To install Olares on Olares One or other physical devices, you must first create a bootable installation drive. This process involves downloading the Olares system image and writing it to a USB stick.
+To reinstall or recover Olares OS on your Olares One, you must create a bootable USB installation drive. This drive allows you to reset the device to its factory state.
 
 :::warning Data loss warning
 This process will erase all data on your USB drive. If you have important files on the drive, back them up before proceeding.
 :::
-
-## Learning objectives
-
-- Download the official Olares system image (ISO).
-- Install the necessary flashing software.
-- Create a valid installation USB drive.
-
-## Before you begin
-
-Ensure that your USB drive is empty or backed up. The flashing process re-formats the drive, which means existing data on it will be permanently deleted.
-
+:::warning Image compatibility
+Olares One requires a specific system image designed for its hardware. If you install the generic self-hosted ISO, Olares One will fail to boot.
+:::
 ## Prerequisites
-
 - USB flash drive: A drive with 8 GB or higher capacity.
+  :::info
+  Ensure that your USB drive is empty or backed up. The flashing process re-formats the drive, which means existing data on it will be permanently deleted.
+  :::
 - Computer: A Windows, macOS, or Linux computer to perform the setup.
 - Internet connection: Stable network for downloading the image file and related software.
 
@@ -35,8 +29,8 @@ Ensure that your USB drive is empty or backed up. The flashing process re-format
 
 Get the official installation file for the Olares operating system.
 
-1. Click [Download Olares ISO](https://cdn.olares.com/olares-latest-amd64.iso).
-2. The latest image file `olares-latest-amd64.iso` is automatically downloaded to your computer.
+1. Click [Download Olares ISO](https://cdn.olares.com/one/olares.iso).
+2. The latest image file `olares.iso` is automatically downloaded to your computer.
 
 ## Step 2. Install flashing tool
 

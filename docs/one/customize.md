@@ -1,6 +1,10 @@
 ---
 outline: [2, 3]
 description: Learn how to personalize your Olares experience by customizing your desktop background, system theme, and designing your public profile page.
+head:
+  - - meta
+    - name: keywords
+      content: Profile, personal webpage, decentralized webpage
 ---
 
 # Customize Olares <Badge text="15 min"/>
@@ -19,7 +23,7 @@ By the end of this tutorial, you will learn how to:
 
 You can adjust the look and feel of your local Olares environment through the system settings.
 
-1. Open **Settings** from the Dock.
+1. Open Settings from the Dock.
 2. Select **Appearance** in the sidebar.
 
 ![Customize desktop](/images/one/setting-appearance.png#bordered){width=80%}
@@ -45,7 +49,7 @@ Your Olares profile is a public homepage available at `https://{your-olares-id}.
 
 ![Profile](/images/manual/olares/profile.png)
 
-Open **Profile** from the Dock to start editing. The editor has four tabs: **Header**, **Social**, **Blocks**, and **Appearance**. 
+Open Profile from the Dock to start editing. The editor has four tabs: **Header**, **Social**, **Blocks**, and **Appearance**. 
 
 ![Profile icon](/images/one/profile-icon.png#bordered){width=95%}
 

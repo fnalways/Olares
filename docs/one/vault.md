@@ -33,7 +33,7 @@ Olares Vault offers two main types of vaults:
 
 ### Vault items
 
-A vault item is a secure container for a specific piece of information. While commonly used for login credentials (username/password), vault items can also store credit cards, secure notes, passports, and network details.
+A vault item is a secure container for a specific piece of information. While commonly used for login credentials, vault items can also store credit cards, secure notes, passports, and network details.
 
 ## Set up Vault
 
