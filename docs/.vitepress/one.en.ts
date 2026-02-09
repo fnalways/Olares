@@ -207,6 +207,10 @@ export const oneSidebar: DefaultTheme.Sidebar = {
           text: "Create a bootable USB",
           link: "/one/create-drive",
         },
+        {
+          text: "Connect applications",
+          link: "/one/connect-apps",
+        },
       ]
     },
     {
