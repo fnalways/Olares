@@ -23,6 +23,7 @@ This guide walks you through identifying your specific graphics card model and i
 
 - Connect to internet: The driver file is large (often 500 MB+), so a stable connection is required.
 - Close applications: Save your work and close any graphic-intensive programs like games or photo editors before starting the installation. The screen might temporarily turn black or blink during the update, which can cause open applications to crash or lose unsaved data.
+- Windows version: For the best stability and driver compatibility, Windows 11 version 24H2 is recommended. While other versions might work, they have not been fully validated with Olares One. 
 
 ## Prerequisites
 
