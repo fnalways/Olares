@@ -16,7 +16,7 @@ Olares Space uses a decentralized ID (DID) or Olares ID for authentication. Make
 2. Open https://space.olares.com/ in your browser. 
 3. Scan the QR code using LarePass.  
 
-::: tipinfo
+:::info
 The features and services available on Olares Space vary depending on whether you use a DID or Olares ID for login. 
 - **Logging in with a DID** allows you to set your own domain since no domain is associated to the account. However, you must bind the DID to an Olares ID before you can activate an Olares device.
 - **Logging in with an Olares ID** enables you to create an Olares, provided the name isn't already linked to another Olares device. However, you cannot use your custom domain since your Olares ID already corresponds to a unique domain.
