@@ -2,7 +2,7 @@
 description: Learn how to access and manage Olares Space accounts using LarePass authentication. 
 ---
 :::warning Documentation does not match current experience
-Some steps and screenshots in this documentation might not fully reflect the current Olares Space platform. If there are differences, follow the actual platform.
+We are currently updating this documentation to match the latest experience on the Olares Space platform. If there are differences, follow the actual platform.
 :::
 # Manage accounts in Olares Space
 

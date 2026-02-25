@@ -3,7 +3,7 @@ outline: [2, 3]
 description: Set up your cloud based Olares instance in Olares Space. Configure system resources, monitor installation progress, and activate your instance with proper credentials.
 ---
 :::warning Documentation does not match current experience
-Some steps and screenshots in this documentation might not fully reflect the current Olares Space platform. If there are differences, follow the actual platform.
+We are currently updating this documentation to match the latest experience on the Olares Space platform. If there are differences, follow the actual platform.
 :::
 # Create a cloud-based Olares
 

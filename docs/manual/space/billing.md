@@ -2,7 +2,7 @@
 description: Understand Olares Space billing system with service charges and payment workflows. Learn about cloud hosting fees, usage based pricing, and promotional credit applications.
 ---
 :::warning Documentation does not match current experience
-Some steps and screenshots in this documentation might not fully reflect the current Olares Space platform. If there are differences, follow the actual platform.
+We are currently updating this documentation to match the latest experience on the Olares Space platform. If there are differences, follow the actual platform.
 :::
 # Billing
 

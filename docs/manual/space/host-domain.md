@@ -3,7 +3,7 @@ outline: [2, 3]
 description: Set up custom domains in Olares Space with domain verification and DNS configuration. Create organizational Olares IDs and manage domain settings for your team.
 ---
 :::warning Documentation does not match current experience
-Some steps and screenshots in this documentation might not fully reflect the current Olares Space platform. If there are differences, follow the actual platform.
+We are currently updating this documentation to match the latest experience on the Olares Space platform. If there are differences, follow the actual platform.
 :::
 # Set up a custom domain
 

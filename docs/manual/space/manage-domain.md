@@ -3,7 +3,7 @@ outline: [2, 3]
 description: Configure domain settings in Olares Space with email invitation rules and member management. Administrate organizational Olares IDs for seamless team collaboration.
 ---
 :::warning Documentation does not match current experience
-Some steps and screenshots in this documentation might not fully reflect the current Olares Space platform. If there are differences, follow the actual platform.
+We are currently updating this documentation to match the latest experience on the Olares Space platform. If there are differences, follow the actual platform.
 :::
 # Manage your domain
 
