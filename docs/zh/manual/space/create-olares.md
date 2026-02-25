@@ -12,7 +12,7 @@ description: 在云端创建 Olares 实例的操作指南，涵盖环境设置�
 
 :::info
 - **托管服务**目前处于邀请制测试阶段。如需使用云端 Olares，请联系我们获取邀请。
-- 如果你想了解如何搭建自托管 Olares，请参考[快速入门指南](../manual/get-started/index.md)。
+- 如果你想了解如何搭建自托管 Olares，参考[快速入门指南](../get-started/index.md)。
 :::
 
 ## 准备工作

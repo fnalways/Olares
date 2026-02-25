@@ -12,7 +12,7 @@ This section provides a step-by-step guide to creating and managing your cloud-b
 
 :::info
 - The **Host Service** is currently in an invite-only beta phase. To access the cloud-based Olares, contact us for an invitation.
-- If you are looking for information about setting up a self-hosted Olares, refer to the [Getting Started Guide](../manual/get-started/index.md).
+- If you are looking for information about setting up a self-hosted Olares, refer to the [Getting Started Guide](../get-started/index.md).
 :::
 
 ## Prerequisites
