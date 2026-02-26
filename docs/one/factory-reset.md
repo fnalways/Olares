@@ -6,7 +6,7 @@ head:
     - name: keywords
       content: Factory reset, Olares One
 ---
-# Reset to factory settings <Badge type="tip" text="10 min" />
+# Reset to factory settings using LarePass <Badge type="tip" text="10 min" />
 
 Resetting to factory settings returns your Olares One to the initial setup state.
 
@@ -14,15 +14,9 @@ Resetting to factory settings returns your Olares One to the initial setup state
 This will permanently delete all accounts, settings, and data on the device. This action cannot be undone.
 :::
 
-## Learning objectives
-
-By the end of this tutorial, you will learn how to:
-- Perform a factory reset from LarePass.
-- Complete the required confirmation and local password verification.
-
 ## Prerequisites
 
-Before starting, ensure that:
+**Hardware**<br>
 - Olares One is powered on.
 - Your phone and Olares One are on the same network.
 - You are signed in to LarePass as an administrator.

@@ -1,65 +1,54 @@
 ---
 outline: [2, 3]
-description: Learn how to create a bootable USB installer for Olares OS using balenaEtcher.
+description: Reinstall Olares OS on Olares One using a bootable USB to restore the device to factory state.
 head:
   - - meta
     - name: keywords
-      content: Olares, Olares One, install Olares, bootable USB, ISO, balenaEtcher
+      content: Olares One, reinstall, factory reset, bootable USB, installation USB
 ---
 
-# Create a bootable USB drive <Badge type="tip" text="15 min"/>
+# Reset to factory settings using installation USB <Badge type="tip" text="10 min"/>
 
-To reinstall or recover Olares OS on your Olares One, you must create a bootable USB installation drive. This drive allows you to reset the device to its factory state.
+Resetting to factory settings returns your Olares One to the initial setup state. You can reinstall Olares OS using the bootable USB drive included with Olares One.
 
-:::warning Data loss warning
-This process will erase all data on your USB drive. If you have important files on the drive, back them up before proceeding.
+:::warning Data loss
+This will permanently delete all accounts, settings, and data on the device. This action cannot be undone.
 :::
-:::warning Image compatibility
-Olares One requires a specific system image designed for its hardware. If you install the generic self-hosted ISO, Olares One will fail to boot.
-:::
+
 ## Prerequisites
-- USB flash drive: A drive with 8 GB or higher capacity.
-  :::info
-  Ensure that your USB drive is empty or backed up. The flashing process re-formats the drive, which means existing data on it will be permanently deleted.
-  :::
-- Computer: A Windows, macOS, or Linux computer to perform the setup.
-- Internet connection: Stable network for downloading the image file and related software.
+**Hardware**<br>
+- The bootable USB drive that came with Olares One.
+- A monitor and keyboard connected to Olares One.
 
-## Step 1. Download Olares image
+## Step 1. Boot from the USB drive
 
-Click to download the [ISO image for Olares One](https://cdn.olares.com/one/olares.iso). The file `olares.iso` will be saved to your computer.
+1. Insert the bootable USB drive into Olares One.
+2. Power on Olares One or restart if it is already running.
+3. Immediately press the **Delete** key repeatedly to enter **BIOS setup**.
+4. Set **USB Boot** as the first boot option.
+5. Press **F10**, then select **Yes** to save and exit. Olares One will restart and boot into the Olares installer interface.
 
-## Step 2. Install flashing tool
+## Step 2. Install Olares to disk
 
-It is recommended to use balenaEtcher for this task because it is free, easy to use, and works on all major operating systems.
+1. From the installer interface, select **Install Olares to Hard Disk** and press **Enter**.
+2. The installer lists available disks (e.g. `nvme0n1 2000G`). Type `/dev/` followed by the disk name (e.g. `/dev/nvme0n1`) as the installation target. Installation usually takes **4–5 minutes**.
+   :::tip
+   If you see prompts about NVIDIA GPU drivers, press **Enter** to accept the default.
+   :::
+3. When you see **Installation completed successfully!**, the reinstall is done.
+4. Remove the USB drive, then press **Ctrl + Alt + Delete** to restart.
 
-1. Go to the [balenaEtcher website](https://etcher.balena.io/).
-2. Download and install the version appropriate for your computer (Windows, macOS, or Linux).
+## Step 3. Verify and activate
 
-## Step 3. Flash the drive
+After reboot, the system starts in a clean state.
 
-Use balenaEtcher to turn your USB stick into a bootable installer.
+1. Log in with the default credentials:
+   - **Username**: `olares`
+   - **Password**: `olares`
+2. (Optional) In a terminal, run:
+   ```bash
+   sudo olares-check
+   ```
+   If the output shows success for Olaresd and Containerd, Olares is installed correctly.
 
-1. Insert your USB flash drive into the computer.
-2. Open balenaEtcher.
-3. Follow the steps on the screen:
-
-    a. Click **Flash from file** and select the Olares ISO file you downloaded.
-
-    b. Click **Select target** and select your USB drive.
-
-    c. Click **Flash!** to start writing the installer to the USB drive.
-
-    ![Bootable USB](/images/one/balenaEtcher.png#bordered)
-
-4. When the flashing process is completed, the USB drive is ready to use, and you can safely eject it.
-
-## Next steps
-
-You can now insert the bootable USB drive into Olares One or other target hardware to begin the installation.
-
-## Resources
-
-- [Install Olares via ISO](../manual/get-started/install-linux-iso.md)
-- [Install Olares](../manual/get-started/install-olares.md)
-- [Installation FAQs](../manual/help/installation.md)
+3. Complete activation via LarePass. For detailed instructions, see [First boot](first-boot.md).
