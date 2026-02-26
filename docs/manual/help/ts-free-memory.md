@@ -3,7 +3,7 @@ outline: [2, 3]
 description: Troubleshoot memory not freeing after stopping apps.
 ---
 
-# Memory insufficient or not released after stopping an app
+# Memory insufficient or not freed after stopping an app
 
 Use this guide when you stop an app (for example in Settings) but system memory is not freed, or when installation or restore fails because of insufficient memory.
 
