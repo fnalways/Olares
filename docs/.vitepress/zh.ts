@@ -37,7 +37,7 @@ const side = {
           collapsed: true,
           items: [
             {
-              text: "内存不够或没有释放",
+              text: "内存不足或没有释放",
               link: "/zh/manual/help/ts-free-memory",
             },
           ],

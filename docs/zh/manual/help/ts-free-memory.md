@@ -1,83 +1,81 @@
 ---
 outline: [2, 3]
-description: Troubleshoot memory not freeing after stopping apps.
+description: 排查暂停应用后内存未释放的问题。
 ---
 
-# Memory not released after stopping an app
+# 暂停应用后内存不足或未释放
 
-Use this guide when you stop an app (for example in Settings) but system memory is not freed, or when installation or restore fails because of insufficient memory.
+当你在设置中暂停应用后系统内存仍未释放，或因内存不足导致安装、恢复失败时，可参考本指南。
 
-## Symptom
+## 适用情况
 
-- You stop an application manually in Settings, but memory usage does not drop.
-- Market reports that there is not enough memory to install or restore an app.
+- 应用市场提示内存不足，无法安装或恢复应用。
+- 你在设置中手动暂停了某个应用，但内存占用未下降。
 
-## Cause
+## 原因
 
-In Olares, some applications (for example Ollama and many LLM apps) are deployed as [shared applications](../../developer/concepts/application.md#shared-application). They provide centralized resources or services to all users in the cluster.
+在 Olares 中，部分应用（如 Ollama 及多数 LLM 应用）以[共享应用](../../developer/concepts/application.md#共享应用)形式部署，为集群内所有用户提供集中资源或服务。
 
-Resource use for these apps is mainly on the system side. In Olares OS 1.12.4 and earlier, stopping a shared app from Settings only stops its user-facing client. The system-side service is not stopped by default, so the memory it uses is not released.
+这类应用的资源占用主要来自服务端。在 Olares OS 1.12.4 及更早版本中，从设置中暂停共享应用只会停止其面向用户的客户端，系统侧服务默认不会停止，因此其占用的内存不会被释放。
 
-## Before you begin
+## 解决方案：通过 Market 释放内存
 
-- The current user should have administrator privileges.
-- This guide applies when your Olares system does not have sub-accounts.
+通过应用市场暂停应用及其服务端（而不仅从设置中暂停），然后视需要在仪表盘和控制面板中确认内存已释放。
 
-## Solution: Free memory via Market
-
-To free memory, stop apps (and their server side) from Market instead of only from Settings, then verify in Dashboard and Control Hub as needed.
-
-### Step 1: Check current memory in Dashboard
-
-Open Dashboard and check current memory usage.
-
-![Dashboard memory overview](/images/manual/help/ts-release-memory-dashboard-memory.png#bordered)
-
-### Step 2: Check the app's memory requirements in Market
-
-In Market, open the app you want to install or resume and check its memory requirements. If the sum of used and required memory is greater than about 90% of total memory, installation or restore may fail.
-
-![Market app memory requirements](/images/manual/help/ts-release-memory-market-requirements.png#bordered)
-
-### Step 3: Identify apps using the most memory in Dashboard
-
-1. Back to Dashboard and navigate to the **Applications** section.
-2. At the top right, use the sorting option to sort apps by memory usage.
-3. Review the list to see which applications are consuming the most memory. Note apps you can close or temporarily stop to free up memory for your new app.
-
-    ![Dashboard application memory usage ranking](/images/manual/help/ts-release-memory-dashboard-app-usage.png#bordered)
-
-### Step 4: Stop apps from Market
-
-Stopping from Market allows you to stop the shared server and release its memory.
-
-1. Open Market and go to **My Olares**.
-2. Click <i class="material-symbols-outlined">keyboard_arrow_down</i> next to the app's operation button and select **Stop**.
-    ![Market My Olares select app to stop](/images/manual/help/ts-release-memory-market-my-olares.png#bordered)
-
-3. If a dialog appears when you stop the app, check **Also stops the shared server (affects all users)**.
-
-    ![Market stop C/S app dialog with option to close server side](/images/manual/help/ts-release-memory-market-cs-dialog.png#bordered)
-
-:::tip Uninstalling a shared app  
-If you are uninstalling a shared app, also check this option so the server side is fully removed.
+:::info
+本指南适用于你具备管理员权限且当前系统无子账户的情况。
 :::
 
-### Step 5: Verify that memory has been released
+### 步骤 1：在仪表盘中查看当前内存
 
-After stopping apps, wait about 5 minutes, then reopen the Dashboard to review current memory usage.
+打开仪表盘，查看当前内存占用情况。
 
-If you notice that most memory-intensive apps are no longer listed at the top, but total memory usage remains high:
+![仪表盘内存概览](/images/manual/help/ts-release-memory-dashboard-memory.png#bordered)
 
-1. Open Control Hub and navigate to the **Namespaces** section.
-2. Click the **Memory usage** column to sort namespaces by memory consumption.
-3. Look for any namespaces with a name ending in `server-shared`. This indicates the server side of a shared app is still be running and holding onto memory.
+### 步骤 2：在应用市场中查看应用内存需求
 
+在应用市场中打开要安装或恢复的应用，查看其内存需求。若已用内存与所需内存之和超过总内存约 90%，安装或恢复可能会失败。
 
-![Control Hub namespaces sorted by memory](/images/manual/help/ts-release-memory-controlhub-namespaces.png#bordered)
+![应用内存需求](/images/manual/help/ts-release-memory-market-requirements.png#bordered)
 
-4. For any shared app that is still holding memory:
+### 步骤 3：在仪表盘中查看不同应用的内存占用
 
-    a. Go to **Market** > **My Olares**, resume the app, then stop it.
+1. 回到仪表盘，进入**应用**页面。
+2. 在右上角使用排序选项，按内存占用排序。
+3. 查看列表，确认哪些应用占用内存最多，并记下可关闭或暂时停止以释放内存的应用。
+
+    ![仪表盘应用内存占用排序](/images/manual/help/ts-release-memory-dashboard-app-usage.png#bordered)
+
+### 步骤 4：在应用市场中暂停应用
+
+在应用市场中暂停应用可以同时停止共享服务端并释放其内存。
+
+1. 打开应用市场，进入**我的 Olares**。
+2. 找到要暂停的应用，点击应用操作按钮旁的 <i class="material-symbols-outlined">keyboard_arrow_down</i>，选择**暂停**。
+    ![我的 Olares 选择要暂停的应用](/images/manual/help/ts-release-memory-market-my-olares.png#bordered)
+
+3. 暂停应用时若出现弹窗，勾选**同时停止共享服务器（影响所有用户）**。
+
+    ![停止 C/S 应用弹窗及关闭服务端选项](/images/manual/help/ts-release-memory-market-cs-dialog.png#bordered)
+
+:::tip 卸载共享应用
+若要卸载共享应用，勾选**同时卸载共享服务（影响所有用户）**，以便完全移除服务端。
+:::
+
+### 步骤 5：确认内存已释放
+
+暂停应用后，等待约 5 分钟，再次打开 Dashboard 查看当前内存占用。
+
+如果占用内存最多的应用已不再排在前面，但总内存占用仍然较高：
+
+1. 打开控制面板，进入**命名空间**页面。
+2. 点击**内存用量**列，按内存占用对命名空间排序。
+3. 查找名称以 `server-shared` 结尾的命名空间，表示该共享应用的服务端仍在运行并占用内存。
+
+![控制面板按内存排序的命名空间](/images/manual/help/ts-release-memory-controlhub-namespaces.png#bordered)
+
+4. 对仍在占用内存的共享应用：
+
+    a. 前往**应用市场** > **我的 Olares**，先恢复该应用再暂停。
     
-    b. In the stop dialog, check **Also stops the shared server (affects all users)** so the server is fully stopped and memory is released.
+    b. 在暂停弹窗中勾选**同时停止共享服务器（影响所有用户）**，使服务端完全停止并释放内存。

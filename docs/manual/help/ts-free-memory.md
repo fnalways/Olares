@@ -7,26 +7,23 @@ description: Troubleshoot memory not freeing after stopping apps.
 
 Use this guide when you stop an app (for example in Settings) but system memory is not freed, or when installation or restore fails because of insufficient memory.
 
-## Symptom
-
-- You stop an application manually in Settings, but memory usage does not drop.
+## Condition
 - Market reports that there is not enough memory to install or restore an app.
+- You stop an application manually in Settings, but memory usage does not drop.
 
 ## Cause
 
 In Olares, some applications (for example Ollama and many LLM apps) are deployed as [shared applications](../../developer/concepts/application.md#shared-application). They provide centralized resources or services to all users in the cluster.
 
-Resource use for these apps is mainly on the system side. In Olares OS 1.12.4 and earlier, stopping a shared app from Settings only stops its user-facing client. The system-side service is not stopped by default, so the memory it uses is not released.
-
-## Before you begin
-
-- The current user should have administrator privileges.
-- This guide applies when your Olares system does not have sub-accounts.
+Resource use for these apps is mainly on the server side. In Olares OS 1.12.4 and earlier, stopping a shared app from Settings only stops its user-facing client. The system-side service is not stopped by default, so the memory it uses is not released.
 
 ## Solution: Free memory via Market
 
-To free memory, stop apps (and their server side) from Market instead of only from Settings, then verify in Dashboard and Control Hub as needed.
+To free memory, stop apps and their server side from Market instead of only from Settings, then verify in Dashboard and Control Hub as needed.
 
+:::info
+This guide applies when you have admin privileges and the system currently does not have sub-accounts created.
+:::
 ### Step 1: Check current memory in Dashboard
 
 Open Dashboard and check current memory usage.
@@ -35,7 +32,7 @@ Open Dashboard and check current memory usage.
 
 ### Step 2: Check the app's memory requirements in Market
 
-In Market, open the app you want to install or resume and check its memory requirements. If the sum of used and required memory is greater than about 90% of total memory, installation or restore may fail.
+In Market, open the app you want to install or resume and check its memory requirements. If the sum of used and required memory is greater than about 90% of total memory, installation or restore might fail.
 
 ![Market app memory requirements](/images/manual/help/ts-release-memory-market-requirements.png#bordered)
 
@@ -52,7 +49,7 @@ In Market, open the app you want to install or resume and check its memory requi
 Stopping from Market allows you to stop the shared server and release its memory.
 
 1. Open Market and go to **My Olares**.
-2. Click <i class="material-symbols-outlined">keyboard_arrow_down</i> next to the app's operation button and select **Stop**.
+2. Find the app you want to stop, click <i class="material-symbols-outlined">keyboard_arrow_down</i> next to the app's operation button and select **Stop**.
     ![Market My Olares select app to stop](/images/manual/help/ts-release-memory-market-my-olares.png#bordered)
 
 3. If a dialog appears when you stop the app, check **Also stops the shared server (affects all users)**.
@@ -60,7 +57,7 @@ Stopping from Market allows you to stop the shared server and release its memory
     ![Market stop C/S app dialog with option to close server side](/images/manual/help/ts-release-memory-market-cs-dialog.png#bordered)
 
 :::tip Uninstalling a shared app  
-If you are uninstalling a shared app, also check this option so the server side is fully removed.
+If you are uninstalling a shared app, check **Also uninstall the shared server (affects all users)** so the server side is fully removed.
 :::
 
 ### Step 5: Verify that memory has been released

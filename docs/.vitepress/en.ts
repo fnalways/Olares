@@ -38,7 +38,7 @@ const side = {
           collapsed: true,
           items: [
             {
-              text: "Memory not released after stopping an app",
+              text: "Insufficient memory",
               link: "/manual/help/ts-free-memory",
             },
           ],
