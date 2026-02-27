@@ -16,7 +16,7 @@ Use this guide when an app listed on the official Market website is missing from
 
 The system might not have finished downloading the full app list during your initial setup. Restarting the chart repository and Market deployments can refresh the app catalog.
 
-## Solution:
+## Solution
 
 Restart the chart repository and Market services from Control Hub, then wait for them to come back up and refresh the Market app.
 
