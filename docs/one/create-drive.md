@@ -7,7 +7,7 @@ head:
       content: Olares One, reinstall, factory reset, bootable USB, installation USB
 ---
 
-# Reset to factory settings using installation USB <Badge type="tip" text="10 min"/>
+# Reset to factory settings using installation USB <Badge type="tip" text="15 min"/>
 
 Resetting to factory settings returns your Olares One to the initial setup state. You can reinstall Olares OS using the bootable USB drive included with Olares One.
 
@@ -20,35 +20,62 @@ This will permanently delete all accounts, settings, and data on the device. Thi
 - The bootable USB drive that came with Olares One.
 - A monitor and keyboard connected to Olares One.
 
-## Step 1. Boot from the USB drive
+## Step 1: Boot from the USB drive
 
 1. Insert the bootable USB drive into Olares One.
-2. Power on Olares One or restart if it is already running.
-3. Immediately press the **Delete** key repeatedly to enter **BIOS setup**.
-4. Set **USB Boot** as the first boot option.
-5. Press **F10**, then select **Yes** to save and exit. Olares One will restart and boot into the Olares installer interface.
+2. Power on Olares One or restart it if it is already running.
+3. When the Olares logo appears, immediately press the **Delete** key repeatedly to enter **BIOS setup**.
+   ![BIOS setup](/images/one/bios-setup.png#bordered)
 
-## Step 2. Install Olares to disk
+4. Navigate to the **Boot** tab, then set **Boot Option #1** to the USB drive, and press **Enter**.
+   ![Set boot option](/images/one/bios-set-boot-option.png#bordered)
+
+5. Press **F10**, then select **Yes** to save and exit.
+   ![Save and exit](/images/one/bios-save-usb-boot.png#bordered)
+
+
+Olares One will restart and boot into the Olares installer interface.
+
+## Step 2: Install Olares to disk
 
 1. From the installer interface, select **Install Olares to Hard Disk** and press **Enter**.
-2. The installer lists available disks (e.g. `nvme0n1 2000G`). Type `/dev/` followed by the disk name (e.g. `/dev/nvme0n1`) as the installation target. Installation usually takes **4–5 minutes**.
-   :::tip
-   If you see prompts about NVIDIA GPU drivers, press **Enter** to accept the default.
-   :::
-3. When you see **Installation completed successfully!**, the reinstall is done.
-4. Remove the USB drive, then press **Ctrl + Alt + Delete** to restart.
+   ![Olares installer](/images/one/olares-installer.png#bordered)
 
-## Step 3. Verify and activate
+2. When prompted for the installation target, type `/dev/` followed by the disk name and press **Enter**.
+   ![Select disk](/images/one/olares-installer-select-disk.png#bordered)
 
-After reboot, the system starts in a clean state.
+   For example, to install to `nvme0n1`, enter:
+   ```bash
+   /dev/nvme0n1
+   ```
+
+3. When you see prompts about NVIDIA GPU drivers, press **Enter** to accept the default.
+   ![Install NVIDIA drivers](/images/one/olares-installer-install-nvidia-drivers.png#bordered)
+
+4. When you see the message below, the reinstallation is complete:
+   ```bash
+   Installation completed successfully!
+   ```
+
+5. Remove the USB drive, then press **Ctrl + Alt + Delete** to restart.
+
+## Step 3: Verify and activate
+
+After the reboot, the system starts in a clean factory state and shows a text-based Ubuntu login prompt.
 
 1. Log in with the default credentials:
    - **Username**: `olares`
    - **Password**: `olares`
-2. (Optional) In a terminal, run:
+   ![Log in](/images/one/olares-check.png#bordered)
+
+2. (Optional) Run the following command to verify the installation:
    ```bash
    sudo olares-check
    ```
-   If the output shows success for Olaresd and Containerd, Olares is installed correctly.
+   Example output:
+   ![Olares check](/images/one/olares-check.png#bordered)
 
-3. Complete activation via LarePass. For detailed instructions, see [First boot](first-boot.md).
+
+## Step 4: Complete activation via LarePass
+
+You can then activate Olares One again via LarePass. For detailed instructions, see [First boot](first-boot.md).

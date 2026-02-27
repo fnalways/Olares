@@ -8,7 +8,7 @@ head:
 ---
 # Reset to factory settings in BIOS <Badge type="tip" text="10 min" />
 
-Resetting to factory settings returns your Olares One to the initial setup state. If you have a monitor and keyboard connected, you can perform this reset in BIOS instead of using LarePass.
+Resetting to factory settings returns your Olares One to its initial setup state. If you have a monitor and keyboard connected, you can perform this reset directly in BIOS instead of using LarePass.
 
 :::warning Data loss
 This will permanently delete all accounts, settings, and data on the device. This action cannot be undone.
@@ -16,14 +16,24 @@ This will permanently delete all accounts, settings, and data on the device. Thi
 
 ## Prerequisites
 **Hardware**<br>
-- A wired keyboard connected to Olares One.
-- A monitor connected to Olares One.
+- A wired keyboard connected to your Olares One.
+- A monitor connected to your Olares One.
 
-## Reset Olares One to factory settings
+## Step 1: Load optimized defaults in BIOS
 
-1. Power on Olares One or restart if it is already running.
-2. Immediately press the **Delete** key repeatedly until the BIOS setup screen appears.
+1. Power on Olares One or restart it if it is already running.
+2. When the Olares logo appears, immediately press the **Delete** key repeatedly to enter **BIOS setup**.
+  ![BIOS setup](/images/one/bios-setup.png#bordered)
+
 3. Press **F9**, then select **Yes** to restore factory settings.
-4. Press **F10**, then select **Yes** to save and exit. The device will restart automatically.
+  ![Load optimized defaults](/images/one/bios-load-optimized-defaults.png#bordered)
 
-Once finished, Olares One reboots into the initial setup phase. You can activate it again via LarePass or complete the initial setup as needed.
+4. Press **F10**, then select **Yes** to save and exit. The device restarts automatically.
+  ![Save and exit](/images/one/bios-save-load-defaults.png#bordered)
+
+Once finished, Olares One reboots into the initial setup phase.
+
+## Step 2: Complete activation via LarePass
+
+You can then activate Olares One again via LarePass. For detailed instructions, see [First boot](first-boot.md).
+
