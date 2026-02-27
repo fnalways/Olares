@@ -27,7 +27,7 @@ This will permanently delete all accounts, settings, and data on the device. Thi
 3. When the Olares logo appears, immediately press the **Delete** key repeatedly to enter **BIOS setup**.
    ![BIOS setup](/images/one/bios-setup.png#bordered)
 
-4. Navigate to the **Boot** tab, then set **Boot Option #1** to the USB drive, and press **Enter**.
+4. Navigate to the **Boot** tab, set **Boot Option #1** to the USB drive, and then press **Enter**.
    ![Set boot option](/images/one/bios-set-boot-option.png#bordered)
 
 5. Press **F10**, then select **Yes** to save and exit.
@@ -41,7 +41,7 @@ Olares One will restart and boot into the Olares installer interface.
 1. From the installer interface, select **Install Olares to Hard Disk** and press **Enter**.
    ![Olares installer](/images/one/olares-installer.png#bordered)
 
-2. When prompted for the installation target, type `/dev/` followed by the disk name and press **Enter**.
+2. When prompted for the installation target, the installer shows a list of available disks. Type `/dev/` followed by the disk name (e.g. `nvme0n1`) from that list and press **Enter**.
    ![Select disk](/images/one/olares-installer-select-disk.png#bordered)
 
    For example, to install to `nvme0n1`, enter:
@@ -59,14 +59,14 @@ Olares One will restart and boot into the Olares installer interface.
 
 5. Remove the USB drive, then press **Ctrl + Alt + Delete** to restart.
 
-## Step 3: Verify and activate
+## Step 3: Verify the installation
 
 After the reboot, the system starts in a clean factory state and shows a text-based Ubuntu login prompt.
 
 1. Log in with the default credentials:
    - **Username**: `olares`
    - **Password**: `olares`
-   ![Log in](/images/one/olares-check.png#bordered)
+   ![Log in](/images/one/olares-login.png#bordered)
 
 2. (Optional) Run the following command to verify the installation:
    ```bash

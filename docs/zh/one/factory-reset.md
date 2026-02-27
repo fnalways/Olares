@@ -36,3 +36,5 @@ This will permanently delete all accounts, settings, and data on the device. Thi
 6. Wait for the reset process to complete.
 
 Once finished, Olares One reboots into the initial setup phase. You are redirected to the activation flow, where you can scan the local network to reactivate Olares.
+
+For detailed instructions, see [First boot](first-boot.md).
