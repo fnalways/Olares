@@ -233,6 +233,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "FlareSolverr",
               link: "/use-cases/flaresolverr",
             },
+            {
+              text: "Hoppscotch",
+              link: "/use-cases/hoppscotch",
+            },
           ]
         },
       ],
