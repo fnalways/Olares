@@ -210,6 +210,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               link: "/zh/use-cases/excalidraw",
             },
             {
+              text: "Nextcloud",
+              link: "/zh/use-cases/nextcloud",
+            },
+            {
               text: "Stirling PDF",
               link: "/zh/use-cases/stirling-pdf",
             },
