@@ -220,6 +220,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               link: "/use-cases/excalidraw",
             },
             {
+              text: "Odoo",
+              link: "/use-cases/odoo",
+            },
+            {
               text: "Stirling PDF",
               link: "/use-cases/stirling-pdf",
             },
