@@ -68,6 +68,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "Ollama",
               link: "/zh/use-cases/ollama",
             },
+            {
+              text: "模型应用",
+              link: "/zh/use-cases/model-apps",
+            },
             // {
             //   text: "Dify",
             //   link: "/zh/use-cases/dify",
