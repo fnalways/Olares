@@ -230,6 +230,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
           collapsed: false,
           items: [
             {
+              text: "Firecrawl",
+              link: "/use-cases/firecrawl",
+            },
+            {
               text: "FlareSolverr",
               link: "/use-cases/flaresolverr",
             },
