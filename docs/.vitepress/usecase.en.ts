@@ -223,6 +223,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "Stirling PDF",
               link: "/use-cases/stirling-pdf",
             },
+            {
+              text: "WordPress",
+              link: "/use-cases/wordpress",
+            },
           ]
         },
         {
