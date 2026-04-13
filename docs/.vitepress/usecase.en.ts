@@ -220,6 +220,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               link: "/use-cases/excalidraw",
             },
             {
+              text: "OnlyOffice",
+              link: "/use-cases/onlyoffice",
+            },
+            {
               text: "Stirling PDF",
               link: "/use-cases/stirling-pdf",
             },
