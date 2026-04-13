@@ -135,6 +135,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "DeerFlow",
               link: "/zh/use-cases/deerflow",
             },
+            {
+              text: "Crawl4AI",
+              link: "/zh/use-cases/crawl4ai",
+            },
           ]
         },
         {
