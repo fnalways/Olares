@@ -135,6 +135,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "DeerFlow",
               link: "/zh/use-cases/deerflow",
             },
+            {
+              text: "Whisper API",
+              link: "/zh/use-cases/whisper-api",
+            },
           ]
         },
         {
