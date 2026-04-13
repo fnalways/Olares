@@ -123,6 +123,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "PDFMathTranslate",
               link: "/zh/use-cases/pdfmathtranslate",
             },
+            {
+              text: "MTranServer",
+              link: "/zh/use-cases/mtranserver",
+            },
             // {
             //   text: "Stable Diffusion",
             //   link: "/zh/use-cases/stable-diffusion",
