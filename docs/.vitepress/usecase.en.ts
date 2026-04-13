@@ -156,5 +156,15 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             },
           ]
         },
+        {
+          text: "Smart home",
+          collapsed: false,
+          items: [
+            {
+              text: "Frigate",
+              link: "/use-cases/frigate",
+            },
+          ]
+        },
       ],
     }

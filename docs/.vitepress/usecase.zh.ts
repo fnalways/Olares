@@ -146,5 +146,15 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             },
           ],
         },
+        {
+          text: "智能家居",
+          collapsed: false,
+          items: [
+            {
+              text: "Frigate",
+              link: "/zh/use-cases/frigate",
+            },
+          ],
+        },
       ],
     };
