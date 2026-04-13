@@ -90,6 +90,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "LLMFit",
               link: "/use-cases/llmfit",
             },
+            {
+              text: "MaxKB",
+              link: "/use-cases/maxkb",
+            },
             {  
               text: "OpenCode",
               link: "/use-cases/opencode",
