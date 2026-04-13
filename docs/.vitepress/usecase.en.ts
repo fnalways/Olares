@@ -216,6 +216,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
           collapsed: false,
           items: [
             {
+              text: "Cloudreve",
+              link: "/use-cases/cloudreve",
+            },
+            {
               text: "Excalidraw",
               link: "/use-cases/excalidraw",
             },
