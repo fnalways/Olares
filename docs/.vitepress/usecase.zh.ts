@@ -43,7 +43,21 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             },
             {
               text: "Open WebUI",
-              link: "/zh/use-cases/openwebui",
+              collapsed: true,
+              items: [
+                {
+                  text: "通过模型应用配置",
+                  link: "/zh/use-cases/openwebui",
+                },
+                {
+                  text: "通过 Ollama 配置",
+                  link: "/zh/use-cases/openwebui-ollama",
+                },
+                {
+                  text: "启用语音朗读",
+                  link: "/zh/use-cases/openwebui-speech",
+                },
+              ]
             },
             {
               text: "ComfyUI",

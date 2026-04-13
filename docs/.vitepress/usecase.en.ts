@@ -53,6 +53,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
                   text: "Set up with Ollama",
                   link: "/use-cases/openwebui-ollama",
                 },
+                {
+                  text: "Enable text-to-speech",
+                  link: "/use-cases/openwebui-speech",
+                },
               ]
             },
             {
