@@ -133,6 +133,10 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
               text: "PDFMathTranslate",
               link: "/use-cases/pdfmathtranslate",
             },
+            {
+              text: "RAGFlow",
+              link: "/use-cases/ragflow",
+            },
             // {
             //   text: "Stable Diffusion",
             //   link: "/use-cases/stable-diffusion",
