@@ -229,6 +229,10 @@ const side = {
               text: "基本文件操作",
               link: "/zh/manual/olares/files/add-edit-download",
             },
+            {
+              text: "使用 Common 目录",
+              link: "/zh/manual/olares/files/common-directory",
+            },
             //{
             //   text: "同步与共享",
             //   link: "/zh/manual/larepass/sync-share",
