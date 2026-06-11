@@ -143,9 +143,3 @@ Yes. During scaling, Olares automatically migrates the Common directory from loc
 Check whether you used the `--local-dir` parameter when downloading the model. This parameter saves models to a specified location instead of Common.
 
 To download models, use the `huggingface-cli download {model-id}` command without `--local-dir`. This command saves model files to Common by default.
-
-### How do I delete model files I no longer need?
-
-1. Before deleting, ensure no running AI application uses the model.
-2. Open the Files app, go to the corresponding subfolder under Common.
-3. Locate the model folder or file, right-click it, and then select **Delete**. 

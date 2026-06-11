@@ -30,7 +30,7 @@ Olares 提供**公共**目录（Common）作为系统级共享空间，让多个
 | `ollama` | Ollama | 存储通过 Ollama 拉取的模型。 |
 
 :::tip
-对于其他 AI 工具，如 llama.cpp 和 vLLM，可以在公共目录下自行创建子目录，并配置工具指向该路径。
+对于其他 AI 工具，如 llama.cpp 和 vLLM，可以在公共目录下自行创建子目录，并配置这些工具从该路径读取模型。
 :::
 
 ## 访问公共目录
@@ -46,27 +46,21 @@ Olares 已为常用 AI 工具预设了公共目录的支持。以下分别介绍
 
 ### Hugging Face 模型
 
-从 Olares V1.12.6 起，系统已预设 `HF_HOME` 环境变量，将 Hugging Face 的缓存目录默认指向 `/common/huggingface`。
-
-使用以下命令下载模型，该模型的文件会自动保存到公共目录下 `huggingface` 的子目录中：
-
-```bash
-huggingface-cli download {model-id}
-```
+从 Olares V1.12.6 起，Hugging Face 模型默认保存到 `/common/huggingface`。
 
 #### 迁移已有模型
 
-如果你之前已经下载过 Hugging Face 模型，可将模型文件手动迁移至公共目录中。
-
-1. 找到旧的模型缓存文件夹。
-
-    - 通过 `--local-dir` 下载的模型，存放在 `--local-dir` 参数指定的文件夹中.
-    - 通过 `huggingface-cli` 下载的模型，存放在 Hugging Face 的默认缓存目录中，通常位于 `~/.cache/huggingface/hub` 中。
-
-2. 将该文件夹复制到 `/common/huggingface/models/` 下，保持原有的目录结构。
-3. 验证模型在公共目录中是否可正常加载。
+如果你之前已通过 Hugging Face 默认缓存方式下载过模型，可将模型文件手动迁移至公共目录:
+1. 找到 Hugging Face 的默认缓存目录。通常位于 `~/.cache/huggingface/hub/`。
+2. 将对应的模型文件夹复制到 `/common/huggingface/` 目录下，保持原有的目录结构。
+3. 验证模型是否可正常加载。例如：打开一个依赖该模型的应用并使用该模型，如果应用能正常识别并运行，说明迁移成功。
 4. 确认无误后，删除原缓存目录中的对应模型文件夹。
-5. 以后下载新的模型时，使用 `huggingface-cli download {model-id}` 命令，省略 `--local-dir` 参数，让工具自动使用公共目录中的缓存。
+
+:::info
+如果你之前使用 `--local-dir` 参数将模型下载到了其他指定位置，建议删除旧文件并重新下载。重新下载时，可通过以下两种方式将模型保存到公共目录：
+- **手动上传**：将下载的模型文件直接上传到公共目录`/common/huggingface/` 下的对应子文件夹中。
+- **通过工具下载**：使用 ComfyUI Launcher 等工具重新下载模型，此时模型会自动保存到公共目录中。
+:::
 
 ### Ollama 模型
 
@@ -74,10 +68,10 @@ huggingface-cli download {model-id}
 
 #### 迁移已有模型
 
-1. 找到旧模型的目录。通常位于 `~/.ollama/models` 下。
-2. 将旧模型目录中的内容复制到 `/common/ollama` 下。
+1. 找到旧模型的目录。通常位于 `~/.ollama/models`。
+2. 将对应的模型文件夹复制到 `/common/ollama`，保持原有的目录结构。
 3. 重启 Ollama 服务，并验证模型是否能正常加载。
-4. 确认无误后，删除旧目录。
+4. 确认无误后，删除旧目录中对应的模型文件夹。
 
 ### ComfyUI 模型
 
@@ -139,13 +133,3 @@ python -m vllm.entrypoints.api_server --model /common/huggingface/models/meta-ll
 ### 从单节点升级到多节点时，公共目录会自动迁移吗？
 
 会。扩展过程中，Olares 会自动将公共目录从本地 SSD 迁移到 JuiceFS 共享存储，确保所有节点都能访问相同的模型文件。
-
-### 为什么我的 Hugging Face 模型没有出现在公共目录中？
-
-检查下载模型时是否使用了 `--local-dir` 参数。该参数会将模型下载到指定位置，而非公共目录。
-
-下载模型，请使用 `huggingface-cli download {model-id}` 命令 （不带 `--local-dir`）。该命令会默认将模型文件存在公共目录中。
-
-### 如何删除不再需要的模型文件？
-
-在文件管理器中，进入公共目录下对应的子文件夹，选中模型文件夹或文件，右键点击并选择**删除**。删除前，请确保没有正在运行的 AI 应用正在使用该模型。
