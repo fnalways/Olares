@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-description: Official documentation for Olares — the open-source sovereign cloud OS for self-hosting AI, apps, and data. Install Olares, manage your system, and explore real-world use cases.
+description: Official documentation for Olares, the open-source personal cloud OS for self-hosting AI, apps, and data. Install Olares, manage your system, and explore real-world use cases.
 
 hero:
   name: "Olares"

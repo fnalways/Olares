@@ -48,7 +48,7 @@ const relPathToRoute = (rel: string) =>
 // Default meta description, used as a fallback when a page has no frontmatter
 // `description` (and as the site-level description).
 const DEFAULT_DESCRIPTION =
-  "Official documentation for Olares — the open-source sovereign cloud OS for self-hosting AI, apps, and data.";
+  "Official documentation for Olares, the open-source personal cloud OS for self-hosting AI, apps, and data.";
 
  
 
@@ -87,7 +87,7 @@ function defineVersionedConfig2(
 
 // https://vitepress.dev/reference/site-config
 export default defineVersionedConfig2(withMermaid({
-  title: "Olares",
+  title: "Olares docs",
   description: DEFAULT_DESCRIPTION,
   lang: "en",
   locales: {

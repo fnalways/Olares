@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-description: Olares 官方文档 —— 开源私有云操作系统，助你自托管 AI、应用与数据。了解如何安装 Olares、管理系统，并探索真实应用场景。
+description: Olares 官方文档：开源个人云操作系统，支持自托管 AI、应用与数据，涵盖 Olares 安装、系统管理与真实应用场景。
 
 hero:
   name: "Olares"
