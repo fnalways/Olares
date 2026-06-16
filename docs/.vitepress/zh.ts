@@ -577,8 +577,11 @@ const side = {
 
 export const zh = defineConfig({
   lang: "zh",
+  description:
+    "Olares 官方文档 —— 开源私有云操作系统，助你自托管 AI、应用与数据，涵盖安装、管理与开发的完整指南。",
   themeConfig: {
-    //logo: "/icon.png",
+    logo: { light: "/olares.svg", dark: "/olares_dark.svg" },
+    siteTitle: false,
     socialLinks: [{ icon: "github", link: "https://github.com/beclab/olares" }],
 
     nav: [

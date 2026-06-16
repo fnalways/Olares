@@ -576,8 +576,11 @@ const side = {
 
 export const en = defineConfig({
   lang: "en",
+  description:
+    "Official documentation for Olares — the open-source sovereign cloud OS for self-hosting AI, apps, and data.",
   themeConfig: {
-    //logo: "/icon.png",
+    logo: { light: "/olares.svg", dark: "/olares_dark.svg" },
+    siteTitle: false,
     socialLinks: [{ icon: "github", link: "https://github.com/beclab/olares" }],
 
     nav: [

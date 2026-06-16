@@ -1,5 +1,8 @@
 import { defineConfig,UserConfig,DefaultTheme } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { en } from "./en";
 import { zh } from "./zh";
 import { redirects } from "./theme/redirects";
@@ -30,6 +33,22 @@ function resolveCanonicalRoute(routePath: string): string {
   const dest = redirectMap["/" + routePath];
   return dest ? dest.replace(/^\/+/, "") : routePath;
 }
+
+// Docs source root (the dir that holds this `.vitepress/`). Used to check on
+// disk whether a page's other-language counterpart exists before emitting an
+// hreflang alternate, so we never point Google at a missing translation.
+const SRC_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const existsRel = (rel: string) => fs.existsSync(path.join(SRC_DIR, rel));
+
+// Map a source-relative path (e.g. `manual/index.md`, `zh/use-cases/x.md`) to
+// its extensionless route, mirroring VitePress' own sitemap/cleanUrls logic.
+const relPathToRoute = (rel: string) =>
+  rel.replace(/(^|\/)index\.md$/, "$1").replace(/\.md$/, "");
+
+// Default meta description, used as a fallback when a page has no frontmatter
+// `description` (and as the site-level description).
+const DEFAULT_DESCRIPTION =
+  "Official documentation for Olares — the open-source sovereign cloud OS for self-hosting AI, apps, and data.";
 
  
 
@@ -69,7 +88,7 @@ function defineVersionedConfig2(
 // https://vitepress.dev/reference/site-config
 export default defineVersionedConfig2(withMermaid({
   title: "Olares",
-  description: "Let people own their data again",
+  description: DEFAULT_DESCRIPTION,
   lang: "en",
   locales: {
     root: {
@@ -140,13 +159,14 @@ export default defineVersionedConfig2(withMermaid({
   },
 
   transformPageData(pageData) {
+    // The build-time 404 page has no canonical URL — skip all SEO metadata.
+    if (pageData.relativePath === '404.md') return;
+
     // Extensionless, version-less route for this page. relativePath never
     // includes the version segment (that comes from `base`/deploy), so every
     // versioned build derives the same value. Mirrors the sitemap item.url
     // logic so canonical hrefs and noindex keys line up.
-    const routePath = pageData.relativePath
-      .replace(/(^|\/)index\.md$/, '$1')
-      .replace(/\.md$/, '');
+    const routePath = relPathToRoute(pageData.relativePath);
 
     // Opt a page out of Google/Bing/Algolia indexing by adding `noindex: true`
     // to its frontmatter. Implemented here (rather than per-file `head`) so
@@ -161,22 +181,39 @@ export default defineVersionedConfig2(withMermaid({
       // Store the extensionless route so this matches the sitemap item.url
       // regardless of `cleanUrls` (which drops the .html from item.url).
       noindexPaths.add(routePath);
-      // Don't also emit a canonical: noindex + canonical send Google mixed
+      // Don't also emit canonical/og: noindex + canonical send Google mixed
       // signals. The page is opting out of indexing entirely.
       return;
     }
 
+    const isZh =
+      pageData.relativePath === 'zh' || pageData.relativePath.startsWith('zh/');
     // Canonical points at the version-less docs root, i.e. the latest version
-    // served at /docs/*. Every versioned build emits this same href, so old
-    // versions under /docs/<version>/* consolidate their duplicate-content
-    // signals onto the latest version instead of competing with it. Each
-    // language self-canonicals (zh -> zh, en -> en) since relativePath keeps
-    // the locale prefix.
+    // served at /docs/*, resolved through the permanent redirect map so it never
+    // lands on a 301 (e.g. / -> /manual/overview). Every versioned build emits
+    // this same URL, consolidating /docs/<version>/* onto the latest version.
+    const pageUrl = DOCS_ORIGIN + resolveCanonicalRoute(routePath);
+
     pageData.frontmatter.head ??= [];
-    pageData.frontmatter.head.push([
-      'link',
-      { rel: 'canonical', href: DOCS_ORIGIN + resolveCanonicalRoute(routePath) },
-    ]);
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'canonical', href: pageUrl }],
+    );
+
+    // hreflang alternates: emit only when BOTH language versions exist on disk,
+    // so we never point Google at a missing translation. relativePath carries
+    // the `zh/` locale prefix, so the counterpart is derivable; the en and zh
+    // builds emit the same reciprocal cluster.
+    const baseRel = isZh ? pageData.relativePath.slice(3) : pageData.relativePath;
+    const zhRel = 'zh/' + baseRel;
+    if (existsRel(baseRel) && existsRel(zhRel)) {
+      const enUrl = DOCS_ORIGIN + resolveCanonicalRoute(relPathToRoute(baseRel));
+      const zhUrl = DOCS_ORIGIN + resolveCanonicalRoute(relPathToRoute(zhRel));
+      pageData.frontmatter.head.push(
+        ['link', { rel: 'alternate', hreflang: 'en', href: enUrl }],
+        ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: zhUrl }],
+        ['link', { rel: 'alternate', hreflang: 'x-default', href: enUrl }],
+      );
+    }
   },
 
   sitemap: {
