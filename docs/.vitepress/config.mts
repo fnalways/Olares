@@ -2,12 +2,34 @@ import { defineConfig,UserConfig,DefaultTheme } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { en } from "./en";
 import { zh } from "./zh";
+import { redirects } from "./theme/redirects";
 import _ from "lodash";
 //import defaultConfig from 'vitepress-versioning-plugin';
 
 // Paths collected during transformPageData so sitemap.transformItems can
 // filter them out without re-reading frontmatter from disk.
 const noindexPaths = new Set<string>();
+
+// Version-less production origin for the docs site. Used for both the sitemap
+// hostname and per-page canonical URLs. relativePath never contains the
+// version segment (that comes from `base`/deploy), so every versioned build
+// emits the same canonical here — pointing /docs/<version>/* back at the
+// latest version served at /docs/*.
+const DOCS_ORIGIN = "https://www.olares.com/docs/";
+
+// Resolve an extensionless route through the permanent (301) redirect map so a
+// canonical never points at a URL that just redirects elsewhere. The clearest
+// case is the home page: `docs/index.md` lives at `/` but `/` 301s to
+// /manual/overview, so its canonical should be the overview page. Pages renamed
+// within this build are handled the same way. sync-redirects.mjs guarantees the
+// map has no chains, so a single hop is enough. Temporary (302) redirects are
+// intentionally left unresolved — that URL may come back, so we don't bake it
+// into a canonical.
+const redirectMap = redirects as Record<string, string>;
+function resolveCanonicalRoute(routePath: string): string {
+  const dest = redirectMap["/" + routePath];
+  return dest ? dest.replace(/^\/+/, "") : routePath;
+}
 
  
 
@@ -118,6 +140,14 @@ export default defineVersionedConfig2(withMermaid({
   },
 
   transformPageData(pageData) {
+    // Extensionless, version-less route for this page. relativePath never
+    // includes the version segment (that comes from `base`/deploy), so every
+    // versioned build derives the same value. Mirrors the sitemap item.url
+    // logic so canonical hrefs and noindex keys line up.
+    const routePath = pageData.relativePath
+      .replace(/(^|\/)index\.md$/, '$1')
+      .replace(/\.md$/, '');
+
     // Opt a page out of Google/Bing/Algolia indexing by adding `noindex: true`
     // to its frontmatter. Implemented here (rather than per-file `head`) so
     // we don't shift source line numbers, which would break `@include` ranges
@@ -130,14 +160,27 @@ export default defineVersionedConfig2(withMermaid({
       ]);
       // Store the extensionless route so this matches the sitemap item.url
       // regardless of `cleanUrls` (which drops the .html from item.url).
-      noindexPaths.add(
-        pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
-      );
+      noindexPaths.add(routePath);
+      // Don't also emit a canonical: noindex + canonical send Google mixed
+      // signals. The page is opting out of indexing entirely.
+      return;
     }
+
+    // Canonical points at the version-less docs root, i.e. the latest version
+    // served at /docs/*. Every versioned build emits this same href, so old
+    // versions under /docs/<version>/* consolidate their duplicate-content
+    // signals onto the latest version instead of competing with it. Each
+    // language self-canonicals (zh -> zh, en -> en) since relativePath keeps
+    // the locale prefix.
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: DOCS_ORIGIN + resolveCanonicalRoute(routePath) },
+    ]);
   },
 
   sitemap: {
-    hostname: "https://www.olares.com/docs/",
+    hostname: DOCS_ORIGIN,
     transformItems: (items) =>
       // Drop noindex pages from sitemap.xml so crawlers don't even discover
       // them via the sitemap. The meta tag above is what ultimately removes
