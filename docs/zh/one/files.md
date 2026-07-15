@@ -7,7 +7,7 @@ head:
       content: Olares, Olares One, 上传文件, 管理文件, 访问云文件, Olares Files 应用
 ---
 
-# 管理文件 <Badge type="tip" text="15 min" />
+# 在 Olares One 上管理文件 <Badge type="tip" text="15 min" />
 
 :::warning
 本页面为 AI 翻译版本，内容仅供快速参考。关键信息建议以[英文原文](../../one/files.md)为准。

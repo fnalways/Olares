@@ -6,7 +6,7 @@ head:
     - name: keywords
       content: Accelerator, GPU, Time slicing, Exclusive, Memory slicing, Olares One
 ---
-# Manage accelerator resources <Badge text="10 min"/>
+# Manage accelerator resources on Olares One <Badge text="10 min"/>
 
 Olares One uses accelerator resources for local LLMs, image and video generation, transcoding, and gaming. The built-in NVIDIA GPU is the main accelerator resource. Supported external GPUs can also appear in **Settings** > **Accelerator**.
 

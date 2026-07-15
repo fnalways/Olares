@@ -420,7 +420,7 @@ const side = {
                   link: "/zh/manual/olares/settings/set-up-hosts",
                 },
                 {
-                  text: "管理 Overlay Gateway",
+                  text: "管理 Overlay 网关",
                   link: "/zh/manual/olares/settings/overlay-gateway",
                 },
               ],
@@ -581,7 +581,7 @@ const side = {
         },        
       ],
     },
-    { text: "术语", link: "/zh/manual/glossary" },
+    { text: "术语表", link: "/zh/manual/glossary" },
   ],
 };
 

@@ -7,7 +7,7 @@ head:
       content: Olares, Olares One, upload files, manage files, access cloud files, Olares Files app
 ---
 
-# Manage files <Badge type="tip" text="15 min" />
+# Manage files on Olares One <Badge type="tip" text="15 min" />
 
 Olares's built-in Files app provides a secure and efficient solution for file storage and synchronization. It allows you to access your personal files anywhere, keep data synchronized across devices, and manage third-party cloud storage in one place.
 

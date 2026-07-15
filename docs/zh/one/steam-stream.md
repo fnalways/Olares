@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: 关于在 Olares 上串流 Steam 游戏的完整教程。学习如何安装 Steam Headless、配置串流服务，以及在 Moonlight 上通过本地和远程网络进行游戏串流。
+description: Olares One 游戏串流完整教程。学习如何安装 Steam Headless、配置 Sunshine 串流服务，并通过 Moonlight 在本地或远程网络中串流 Steam 游戏。
 head:
   - - meta
     - name: keywords

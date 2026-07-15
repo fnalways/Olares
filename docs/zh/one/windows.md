@@ -1,6 +1,6 @@
 ---
 outline: [2, 4]
-description: 在 Olares 上安装和运行 Windows 虚拟机的完整指南。了解如何配置初始凭据、通过基于浏览器的 VNC 或 Microsoft 远程桌面（RDP）连接，以及在计算机和 VM 之间传输文件。
+description: 在 Olares One 上安装和运行 Windows 虚拟机的完整指南。学习如何配置登录凭据、通过浏览器 VNC 或 Microsoft 远程桌面（RDP）连接，以及在计算机与虚拟机之间传输文件。
 head:
   - - meta
     - name: keywords

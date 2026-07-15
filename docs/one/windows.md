@@ -1,6 +1,6 @@
 ---
 outline: [2, 4]
-description: Install and run a Windows VM on Olares. Set credentials, connect with browser VNC or Remote Desktop (RDP), and transfer files between systems.
+description: Install and run a Windows VM on Olares One. Set credentials, connect via browser VNC or Remote Desktop (RDP), and transfer files between your computer and the VM.
 head:
   - - meta
     - name: keywords

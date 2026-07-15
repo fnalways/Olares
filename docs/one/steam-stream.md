@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: Stream Steam games from Olares with Steam Headless and Moonlight. Configure local and remote game streaming to phones, computers, and other devices.
+description: Stream Steam games from Olares One with Steam Headless and Moonlight. Set up Sunshine, pair your devices, and play locally or remotely on phones, computers, and more.
 head:
   - - meta
     - name: keywords
