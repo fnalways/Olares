@@ -36,6 +36,75 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
           ],
         },
         {
+          text: "创意媒体",
+          collapsed: false,
+          items: [
+            {
+              text: "Blender",
+              link: "/zh/use-cases/blender",
+            },
+            {
+              text: "ComfyUI",
+              link: "/zh/use-cases/comfyui",
+              collapsed: true,
+              items: [
+                {
+                  text: "管理 ComfyUI",
+                  link: "/zh/use-cases/comfyui-launcher",
+                },
+                {
+                  text: "在 Krita 中使用 ComfyUI",
+                  link: "/zh/use-cases/comfyui-for-krita",
+                },
+                {
+                  text: "常见问题",
+                  link: "/zh/use-cases/comfyui-common-issues",
+                },
+              ]
+            },
+            {
+              text: "Concat",
+              link: "/zh/use-cases/concat",
+            },
+            {
+              text: "Open Design",
+              link: "/zh/use-cases/open-design",
+            },
+            {
+              text: "Qwen Image 2.1",
+              link: "/zh/use-cases/qwen-image-2.1",
+            },
+            {
+              text: "ACE-Step 1.5",
+              link: "/zh/use-cases/ace-step-1.5",
+            },
+            /*{
+              text: "ACE-Step",
+              link: "/zh/use-cases/ace-step",
+            },*/
+            /*{
+              text: "Duix.Avatar",
+              link: "/zh/use-cases/duix-avatar",
+            },*/
+            // {
+            //   text: "Stable Diffusion",
+            //   link: "/zh/use-cases/stable-diffusion",
+            // },
+            {
+              text: "Whisper-WebUI",
+              link: "/zh/use-cases/whisper-webui",
+            },
+            {
+              text: "Speaches",
+              link: "/zh/use-cases/speaches",
+            },
+            {
+              text: "IndexTTS2",
+              link: "/zh/use-cases/indextts2",
+            },
+          ],
+        },
+        {
           text: "AI",
           collapsed: false,
           items: [
@@ -252,71 +321,6 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
                 {
                   text: "Unsloth",
                   link: "/zh/use-cases/unsloth",
-                },
-              ],
-            },
-            {
-              text: "创意媒体",
-              collapsed: true,
-              items: [
-                {
-                  text: "Blender",
-                  link: "/zh/use-cases/blender",
-                },
-                {
-                  text: "ComfyUI",
-                  link: "/zh/use-cases/comfyui",
-                  collapsed: true,
-                  items: [
-                    {
-                      text: "管理 ComfyUI",
-                      link: "/zh/use-cases/comfyui-launcher",
-                    },
-                    {
-                      text: "在 Krita 中使用 ComfyUI",
-                      link: "/zh/use-cases/comfyui-for-krita",
-                    },
-                    {
-                      text: "常见问题",
-                      link: "/zh/use-cases/comfyui-common-issues",
-                    },
-                  ]
-                },
-                {
-                  text: "Concat",
-                  link: "/zh/use-cases/concat",
-                },
-                {
-                  text: "Open Design",
-                  link: "/zh/use-cases/open-design",
-                },
-                {
-                  text: "ACE-Step 1.5",
-                  link: "/zh/use-cases/ace-step-1.5",
-                },
-                /*{
-                  text: "ACE-Step",
-                  link: "/zh/use-cases/ace-step",
-                },*/
-                /*{
-                  text: "Duix.Avatar",
-                  link: "/zh/use-cases/duix-avatar",
-                },*/
-                // {
-                //   text: "Stable Diffusion",
-                //   link: "/zh/use-cases/stable-diffusion",
-                // },
-                {
-                  text: "Whisper-WebUI",
-                  link: "/zh/use-cases/whisper-webui",
-                },
-                {
-                  text: "Speaches",
-                  link: "/zh/use-cases/speaches",
-                },
-                {
-                  text: "IndexTTS2",
-                  link: "/zh/use-cases/indextts2",
                 },
               ],
             },

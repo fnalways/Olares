@@ -14,9 +14,9 @@ export interface UseCase {
 
 // Display order of the category filter pills (canonical English keys).
 export const useCaseCategories: string[] = [
+  "Creative media",
   "AI agent",
   "AI workbench",
-  "Creative media",
   "Model services",
   "Embodied AI",
   "Virtual machine",
@@ -70,6 +70,7 @@ export const useCases: UseCase[] = [
   { title: "Concat", link: "/use-cases/concat", category: "Creative media", description: "Edit videos in your browser or through MCP", descriptionZh: "在浏览器中剪辑视频，或通过 MCP 对话式编辑" },
   { title: "FlowStudio", link: "/use-cases/flowstudio", category: "Creative media", description: "Generate images and videos with reusable AI workflows", descriptionZh: "使用可复用的 AI 工作流生成图像和视频" },
   { title: "Open Design", link: "/use-cases/open-design", category: "Creative media", description: "Turn prompts into prototypes, pages, and slide decks", descriptionZh: "将提示词转化为原型、页面和幻灯片" },
+  { title: "Qwen Image 2.1", link: "/use-cases/qwen-image-2.1", category: "Creative media", description: "Generate and edit images locally with text and references", descriptionZh: "通过文字和参考图，在本地生成与编辑图片" },
   { title: "ACE-Step 1.5", link: "/use-cases/ace-step-1.5", category: "Creative media", description: "Generate music from prompts or lyrics", descriptionZh: "根据提示词或歌词生成音乐" },
   { title: "Whisper-WebUI", link: "/use-cases/whisper-webui", category: "Creative media", description: "Speech-to-text, subtitles, and translation", descriptionZh: "语音转文字、字幕生成与翻译" },
   { title: "Speaches", link: "/use-cases/speaches", category: "Creative media", description: "Speech-to-text, text-to-speech, and voice chat", descriptionZh: "语音转文字、文字转语音与语音对话" },
